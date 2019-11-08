@@ -2,9 +2,8 @@
 // MesTempDoc.h : interface of the CMesTempDoc class
 //
 
-
 #pragma once
-
+#include "Element.h"
 
 class CMesTempDoc : public CDocument
 {
@@ -45,4 +44,6 @@ protected:
 	// Helper function that sets search content for a Search Handler
 	void SetSearchContent(const CString& value);
 #endif // SHARED_HANDLERS
+public:
+	void z_podstawowego(Element e, float Xp, float Yp, float* Xw, float* Yw);
 };

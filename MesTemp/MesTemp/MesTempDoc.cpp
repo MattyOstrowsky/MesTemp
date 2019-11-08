@@ -136,3 +136,16 @@ void CMesTempDoc::Dump(CDumpContext& dc) const
 
 
 // CMesTempDoc commands
+
+//funkcja podaj¹ca wspó³rzêdne globalne na podstawie wspó³rzêdnych lokalnych w danym elemencie
+//Xp,Yp- wspó³rzêdne podstawowe; Xw, Yw- wynik (wspó³rzêdne globalne)
+void CMesTempDoc::z_podstawowego(Element e, float Xp, float Yp, float* Xw, float* Yw)
+{
+	float N1, N2, N3, N4;
+	N1 = 0.25 * (1 - Xp) * (1 - Yp);
+	N2 = 0.25 * (1 + Xp) * (1 - Yp);
+	N3 = 0.25 * (1 + Xp) * (1 + Yp);
+	N4 = 0.25 * (1 - Xp) * (1 + Yp);
+	*Xw = N1 * e.x1 + N2 * e.x2 + N3 * e.x3 + N4 * e.x4;
+	*Yw = N1 * e.y1 + N2 * e.y2 + N3 * e.y3 + N4 * e.y4;
+}
