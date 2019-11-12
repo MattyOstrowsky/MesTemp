@@ -3,7 +3,7 @@
 //
 
 #pragma once
-#include "Element.h"
+#include "pch.h"
 
 class CMesTempDoc : public CDocument
 {
@@ -46,4 +46,6 @@ protected:
 #endif // SHARED_HANDLERS
 public:
 	void z_podstawowego(Element e, float Xp, float Yp, float* Xw, float* Yw);
+	// wektor wszystkich elementów
+	std::vector<Element> elementy;
 };

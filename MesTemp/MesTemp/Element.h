@@ -40,7 +40,7 @@ public:
 	//funkcja ustawiaj¹ca (zmieniaj¹ca) numery elementu i wêz³ów
 	void numeruj(int numer, int N1, int N2, int N3, int N4);
 
-	// funkcja ustawiaj¹ca temperatury w wêz³ach
+	// funkcja ustawiaj¹ca (zmieniaj¹ca) temperatury w wêz³ach
 	void ust_temp(float T1, float T2, float T3, float T4);
 	// funkcja tworz¹ca element podstawowy (kwadrat o rogach w 1 i -1) z temperaturami jak w elemencie Ÿród³owym
 	Element el_podstawowy(Element zrodlo);
