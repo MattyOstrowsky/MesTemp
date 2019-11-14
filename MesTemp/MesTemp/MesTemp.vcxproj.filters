@@ -45,6 +45,9 @@
     <ClInclude Include="Siatka.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Prostokat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MesTemp.cpp">
@@ -66,6 +69,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Siatka.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Prostokat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
