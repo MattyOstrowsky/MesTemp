@@ -14,6 +14,8 @@ public:
 
 	void ustaw_kordy(); //ustawianie kordow x i y na podstawie wczytanych elemntow
 
+	void zageszczenie_prostokatow(int);
+
 	Siatka::~Siatka(); //destruktor
 
 };

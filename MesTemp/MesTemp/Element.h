@@ -19,6 +19,8 @@ public:
 	float y3;
 	float x4;
 	float y4;
+	//czy element jest prostokat
+	bool czy_prostokat = 0;
 	//numery s¹siadów dook³a ka¿dego wêz³a
 	std::vector<int> s1;
 	std::vector<int> s2;

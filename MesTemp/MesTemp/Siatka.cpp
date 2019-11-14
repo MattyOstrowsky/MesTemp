@@ -31,3 +31,41 @@ void Siatka::ustaw_kordy()
 	kord_y.erase(std::unique(kord_y.begin(), kord_y.end()), kord_y.end()); //usuwanie duplikatow
 	
 }
+
+void Siatka::zageszczenie_prostokatow(int gestosc)
+{
+	std::vector <float> temp; // tymczasowe kordy
+
+	//Zageszczenie pierwszego elementu przez polowienie w strone drugiego elementu
+	temp.push_back(0.5 * (kord_x[1] - kord_x[0]));
+	for (int j = 0; j < gestosc - 2; j++)
+		temp.push_back(0.5 * (kord_x[1] - temp[j]));
+	//Zageszczenie ostatniego elementu przez polowienie w strone przedostatniego elementu
+	temp.push_back(0.5 * (kord_x[-1] - kord_x[-2]));
+	for (int k = 0; k < gestosc - 2; k++)
+		temp.push_back(0.5 * (temp[k + gestosc - 1] - kord_x[-2]));
+
+	//Dodanie elementów do 
+	for (int jk = 0; jk < temp.size(); jk++)
+		kord_x.push_back(temp[jk]);
+
+	temp.clear();
+
+	//Zageszczenie pierwszego elementu x przez polowienie w strone drugiego elementu
+	temp.push_back(0.5 * (kord_y[1] - kord_y[0]));
+	for (int j = 0; j < gestosc - 2; j++)
+		temp.push_back(0.5 * (kord_y[1] - temp[j]));
+	//Zageszczenie ostatniego elementu x przez polowienie w strone przedostatniego elementu
+	temp.push_back(0.5 * (kord_y[-1] - kord_y[-2]));
+	for (int k = 0; k < gestosc - 2; k++)
+		temp.push_back(0.5 * (temp[k + gestosc - 1] - kord_y[-2]));
+
+	//Dodanie temp do kordow 
+	for (int jk = 0; jk < temp.size(); jk++)
+		kord_y.push_back(temp[jk]);
+
+	temp.clear();
+
+
+}
+
