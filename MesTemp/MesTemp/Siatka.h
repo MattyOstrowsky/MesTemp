@@ -1,6 +1,5 @@
 #pragma once
 #include "Element.h"
-#include <vector>
 
 class Siatka
 {
@@ -12,11 +11,9 @@ public:
 
 	Siatka::Siatka(std::vector <Element>); //konstruktor, argument jest obiektem klasy element
 
-	void ustaw_kordy(); //ustawianie kordow x i y na podstawie wczytanych elemntow
-
-	void zageszczenie_prostokatow(int);
-
-	Siatka::~Siatka(); //destruktor
+	void zageszczenie_prostokatow(int, std::vector <float>&); //zageszczenie prostokatow: 
+															  //1. ilosc elementow w poziomie lub w pionie,
+															  //2. kord_x lub kord_y
 
 };
 

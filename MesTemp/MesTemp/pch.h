@@ -11,5 +11,6 @@
 #include "Element.h"
 #include "framework.h"
 #include <vector>
+#include <algorithm>
 
 #endif //PCH_H
