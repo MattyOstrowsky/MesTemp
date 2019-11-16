@@ -42,6 +42,12 @@
     <ClInclude Include="Element.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Siatka.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Prostokat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Macierze.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -63,6 +69,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Element.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Siatka.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Prostokat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Macierze.cpp">

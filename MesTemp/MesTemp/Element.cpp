@@ -21,6 +21,7 @@ Element::Element(int numer, int N1, int N2, int N3, int N4, float X1, float Y1, 
 	nr2 = N2;
 	nr3 = N3;
 	nr4 = N4;
+	if ((x1 == x3) && (x2 == x4) && (y1 == y2)) czy_prostokat = 1; // wyrazenie ustala czy element jest prostokatny
 }
 
 void Element::ust_wsp(float X1, float Y1, float X2, float Y2, float X3, float Y3, float X4, float Y4)
@@ -33,6 +34,7 @@ void Element::ust_wsp(float X1, float Y1, float X2, float Y2, float X3, float Y3
 	y3 = Y3;
 	x4 = X4;
 	y4 = Y4;
+	if ((x1 == x3) && (x2 == x4) && (y1 == y2)) czy_prostokat = 1; // wyrazenie ustala czy element jest prostokatny
 }
 
 void Element::numeruj(int numer, int N1, int N2, int N3, int N4)
