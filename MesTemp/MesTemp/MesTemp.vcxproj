@@ -189,6 +189,7 @@
   <ItemGroup>
     <ClInclude Include="Element.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Macierze.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MesTemp.h" />
     <ClInclude Include="MesTempDoc.h" />
@@ -199,6 +200,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Element.cpp" />
+    <ClCompile Include="Macierze.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MesTemp.cpp" />
     <ClCompile Include="MesTempDoc.cpp" />

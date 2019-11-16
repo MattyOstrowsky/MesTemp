@@ -1,0 +1,21 @@
+#pragma once
+#include "pch.h"
+//zapis macierzy metod¹ SRF (3 tablic. No, tutaj to w³aœciwie wektorów)
+class Macierze
+{
+
+public:
+	// indeksy pierwszych elementów kolejnych wierszy. ¯eby algorytm dzia³a³ dobrze na koñcu trzeba dodaæ indeks nieistniej¹cego woersza n+1
+	std::vector<float> prow;
+	// numer kolumny ka¿dego zapisanego elementu
+	std::vector<int> coln;
+	// wartoœci zappisanych elementów macierzy
+	std::vector<float> A;
+
+	//konstruktor, na razie nie wiem, jak go zrobiæ
+	Macierze(std::vector<float>& danea, std::vector<float>& danep, std::vector<int>& danec);
+
+	//funkcja rozwi¹zuj¹ca uk³ad równañ
+	void licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik);
+};
+
