@@ -40,6 +40,8 @@ protected:
 // Generated message map functions
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnStartZag();
 };
 
 #ifndef _DEBUG  // debug version in MesTempView.cpp

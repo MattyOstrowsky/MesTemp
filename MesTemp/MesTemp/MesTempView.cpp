@@ -12,6 +12,7 @@
 
 #include "MesTempDoc.h"
 #include "MesTempView.h"
+#include "DialZagesc.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -27,6 +28,7 @@ BEGIN_MESSAGE_MAP(CMesTempView, CView)
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
+	ON_COMMAND(ID_START_ZAG32772, &CMesTempView::OnStartZag)
 END_MESSAGE_MAP()
 
 // CMesTempView construction/destruction
@@ -103,3 +105,11 @@ CMesTempDoc* CMesTempView::GetDocument() const // non-debug version is inline
 
 
 // CMesTempView message handlers
+
+
+void CMesTempView::OnStartZag()
+{
+	DialZagesc dlgDialZagesc;
+	dlgDialZagesc.DoModal();
+
+}
