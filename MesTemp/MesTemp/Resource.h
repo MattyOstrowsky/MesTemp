@@ -22,13 +22,15 @@
 #define ID_START_WCZYTAJDANE            32771
 #define ID_START_ZAG32772               32772
 #define ID_START_GENERUJSIATK32773      32773
+#define ID_START_RYSUJ                  32774
+#define ID_START_ZAPISZ                 32775
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        312
-#define _APS_NEXT_COMMAND_VALUE         32774
+#define _APS_NEXT_COMMAND_VALUE         32776
 #define _APS_NEXT_CONTROL_VALUE         1000
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
