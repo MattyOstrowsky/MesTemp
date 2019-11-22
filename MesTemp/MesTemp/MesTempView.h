@@ -14,6 +14,7 @@ protected: // create from serialization only
 // Attributes
 public:
 	CMesTempDoc* GetDocument() const;
+	bool StRysuj= false;
 
 // Operations
 public:

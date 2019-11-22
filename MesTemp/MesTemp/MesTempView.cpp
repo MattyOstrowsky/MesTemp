@@ -53,13 +53,15 @@ BOOL CMesTempView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CMesTempView drawing
 
-void CMesTempView::OnDraw(CDC* /*pDC*/)
+void CMesTempView::OnDraw(CDC * pDC)
 {
 	CMesTempDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
-
+	if (StRysuj == true) {
+		pDC->Rectangle(10, 40, 600, 400);
+	};
 	// TODO: add draw code for native data here
 }
 
@@ -109,7 +111,10 @@ CMesTempDoc* CMesTempView::GetDocument() const // non-debug version is inline
 
 void CMesTempView::OnStartZag()
 {
-	DialZagesc dlgDialZagesc;
-	dlgDialZagesc.DoModal();
+	//DialZagesc dlgDialZagesc;
+	//dlgDialZagesc.DoModal();
+	StRysuj = true;
+	Invalidate(TRUE);
+	UpdateWindow();
 
 }

@@ -10,6 +10,7 @@ class DialZagesc : public CDialogEx
 public:
 	DialZagesc(CWnd* pParent = nullptr);   // konstruktor standardowy
 	virtual ~DialZagesc();
+	
 
 // Dane okna dialogowego
 #ifdef AFX_DESIGN_TIME
