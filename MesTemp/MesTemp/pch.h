@@ -10,8 +10,10 @@
 // add headers that you want to pre-compile here
 #include "Element.h"
 #include "framework.h"
+#include "Siatka.h"
 #include <vector>
 #include <algorithm>
 #include <cstdlib>
+#include <afxcontrolbars.h>
 
 #endif //PCH_H

@@ -187,6 +187,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="DialZagesc.h" />
     <ClInclude Include="Element.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Macierze.h" />
@@ -201,6 +202,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DialZagesc.cpp" />
     <ClCompile Include="Element.cpp" />
     <ClCompile Include="Macierze.cpp" />
     <ClCompile Include="MainFrm.cpp" />
