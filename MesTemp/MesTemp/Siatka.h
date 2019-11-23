@@ -8,7 +8,7 @@ private:
 public:
 	std::vector <float> kord_x; // kordy x siatki prostokatnej
 	std::vector <float> kord_y; // kordy y siatki prostokatnej
-	std::vector <float [2]> nwezel; // wektor wezlow siatki nieregularnej
+	std::vector <std::vector <float>> nwezel; // wektor wezlow siatki nieregularnej
 
 
 	Siatka::Siatka(std::vector <Element>); //konstruktor, argument jest obiektem klasy od wczytania danych
@@ -18,9 +18,9 @@ public:
 															  //2. kord_x lub kord_y
 
 	void zageszczenie_nieregularne(int); //zageszczenie nieregularnej siatki:
-										 /* tworzenie wêz³ów na podstawie zadanej gêstoœci (takiej samej jak przy prostok¹tach)
-										    na przeciwleg³ych œcianach w zale¿noœci czy element jest pionowy czy poziomy 
-											(NIE DZIELIMY PIONOWYCH ELEMENTÓW POZIOMO!!!*/
+										//  tworzenie wêz³ów na podstawie zadanej gêstoœci (takiej samej jak przy prostok¹tach)
+										   // na przeciwleg³ych œcianach w zale¿noœci czy element jest pionowy czy poziomy 
+										//	(NIE DZIELIMY PIONOWYCH ELEMENTÓW POZIOMO!!!
 
 };
 

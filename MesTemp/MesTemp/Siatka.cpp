@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Siatka.h"
 
-
 Siatka::Siatka(std::vector <Element> E) 
 {
 
@@ -84,6 +83,9 @@ void Siatka::zageszczenie_prostokatow(int gestosc, std::vector<float>& kord)
 
 void Siatka::zageszczenie_nieregularne(int gestosc)
 {
+
+	std::vector <float> temp;
+	
 	//sprawdzanie ka¿dego obszaru
 	for (int i = 0; i < element.size(); i++)
 	{
@@ -95,37 +97,74 @@ void Siatka::zageszczenie_nieregularne(int gestosc)
 			{
 				//dodawanie par wêz³ów w zale¿noœci od kszta³tu elementu
 
+				//pierwsza œcianka
 				if (element[i].y1 < element[i].y3)
-					nwezel.push_back({ element[i].x1 + 1.0 / gestosc * (element[i].x3 - element[i].x1),
-										element[i].y1 + 1.0 / gestosc * abs(element[i].y3 - element[i].y1) });
+				{
+					temp.push_back(element[i].x1 + 1.0 / gestosc * (element[i].x3 - element[i].x1));
+					temp.push_back(element[i].y1 + 1.0 / gestosc * abs(element[i].y3 - element[i].y1));
+					nwezel.push_back(temp);
+					temp.clear();
+				}
 				else
-					nwezel.push_back({ element[i].x1 + 1.0 / gestosc * (element[i].x3 - element[i].x1),
-										element[i].y3 + 1.0 / gestosc * abs(element[i].y3 - element[i].y1) });
+				{
+					temp.push_back(element[i].x1 + 1.0 / gestosc * (element[i].x3 - element[i].x1));
+					temp.push_back(element[i].y3 + 1.0 / gestosc * abs(element[i].y3 - element[i].y1));
+					nwezel.push_back(temp);
+					temp.clear();
+				}
+
+				//druga œcianka
 				if (element[i].y2 < element[i].y4)
-					nwezel.push_back({ element[i].x2 + 1.0 / gestosc * (element[i].x4 - element[i].x2),
-										element[i].y2 + 1.0 / gestosc * abs(element[i].y4 - element[i].y2) });
+				{
+					temp.push_back(element[i].x2 + 1.0 / gestosc * (element[i].x4 - element[i].x2));
+					temp.push_back(element[i].y2 + 1.0 / gestosc * abs(element[i].y4 - element[i].y2));
+					nwezel.push_back(temp);
+					temp.clear();
+				}
 				else
-					nwezel.push_back({ element[i].x2 + 1.0 / gestosc * (element[i].x2 - element[i].x4),
-										element[i].y4 + 1.0 / gestosc * abs(element[i].y4 - element[i].y2) });
+				{
+					temp.push_back(element[i].x2 + 1.0 / gestosc * (element[i].x2 - element[i].x4));
+					temp.push_back(element[i].y4 + 1.0 / gestosc * abs(element[i].y4 - element[i].y2));
+					nwezel.push_back(temp);
+					temp.clear();
+				}
 			}
 			//dla elementów poziomych
 			else
 			{
 				//dodawanie par wêz³ów w zale¿noœci od kszta³tów elementów
 
+				//pierwsza œcianka
 				if (element[i].x1 < element[i].x3)
-					nwezel.push_back({ element[i].x1 + 1.0 / gestosc * abs(element[i].x3 - element[i].x1), 
-										element[i].y1 + 1.0 / gestosc * (element[i].y3 - element[i].y1) });
-				else 
-					nwezel.push_back({ element[i].x3 + 1.0 / gestosc * abs(element[i].x3 - element[i].x1),
-										element[i].y1 + 1.0 / gestosc * (element[i].y3 - element[i].y1) });
-				if (element[i].x2 < element[i].x4)
-					nwezel.push_back({ element[i].x2 + 1.0 / gestosc * abs(element[i].y3 - element[i].y1),
-										element[i].y2 + 1.0 / gestosc * (element[i].y4 - element[i].y2) });
+				{
+					temp.push_back(element[i].x1 + 1.0 / gestosc * abs(element[i].x3 - element[i].x1));
+					temp.push_back(element[i].y1 + 1.0 / gestosc * (element[i].y3 - element[i].y1));
+					nwezel.push_back(temp);
+					temp.clear();
+				}
 				else
-					nwezel.push_back({ element[i].x4 + 1.0 / gestosc * abs(element[i].y3 - element[i].y1),
-										element[i].y2 + 1.0 / gestosc * (element[i].y4 - element[i].y2) });
-				
+				{
+					temp.push_back(element[i].x3 + 1.0 / gestosc * abs(element[i].x3 - element[i].x1));
+					temp.push_back(element[i].y1 + 1.0 / gestosc * (element[i].y3 - element[i].y1));
+					nwezel.push_back(temp);
+					temp.clear();
+				}
+
+				//druga œcianka
+				if (element[i].x2 < element[i].x4)
+				{
+					temp.push_back(element[i].x2 + 1.0 / gestosc * abs(element[i].y3 - element[i].y1));
+					temp.push_back(element[i].y2 + 1.0 / gestosc * (element[i].y4 - element[i].y2));
+					nwezel.push_back(temp);
+					temp.clear();
+				}
+				else
+				{
+					temp.push_back(element[i].x4 + 1.0 / gestosc * abs(element[i].y3 - element[i].y1));
+					temp.push_back(element[i].y2 + 1.0 / gestosc * (element[i].y4 - element[i].y2));
+					nwezel.push_back(temp);
+					temp.clear();
+				}
 			}
 		}
 	}
@@ -135,8 +174,10 @@ void Siatka::zageszczenie_nieregularne(int gestosc)
 	nwezel.erase(std::unique(nwezel.begin(), nwezel.end()), nwezel.end()); //usuwanie duplikatow
 
 	element.clear(); // czyszczenie pamiêci
-
+	
 }
+
+
 
 
 
