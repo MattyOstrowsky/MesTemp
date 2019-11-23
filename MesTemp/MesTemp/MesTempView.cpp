@@ -12,6 +12,7 @@
 
 #include "MesTempDoc.h"
 #include "MesTempView.h"
+#include "DialZagesc.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -27,6 +28,8 @@ BEGIN_MESSAGE_MAP(CMesTempView, CView)
 	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
+	ON_COMMAND(ID_START_ZAG32772, &CMesTempView::OnStartZag)
+	ON_COMMAND(ID_FILE_OPEN, &CMesTempView::OnFileOpen)
 END_MESSAGE_MAP()
 
 // CMesTempView construction/destruction
@@ -51,14 +54,28 @@ BOOL CMesTempView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CMesTempView drawing
 
-void CMesTempView::OnDraw(CDC* /*pDC*/)
+void CMesTempView::OnDraw(CDC * pDC)
 {
 	CMesTempDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
-
+	if (StRysuj) {
+		pDC->MoveTo(20, 20);
+		pDC->LineTo(10, 20);
+		pDC->LineTo(15, 15);
+		pDC->LineTo(20, 20);
+		pDC->MoveTo(15, 20);
+		pDC->LineTo(15,550);
+		pDC->LineTo(400, 550);
+		pDC->MoveTo(400, 555);
+		pDC->LineTo(400, 545);
+		pDC->LineTo(405, 550);
+		pDC->LineTo(400, 555);
+		
+	};
 	// TODO: add draw code for native data here
+	pDC->TextOutW(100, 100, FilePathName);
 }
 
 
@@ -103,3 +120,38 @@ CMesTempDoc* CMesTempView::GetDocument() const // non-debug version is inline
 
 
 // CMesTempView message handlers
+
+
+void CMesTempView::OnStartZag()
+{
+	//DialZagesc dlgDialZagesc;
+	//dlgDialZagesc.DoModal();
+	StRysuj = true;
+	Invalidate(TRUE);
+	UpdateWindow();
+
+}
+
+
+void CMesTempView::OnFileOpen()
+{
+	// TODO: Dodaj tutaj swój kod procedury obs³ugi polecenia
+	CFile newfile;
+	TCHAR szFilters[] = _T("txt Type Files (*.txt)|*.txt|All Files (*.*)|*.*||");
+	CFileDialog fileDlg(TRUE, _T("txt"), _T("*.txt"), OFN_HIDEREADONLY | OFN_FILEMUSTEXIST, szFilters);
+	if (fileDlg.DoModal() == IDOK)
+	{
+		CFile oldFile;
+		ASSERT(oldFile != NULL);
+		oldFile.Open(fileDlg.GetPathName(), CFile::modeRead | CFile::shareExclusive);
+		FilePathName = fileDlg.GetPathName();
+		CArchive loadArchive(&oldFile, CArchive::load | CArchive::bNoFlushOnDelete); // Create the archive to load data, the archive must be closed manually after the loading process      
+		Serialize(loadArchive);
+		loadArchive.Close();
+		oldFile.Close();
+
+	}
+	
+	Invalidate(TRUE);
+	UpdateWindow();
+}

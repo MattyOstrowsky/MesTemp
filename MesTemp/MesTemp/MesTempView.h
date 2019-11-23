@@ -14,6 +14,9 @@ protected: // create from serialization only
 // Attributes
 public:
 	CMesTempDoc* GetDocument() const;
+	bool StRysuj= false;
+
+	CString FilePathName;
 
 // Operations
 public:
@@ -40,6 +43,9 @@ protected:
 // Generated message map functions
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnStartZag();
+	afx_msg void OnFileOpen();
 };
 
 #ifndef _DEBUG  // debug version in MesTempView.cpp

@@ -13,5 +13,6 @@
 #include <vector>
 #include <algorithm>
 #include <cstdlib>
+#include <afxcontrolbars.h>
 
 #endif //PCH_H
