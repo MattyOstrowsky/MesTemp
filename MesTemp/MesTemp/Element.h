@@ -1,6 +1,7 @@
 #pragma once
 #include "pch.h"
 #include <vector>
+
 class Element
 {
 public:
@@ -21,7 +22,9 @@ public:
 	float x4;
 	float y4;
 	//czy element jest prostokat
-	bool czy_prostokat = 0;
+	bool czy_prostokat;
+	//jesli nieprostokat to czy pionowo zageszczac pion = 1 czy poziomo pion = 0
+	bool pion; 
 	//numery s¹siadów dook³a ka¿dego wêz³a
 	std::vector<int> s1;
 	std::vector<int> s2;
