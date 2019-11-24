@@ -15,7 +15,6 @@ protected: // create from serialization only
 public:
 	CMesTempDoc* GetDocument() const;
 	bool StRysuj= false;
-
 	CString FilePathName;
 
 // Operations

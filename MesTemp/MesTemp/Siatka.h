@@ -1,17 +1,18 @@
 #pragma once
-#include "Element.h"
+#include "Input.h"
 
 class Siatka
 {
 private:
-	std::vector <Element> element; //wektor elementów z klasy od wczytania danych
+	std::vector <Input> element; //wektor elementów z klasy od wczytania danych
 public:
 	std::vector <float> kord_x; // kordy x siatki prostokatnej
 	std::vector <float> kord_y; // kordy y siatki prostokatnej
 	std::vector <std::vector <float>> nwezel; // wektor wezlow siatki nieregularnej
 
+	Siatka::Siatka(std::vector <Input>&);
 
-	Siatka::Siatka(std::vector <Element>); //konstruktor, argument jest obiektem klasy od wczytania danych
+	void utworz_siatke(std::vector <Input>&); //utworzenie wstepnej siatki, argument jest wektorem obiektow klasy od wczytania danych
 
 	void zageszczenie_prostokatow(int, std::vector <float>&); //zageszczenie prostokatow: 
 															  //1. ilosc elementow w poziomie lub w pionie,

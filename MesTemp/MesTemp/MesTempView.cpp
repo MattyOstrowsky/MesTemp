@@ -149,7 +149,6 @@ void CMesTempView::OnFileOpen()
 		Serialize(loadArchive);
 		loadArchive.Close();
 		oldFile.Close();
-
 	}
 	
 	Invalidate(TRUE);
