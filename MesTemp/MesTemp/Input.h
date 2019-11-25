@@ -12,7 +12,6 @@ public:
 	int nr; //nr porzadkowy
 	bool czy_prostokat; //okresla czy obszar jest prostokatem
 	bool pion; //jesli obszar nie jest prostokatem to atrybut okresla czy obszar jest pionowy (1) czy poziomy (0)
-	std::vector <Input> dane;
 	
 	//zestaw wspolrzednych (prostokaty tylko x1 y1 i x4 y4)
 	float x1; 
@@ -29,7 +28,7 @@ public:
 	char material[15]; //nazwa materialu
 	
 	Input::Input(); //pusty konstruktor aby utworzyc wstepny obiekt
-	void czytaj(std::string nazwa); //czytanie pliku i ustawianie atrybutow
+	void czytaj(std::string nazwa, std::vector <Input>& dane); //czytanie pliku i ustawianie atrybutow
 
 };
 

@@ -1,0 +1,13 @@
+liczba obszarów
+skala
+
+//dla prostokatów
+
+nr czy_prostokat=0 x1 y1 x4 y4 czy_zrodlo moc_zrodla przewodnosc material
+
+//dla nieprostok¹tów
+
+nr czy_prostokat=1 pion x1 y1 x2 y2 x3 y3 x4 y4 czy_zrodlo moc_zrodla przewodnosc material
+
+
+//trzeba coœ bêdzie dodaæ o warunkach brzegowych... ale to jeszcze przysz³oœæ :D 
