@@ -15,7 +15,10 @@ public:
 	//konstruktor, na razie nie wiem, jak go zrobiæ
 	Macierze(std::vector<float>& danea, std::vector<float>& danep, std::vector<int>& danec);
 
-	//funkcja rozwi¹zuj¹ca uk³ad równañ
+	//funkcja rozwi¹zuj¹ca uk³ad równañ iteracyjn¹ metod¹ Gaussa-Siedla
 	void licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik);
+	// funkcja dodaj¹ca macierz lokaln¹ albo wskazan¹ wartoœæ do globalnej
+	void do_globalnej(Macierze& globalna, float lokalna [4][4], int wspolrzedne [4]);
+	void do_globalnej(Macierze& globalna, float co, int gdziex, int gdziey);
 };
 

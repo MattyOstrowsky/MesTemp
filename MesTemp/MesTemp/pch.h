@@ -11,7 +11,7 @@
 #include "Element.h"
 #include "framework.h"
 #include <vector>
-#include <algorithm>
 #include <cstdlib>
+#include <algorithm>
 
 #endif //PCH_H
