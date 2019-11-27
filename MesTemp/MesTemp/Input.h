@@ -28,7 +28,7 @@ public:
 	char material[15]; //nazwa materialu
 	
 	Input::Input(); //pusty konstruktor aby utworzyc wstepny obiekt
-	void czytaj(std::string nazwa, std::vector <Input>& dane); //czytanie pliku i ustawianie atrybutow
+	void czytaj(std::ifstream& plik); //czytanie pliku i ustawianie atrybutow
 
 };
 
