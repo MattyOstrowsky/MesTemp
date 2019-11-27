@@ -26,9 +26,9 @@ public:
 	float moc_zrodla; //okresla moc zrodla
 	float przewodnosc; //okresla przewodnosc obszaru
 	char material[15]; //nazwa materialu
-	std::vector <Input> dane;
+	
 	Input::Input(); //pusty konstruktor aby utworzyc wstepny obiekt
-	void czytaj(CString nazwa); //czytanie pliku i ustawianie atrybutow
+	void czytaj(std::string nazwa, std::vector <Input>& dane); //czytanie pliku i ustawianie atrybutow
 
 };
 
