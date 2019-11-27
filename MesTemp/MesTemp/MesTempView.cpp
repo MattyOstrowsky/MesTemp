@@ -9,11 +9,12 @@
 #ifndef SHARED_HANDLERS
 #include "MesTemp.h"
 #endif
-
+#include <cstdio>
+#include <string>
 #include "MesTempDoc.h"
 #include "MesTempView.h"
 #include "DialZagesc.h"
-
+#include "Input.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -74,8 +75,11 @@ void CMesTempView::OnDraw(CDC * pDC)
 		pDC->LineTo(400, 555);
 		
 	};
+	
+
 	// TODO: add draw code for native data here
-	pDC->TextOutW(100, 100, FilePathName);
+	pDC->TextOutW(100, x->x1, FilePathName);
+	
 }
 
 
@@ -151,6 +155,8 @@ void CMesTempView::OnFileOpen()
 		oldFile.Close();
 	}
 	
+	
+	x->czytaj(FilePathName);
 	Invalidate(TRUE);
 	UpdateWindow();
 }
