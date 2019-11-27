@@ -17,9 +17,10 @@ public:
 	bool StRysuj= false;
 	CString FilePathName;
 
+	
 // Operations
 public:
-
+	Input* x = new Input();
 // Overrides
 public:
 	virtual void OnDraw(CDC* pDC);  // overridden to draw this view

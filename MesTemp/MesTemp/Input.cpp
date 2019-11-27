@@ -5,7 +5,7 @@
 Input::Input() {}; //pusty konstruktor aby utworzyc wstepny obiekt
 
 //czytanie pliku i ustalanie atrybutow oraz pakowanie obiektow do wektora
-void Input::czytaj(std::string nazwa, std::vector <Input> & dane)
+void Input::czytaj(CString nazwa)
 {
 	int liczba_obszarow;
 	float skala;
