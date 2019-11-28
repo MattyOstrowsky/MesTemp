@@ -44,12 +44,40 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 	} while (czy);
 }
 
+void Macierze::do_globalnej(Macierze& globalna, float co, int gdziex, int gdziey)
+{
+	bool czy = true;	//zmienna logiczna- czy trzeba twozyæ nowy element macierzy globalnej (zapisywanej jako 3 wektory)?
+	int pop = 0;	//indeks elementu tablicy A macierzy globalnej, po którym nale¿y wstawiæ nowy
+	std::vector<float>::iterator it;
+	std::vector<int>::iterator it2;
+	for (int k = globalna.prow[gdziey] - 1; k < globalna.prow[gdziey + 1]; k++)	//szuka, czy istnieje ju¿ niepusty element maierzy globalnej o takich indeksach
+	{
+		if (globalna.coln[k] == gdziex)
+		{
+			globalna.A[k] += co;
+			czy = false;
+		}
+		if (k == globalna.prow[gdziey] - 1) pop = k;
+		if (globalna.coln[k] < gdziex) pop = k;
+	}
+	if (czy)
+	{
+		it = globalna.A.begin();
+		globalna.A.insert(it + pop + 1, co);	//dodawanie elementu do A
+		it2 = globalna.coln.begin();
+		globalna.coln.insert(it2 + pop + 1, gdziex);	//dodawanie elementu do coln
+		for (int q = gdziey + 1; q < globalna.prow.size(); q++)
+		{
+			globalna.prow[q] += 1;				//zwiêkszanie o 1 indeksów pierwszych niezerowych wyrazów w ka¿dym wierszu poni¿ej dodanego
+		}
+	}
+}
 
 // funkcja dodaj¹ca macierz lokaln¹ do globalnej
-void Macierze::do_globalnej(Macierze& globalna, float lokalna[4][4], int wspolrzedne[4])
+void Macierze::do_globalnej(Macierze& globalna, float lokalna[][4], int wspolrzedne[4])
 {
 	bool czy;	//zmienna logiczna- czy trzeba twozyæ nowy element macierzy globalnej (zapisywanej jako 3 wektory)?
-	int pop;	//indeks elementu tablicy A macierzy globalnej, po którym nale¿y wstawiæ nowy
+	int pop = 0;	//indeks elementu tablicy A macierzy globalnej, po którym nale¿y wstawiæ nowy
 	std::vector<float>::iterator it;
 	std::vector<int>::iterator it2;
 	for (int i = 0; i < 4; i++)
@@ -59,55 +87,8 @@ void Macierze::do_globalnej(Macierze& globalna, float lokalna[4][4], int wspolrz
 			czy = true;
 			if (lokalna[i][j] != 0)
 			{
-				for (int k = globalna.prow[wspolrzedne[i]]; k < globalna.prow[wspolrzedne[i] + 1]; k++)	//szuka, czy istnieje ju¿ niepusty element maierzy globalnej o takich indeksach
-				{
-					if (globalna.coln[k] == wspolrzedne[j])
-					{
-						globalna.A[k] += lokalna[i][j];	//jeœli tak to dodaje do niego wyraz z macierzy lokalnej
-						czy = false;
-					}
-					if (globalna.coln[k] < wspolrzedne[j]) pop = k;
-				}
-				if (czy)
-				{
-					it = globalna.A.begin();
-					globalna.A.insert(it + pop+1, lokalna[i][j]);	//dodawanie elementu do A
-					it2 = globalna.coln.begin();
-					globalna.coln.insert(it2 + pop+1, wspolrzedne[j]);	//dodawanie elementu do coln
-					for (int q = wspolrzedne[i] + 1; 1 < globalna.prow.size(); q++)
-					{
-						globalna.prow[q] += 1;				//zwiêkszanie o 1 indeksów pierwszych niezerowych wyrazów w ka¿dym wierszu poni¿ej dodanego
-					}
-				}
+				globalna.do_globalnej(globalna, lokalna[i][j], wspolrzedne[j], wspolrzedne[i]);
 			}
-		}
-	}
-}
-
-void Macierze::do_globalnej(Macierze& globalna, float co, int gdziex, int gdziey)
-{
-	bool czy = true;	//zmienna logiczna- czy trzeba twozyæ nowy element macierzy globalnej (zapisywanej jako 3 wektory)?
-	int pop;	//indeks elementu tablicy A macierzy globalnej, po którym nale¿y wstawiæ nowy
-	std::vector<float>::iterator it;
-	std::vector<int>::iterator it2;
-	for (int k = globalna.prow[gdziey]; k < globalna.prow[gdziey + 1]; k++)	//szuka, czy istnieje ju¿ niepusty element maierzy globalnej o takich indeksach
-	{
-		if (globalna.coln[k] == gdziex)
-		{
-			globalna.A[k] += co;
-			czy = false;
-		}
-		if (globalna.coln[k] < gdziex) pop = k;
-	}
-	if (czy)
-	{
-		it = globalna.A.begin();
-		globalna.A.insert(it + pop + 1, co);	//dodawanie elementu do A
-		it2 = globalna.coln.begin();
-		globalna.coln.insert(it2 + pop + 1, gdziex);	//dodawanie elementu do coln
-		for (int q = gdziey + 1; 1 < globalna.prow.size(); q++)
-		{
-			globalna.prow[q] += 1;				//zwiêkszanie o 1 indeksów pierwszych niezerowych wyrazów w ka¿dym wierszu poni¿ej dodanego
 		}
 	}
 }
