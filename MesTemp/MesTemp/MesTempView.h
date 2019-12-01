@@ -19,6 +19,7 @@ public:
 
 // Operations
 public:
+	std::vector <Input> wektor_obszarow;
 
 // Overrides
 public:

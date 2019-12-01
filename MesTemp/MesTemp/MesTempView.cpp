@@ -140,7 +140,7 @@ void CMesTempView::OnFileOpen()
 	TCHAR szFilters[] = _T("txt Type Files (*.txt)|*.txt|All Files (*.*)|*.*||");
 	CFileDialog fileDlg(TRUE, _T("txt"), _T("*.txt"), OFN_HIDEREADONLY | OFN_FILEMUSTEXIST, szFilters);
 	if (fileDlg.DoModal() == IDOK)
-	{
+	{	
 		CFile oldFile;
 		ASSERT(oldFile != NULL);
 		oldFile.Open(fileDlg.GetPathName(), CFile::modeRead | CFile::shareExclusive);
@@ -149,7 +149,33 @@ void CMesTempView::OnFileOpen()
 		Serialize(loadArchive);
 		loadArchive.Close();
 		oldFile.Close();
-	}
+
+
+		int liczba_obszarow;
+		int skala;
+
+		std::ifstream plik(FilePathName); //otworzenie pliku o danej nazwie
+
+		if (!plik)
+		{
+			std::cout << "Plik nie moze byc otwarty.\n";
+		}
+		else
+		{
+
+			plik >> liczba_obszarow;
+			plik >> skala;
+
+			for (int i = 0; i < liczba_obszarow; i++)
+			{
+				Input obszar; //utworzenie obiektu obszar
+				obszar.czytaj(plik);
+				wektor_obszarow.push_back(obszar);
+			}
+
+			plik.close();
+		}
+
 	
 	Invalidate(TRUE);
 	UpdateWindow();
