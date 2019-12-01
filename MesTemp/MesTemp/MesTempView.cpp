@@ -56,26 +56,41 @@ BOOL CMesTempView::PreCreateWindow(CREATESTRUCT& cs)
 
 void CMesTempView::OnDraw(CDC * pDC)
 {
+
+	int yos0 = 550;
+	int xos0 = 15;
+	int xx = 40;
 	CMesTempDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
-	if (StRysuj) {
+	if (Rysuj) {
 		pDC->MoveTo(20, 20);
 		pDC->LineTo(10, 20);
 		pDC->LineTo(15, 15);
 		pDC->LineTo(20, 20);
 		pDC->MoveTo(15, 20);
-		pDC->LineTo(15,550);
+		pDC->LineTo(xos0,yos0);
 		pDC->LineTo(400, 550);
 		pDC->MoveTo(400, 555);
 		pDC->LineTo(400, 545);
 		pDC->LineTo(405, 550);
 		pDC->LineTo(400, 555);
+
+		CString s;
 		
+		s.Format(_T("%f"), xx + 10);
+		pDC->TextOutW(100, 200, s);
+		s.Format(_T("%f"), 20 + yos0 + wektor_obszarow[0].y1);
+		pDC->TextOutW(100, 100, s);
+		pDC->MoveTo(xos0 + wektor_obszarow[0].x1, yos0 + wektor_obszarow[0].y1);
+		pDC->LineTo(xos0 + wektor_obszarow[0].x2, yos0 + wektor_obszarow[0].y1);
+		pDC->LineTo(xos0 + wektor_obszarow[0].x2, yos0 + wektor_obszarow[0].y2);
+		pDC->LineTo(xos0 + wektor_obszarow[0].x1, yos0 + wektor_obszarow[0].y2);
+		pDC->LineTo(xos0 + wektor_obszarow[0].x1, yos0 + wektor_obszarow[0].y1);
 	};
 	// TODO: add draw code for native data here
-	pDC->TextOutW(100, 100, FilePathName);
+	
 }
 
 
@@ -126,7 +141,7 @@ void CMesTempView::OnStartZag()
 {
 	//DialZagesc dlgDialZagesc;
 	//dlgDialZagesc.DoModal();
-	StRysuj = true;
+	ZagRysuj = true;
 	Invalidate(TRUE);
 	UpdateWindow();
 
@@ -140,7 +155,7 @@ void CMesTempView::OnFileOpen()
 	TCHAR szFilters[] = _T("txt Type Files (*.txt)|*.txt|All Files (*.*)|*.*||");
 	CFileDialog fileDlg(TRUE, _T("txt"), _T("*.txt"), OFN_HIDEREADONLY | OFN_FILEMUSTEXIST, szFilters);
 	if (fileDlg.DoModal() == IDOK)
-	{	
+	{
 		CFile oldFile;
 		ASSERT(oldFile != NULL);
 		oldFile.Open(fileDlg.GetPathName(), CFile::modeRead | CFile::shareExclusive);
@@ -176,7 +191,8 @@ void CMesTempView::OnFileOpen()
 			plik.close();
 		}
 
-	
-	Invalidate(TRUE);
-	UpdateWindow();
+		Rysuj = true;
+		Invalidate(TRUE);
+		UpdateWindow();
+	}
 }

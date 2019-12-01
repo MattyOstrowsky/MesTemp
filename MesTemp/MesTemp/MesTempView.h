@@ -13,13 +13,16 @@ protected: // create from serialization only
 
 // Attributes
 public:
+	
 	CMesTempDoc* GetDocument() const;
-	bool StRysuj= false;
+	bool ZagRysuj= false;
+	bool Rysuj = false;
 	CString FilePathName;
 
 // Operations
 public:
 	std::vector <Input> wektor_obszarow;
+	
 
 // Overrides
 public:
