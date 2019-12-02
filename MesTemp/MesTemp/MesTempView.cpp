@@ -78,7 +78,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 		CString cc;
 		cc = czy_pokrywa ? "TRUE" : "FALSE";
 
-		pDC->TextOutW(200,200,cc);
+		//pDC->TextOutW(200,200,cc);
 
 		for (int i = 0; i < liczba_obszarow; i++)
 		{
@@ -106,14 +106,27 @@ void CMesTempView::OnDraw(CDC * pDC)
 
 	if (RysSiatka)
 	{
-		Siatka siatka;
+		Siatka siatka(wektor_obszarow);
 		siatka.utworz_siatke(wektor_obszarow);
 		
 		
-		for (int i = 0; i < siatka.kord_x.size; i++)
+		for (int i = 0; i < siatka.kord_x.size(); i++)
 		{
 			pDC->MoveTo(siatka.kord_x[i], 0);
 			pDC->LineTo(siatka.kord_x[i], 1000);
+			CString floatString;
+			floatString.Format(_T("%f"), siatka.kord_x[i]);
+			pDC->TextOutW(400, 10 * i + 200, floatString);
+		}
+		for (int i = 0; i < siatka.kord_y.size(); i++)
+		{
+			CString floatString;
+			floatString.Format(_T("%f"), siatka.kord_y[i]);
+			pDC->TextOutW(200, 20 * i + 200, floatString);
+			pDC->MoveTo(0,siatka.kord_y[i]);
+			pDC->LineTo(1000,siatka.kord_y[i]);
+			
+			
 		}
 
 	}
