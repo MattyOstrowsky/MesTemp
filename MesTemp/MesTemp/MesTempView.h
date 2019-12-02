@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include "MesTempDoc.h"
 
 
 class CMesTempView : public CView
@@ -22,6 +23,8 @@ public:
 	int skala;
 	float yos0 = 550;
 	float xos0 = 15;
+	bool czy_pokrywa = false;
+	bool RysSiatka = false;
 // Operations
 public:
 	std::vector <Input> wektor_obszarow;

@@ -29,6 +29,6 @@ public:
 	
 	Input::Input(); //pusty konstruktor aby utworzyc wstepny obiekt
 	void czytaj(std::ifstream& plik); //czytanie pliku i ustawianie atrybutow
-
+	void test(int, std::vector <Input> wektor, bool & czy_pokrywa);
 };
 

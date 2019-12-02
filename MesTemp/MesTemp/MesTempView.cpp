@@ -13,6 +13,7 @@
 #include "MesTempDoc.h"
 #include "MesTempView.h"
 #include "DialZagesc.h"
+#include "Siatka.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -74,7 +75,10 @@ void CMesTempView::OnDraw(CDC * pDC)
 		pDC->LineTo(400, 545);
 		pDC->LineTo(405, 550);
 		pDC->LineTo(400, 555);
+		CString cc;
+		cc = czy_pokrywa ? "TRUE" : "FALSE";
 
+		pDC->TextOutW(200,200,cc);
 
 		for (int i = 0; i < liczba_obszarow; i++)
 		{
@@ -99,7 +103,20 @@ void CMesTempView::OnDraw(CDC * pDC)
 		}
 		
 	};
-	// TODO: add draw code for native data here
+
+	if (RysSiatka)
+	{
+		Siatka siatka;
+		siatka.utworz_siatke(wektor_obszarow);
+		
+		
+		for (int i = 0; i < siatka.kord_x.size; i++)
+		{
+			pDC->MoveTo(siatka.kord_x[i], 0);
+			pDC->LineTo(siatka.kord_x[i], 1000);
+		}
+
+	}
 	
 }
 
@@ -179,6 +196,7 @@ void CMesTempView::OnFileOpen()
 		
 
 		std::ifstream plik(FilePathName); //otworzenie pliku o danej nazwie
+		Input obszar; //utworzenie obiektu obszar
 
 		if (!plik)
 		{
@@ -189,10 +207,11 @@ void CMesTempView::OnFileOpen()
 
 			plik >> liczba_obszarow;
 			plik >> skala;
+			
 
 			for (int i = 0; i < liczba_obszarow; i++)
 			{
-				Input obszar; //utworzenie obiektu obszar
+				
 				obszar.czytaj(plik);
 				wektor_obszarow.push_back(obszar);
 			}
@@ -200,7 +219,9 @@ void CMesTempView::OnFileOpen()
 			plik.close();
 		}
 
+		obszar.test(liczba_obszarow,wektor_obszarow,czy_pokrywa);
 		Rysuj = true;
+		RysSiatka = true;
 		Invalidate(TRUE);
 		UpdateWindow();
 	}
