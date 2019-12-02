@@ -18,7 +18,10 @@ public:
 	bool ZagRysuj= false;
 	bool Rysuj = false;
 	CString FilePathName;
-
+	int liczba_obszarow;
+	int skala;
+	float yos0 = 550;
+	float xos0 = 15;
 // Operations
 public:
 	std::vector <Input> wektor_obszarow;

@@ -57,9 +57,7 @@ BOOL CMesTempView::PreCreateWindow(CREATESTRUCT& cs)
 void CMesTempView::OnDraw(CDC * pDC)
 {
 
-	int yos0 = 550;
-	int xos0 = 15;
-	int xx = 40;
+	
 	CMesTempDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
@@ -77,17 +75,29 @@ void CMesTempView::OnDraw(CDC * pDC)
 		pDC->LineTo(405, 550);
 		pDC->LineTo(400, 555);
 
-		CString s;
+
+		for (int i = 0; i < liczba_obszarow; i++)
+		{
+			if (wektor_obszarow[i].czy_prostokat) // dla prostokatow
+			{
+				pDC->MoveTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y1);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y4);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y4);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+			}
+			else //dla nieprostokatow
+			{
+				pDC->MoveTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x2, yos0 - wektor_obszarow[i].y2);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x3, yos0 - wektor_obszarow[i].y3);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y4);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+			}
+			
+			
+		}
 		
-		s.Format(_T("%f"), xx + 10);
-		pDC->TextOutW(100, 200, s);
-		s.Format(_T("%f"), 20 + yos0 + wektor_obszarow[0].y1);
-		pDC->TextOutW(100, 100, s);
-		pDC->MoveTo(xos0 + wektor_obszarow[0].x1, yos0 + wektor_obszarow[0].y1);
-		pDC->LineTo(xos0 + wektor_obszarow[0].x2, yos0 + wektor_obszarow[0].y1);
-		pDC->LineTo(xos0 + wektor_obszarow[0].x2, yos0 + wektor_obszarow[0].y2);
-		pDC->LineTo(xos0 + wektor_obszarow[0].x1, yos0 + wektor_obszarow[0].y2);
-		pDC->LineTo(xos0 + wektor_obszarow[0].x1, yos0 + wektor_obszarow[0].y1);
 	};
 	// TODO: add draw code for native data here
 	
@@ -166,8 +176,7 @@ void CMesTempView::OnFileOpen()
 		oldFile.Close();
 
 
-		int liczba_obszarow;
-		int skala;
+		
 
 		std::ifstream plik(FilePathName); //otworzenie pliku o danej nazwie
 
