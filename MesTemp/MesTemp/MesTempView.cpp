@@ -13,6 +13,7 @@
 #include "MesTempDoc.h"
 #include "MesTempView.h"
 #include "DialZagesc.h"
+#include "Siatka.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -56,26 +57,67 @@ BOOL CMesTempView::PreCreateWindow(CREATESTRUCT& cs)
 
 void CMesTempView::OnDraw(CDC * pDC)
 {
+
+	
 	CMesTempDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
-	if (StRysuj) {
+	if (Rysuj) {
 		pDC->MoveTo(20, 20);
 		pDC->LineTo(10, 20);
 		pDC->LineTo(15, 15);
 		pDC->LineTo(20, 20);
 		pDC->MoveTo(15, 20);
-		pDC->LineTo(15,550);
+		pDC->LineTo(xos0,yos0);
 		pDC->LineTo(400, 550);
 		pDC->MoveTo(400, 555);
 		pDC->LineTo(400, 545);
 		pDC->LineTo(405, 550);
 		pDC->LineTo(400, 555);
+		CString cc;
+		cc = czy_pokrywa ? "TRUE" : "FALSE";
+
+		pDC->TextOutW(200,200,cc);
+
+		for (int i = 0; i < liczba_obszarow; i++)
+		{
+			if (wektor_obszarow[i].czy_prostokat) // dla prostokatow
+			{
+				pDC->MoveTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y1);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y4);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y4);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+			}
+			else //dla nieprostokatow
+			{
+				pDC->MoveTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x2, yos0 - wektor_obszarow[i].y2);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x3, yos0 - wektor_obszarow[i].y3);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y4);
+				pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+			}
+			
+			
+		}
 		
 	};
-	// TODO: add draw code for native data here
-	pDC->TextOutW(100, 100, FilePathName);
+
+	if (RysSiatka)
+	{
+		Siatka siatka;
+		siatka.utworz_siatke(wektor_obszarow);
+		
+		
+		for (int i = 0; i < siatka.kord_x.size; i++)
+		{
+			pDC->MoveTo(siatka.kord_x[i], 0);
+			pDC->LineTo(siatka.kord_x[i], 1000);
+		}
+
+	}
+	
 }
 
 
@@ -126,7 +168,7 @@ void CMesTempView::OnStartZag()
 {
 	//DialZagesc dlgDialZagesc;
 	//dlgDialZagesc.DoModal();
-	StRysuj = true;
+	ZagRysuj = true;
 	Invalidate(TRUE);
 	UpdateWindow();
 
@@ -149,8 +191,38 @@ void CMesTempView::OnFileOpen()
 		Serialize(loadArchive);
 		loadArchive.Close();
 		oldFile.Close();
+
+
+		
+
+		std::ifstream plik(FilePathName); //otworzenie pliku o danej nazwie
+		Input obszar; //utworzenie obiektu obszar
+
+		if (!plik)
+		{
+			std::cout << "Plik nie moze byc otwarty.\n";
+		}
+		else
+		{
+
+			plik >> liczba_obszarow;
+			plik >> skala;
+			
+
+			for (int i = 0; i < liczba_obszarow; i++)
+			{
+				
+				obszar.czytaj(plik);
+				wektor_obszarow.push_back(obszar);
+			}
+
+			plik.close();
+		}
+
+		obszar.test(liczba_obszarow,wektor_obszarow,czy_pokrywa);
+		Rysuj = true;
+		RysSiatka = true;
+		Invalidate(TRUE);
+		UpdateWindow();
 	}
-	
-	Invalidate(TRUE);
-	UpdateWindow();
 }

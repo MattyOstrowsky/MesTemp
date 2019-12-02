@@ -12,6 +12,8 @@ public:
 
 	Siatka::Siatka(std::vector <Input>&);
 
+	Siatka::Siatka();
+
 	void utworz_siatke(std::vector <Input>&); //utworzenie wstepnej siatki, argument jest wektorem obiektow klasy od wczytania danych
 
 	void zageszczenie_prostokatow(int, std::vector <float>&); //zageszczenie prostokatow: 

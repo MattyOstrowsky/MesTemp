@@ -33,6 +33,7 @@ void Siatka::utworz_siatke(std::vector <Input> &element)
 			nwezel.push_back({ element[i].x2, element[i].y2 });
 			nwezel.push_back({ element[i].x3, element[i].y3 });
 			nwezel.push_back({ element[i].x4, element[i].y4 });
+			
 		}
 	}
 
