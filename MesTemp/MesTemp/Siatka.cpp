@@ -18,9 +18,9 @@ void Siatka::utworz_siatke(std::vector <Input> &element)
 		if (element[i].czy_prostokat)
 		{
 			kord_x.push_back(element[i].x1);
-			kord_x.push_back(element[i].x2);
+			kord_x.push_back(element[i].x4);
 			kord_y.push_back(element[i].y1);
-			kord_y.push_back(element[i].y2);
+			kord_y.push_back(element[i].y4);
 		}
 	}
 
