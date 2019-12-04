@@ -110,7 +110,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 		Siatka siatka(wektor_obszarow);
 		siatka.utworz_siatke(wektor_obszarow);
 		
-		for (int i = 0; i < siatka.kord_x.size()-1; i++)
+		for (int i = 0; i < siatka.kord_x.size(); i++)
 		{
 			pDC->MoveTo(xos0 + siatka.kord_x[i], 0);
 			pDC->LineTo(xos0 + siatka.kord_x[i], 1000);
@@ -118,7 +118,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 			floatString.Format(_T("%f"), siatka.kord_x[i]);
 			pDC->TextOutW(400, 10 * i + 200, floatString);
 		}
-		for (int i = 0; i < siatka.kord_y.size() - 1; i++)
+		for (int i = 0; i < siatka.kord_y.size() ; i++)
 		{
 			CString floatString;
 			floatString.Format(_T("%f"), siatka.kord_y[i]);
@@ -138,12 +138,13 @@ void CMesTempView::OnDraw(CDC * pDC)
 					floatString.Format(_T("%f"), siatka.kord_x[i]);
 					pDC->TextOutW(400, 10 * i + 200, floatString);
 				}
-				for (int i = 0; i < siatka.kord_x.size(); i++)
+				
+				for (int i = 0; i < siatka.kord_y.size(); i++)
 				{
-					pDC->MoveTo(xos0 + siatka.kord_x[i], 0);
-					pDC->LineTo(xos0 + siatka.kord_x[i], 1000);
+					pDC->MoveTo(0, yos0 - siatka.kord_y[i]);
+					pDC->LineTo( 1000, yos0 - siatka.kord_y[i] );
 					CString floatString;
-					floatString.Format(_T("%f"), siatka.kord_x[i]);
+					floatString.Format(_T("%f"), siatka.kord_y[i]);
 					pDC->TextOutW(400, 10 * i + 200, floatString);
 				}
 
