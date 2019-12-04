@@ -57,7 +57,7 @@ BOOL CMesTempView::PreCreateWindow(CREATESTRUCT& cs)
 
 void CMesTempView::OnDraw(CDC * pDC)
 {
-
+	
 	
 	CMesTempDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
@@ -106,31 +106,52 @@ void CMesTempView::OnDraw(CDC * pDC)
 
 	if (RysSiatka)
 	{
+		
 		Siatka siatka(wektor_obszarow);
 		siatka.utworz_siatke(wektor_obszarow);
 		
-		
-		for (int i = 0; i < siatka.kord_x.size(); i++)
+		for (int i = 0; i < siatka.kord_x.size()-1; i++)
 		{
-			pDC->MoveTo(siatka.kord_x[i], 0);
-			pDC->LineTo(siatka.kord_x[i], 1000);
+			pDC->MoveTo(xos0 + siatka.kord_x[i], 0);
+			pDC->LineTo(xos0 + siatka.kord_x[i], 1000);
 			CString floatString;
 			floatString.Format(_T("%f"), siatka.kord_x[i]);
 			pDC->TextOutW(400, 10 * i + 200, floatString);
 		}
-		for (int i = 0; i < siatka.kord_y.size(); i++)
+		for (int i = 0; i < siatka.kord_y.size() - 1; i++)
 		{
 			CString floatString;
 			floatString.Format(_T("%f"), siatka.kord_y[i]);
 			pDC->TextOutW(200, 20 * i + 200, floatString);
-			pDC->MoveTo(0,siatka.kord_y[i]);
-			pDC->LineTo(1000,siatka.kord_y[i]);
-			
-			
+			pDC->MoveTo(0, yos0 - siatka.kord_y[i]);
+			pDC->LineTo(1000, yos0 - siatka.kord_y[i]);
 		}
+			if (ZagRysuj)
+			{
+				siatka.zageszczenie_prostokatow(5, siatka.kord_y);
+				siatka.zageszczenie_prostokatow(5, siatka.kord_x);
+				for (int i = 0; i < siatka.kord_x.size() ; i++)
+				{
+					pDC->MoveTo(xos0 + siatka.kord_x[i], 0);
+					pDC->LineTo(xos0 + siatka.kord_x[i], 1000);
+					CString floatString;
+					floatString.Format(_T("%f"), siatka.kord_x[i]);
+					pDC->TextOutW(400, 10 * i + 200, floatString);
+				}
+				for (int i = 0; i < siatka.kord_x.size(); i++)
+				{
+					pDC->MoveTo(xos0 + siatka.kord_x[i], 0);
+					pDC->LineTo(xos0 + siatka.kord_x[i], 1000);
+					CString floatString;
+					floatString.Format(_T("%f"), siatka.kord_x[i]);
+					pDC->TextOutW(400, 10 * i + 200, floatString);
+				}
+
+			}
+		
 
 	}
-	
+
 }
 
 
@@ -181,6 +202,7 @@ void CMesTempView::OnStartZag()
 {
 	//DialZagesc dlgDialZagesc;
 	//dlgDialZagesc.DoModal();
+
 	ZagRysuj = true;
 	Invalidate(TRUE);
 	UpdateWindow();
