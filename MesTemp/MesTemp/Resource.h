@@ -19,6 +19,12 @@
 #define ID_VIEW_APPLOOK_OFF_2007_AQUA   218
 #define ID_VIEW_APPLOOK_WINDOWS_7       219
 #define IDD_DIALOG1                     310
+#define IDC_EDIT2                       1017
+#define IDC_SPIN2                       1018
+#define IDC_EDIT5                       1022
+#define IDC_SPIN3                       1023
+#define IDC_CHECK1                      1024
+#define IDC_CHECK2                      1025
 #define ID_START_WCZYTAJDANE            32771
 #define ID_START_ZAG32772               32772
 #define ID_START_GENERUJSIATK32773      32773
@@ -31,7 +37,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        312
 #define _APS_NEXT_COMMAND_VALUE         32776
-#define _APS_NEXT_CONTROL_VALUE         1000
+#define _APS_NEXT_CONTROL_VALUE         1026
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
 #endif

@@ -31,6 +31,8 @@ BEGIN_MESSAGE_MAP(CMesTempView, CView)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
 	ON_COMMAND(ID_START_ZAG32772, &CMesTempView::OnStartZag)
 	ON_COMMAND(ID_FILE_OPEN, &CMesTempView::OnFileOpen)
+	ON_COMMAND(ID_START_GENERUJSIATK32773, &CMesTempView::OnStartGeneruj)
+
 END_MESSAGE_MAP()
 
 // CMesTempView construction/destruction
@@ -64,21 +66,29 @@ void CMesTempView::OnDraw(CDC * pDC)
 	if (!pDoc)
 		return;
 	if (Rysuj) {
+		CPen pen1(PS_SOLID, 2, RGB(0, 0, 0));
+		CPen* oldpen1 = pDC->SelectObject(&pen1);
+		pDC->Rectangle(8, 10, 800, 600);
+		CPen pen2(PS_SOLID, 2, RGB(0, 0, 0));
+		CPen* oldpen2 = pDC->SelectObject(&pen2);
 		pDC->MoveTo(20, 20);
 		pDC->LineTo(10, 20);
 		pDC->LineTo(15, 15);
 		pDC->LineTo(20, 20);
 		pDC->MoveTo(15, 20);
 		pDC->LineTo(xos0,yos0);
-		pDC->LineTo(400, 550);
-		pDC->MoveTo(400, 555);
-		pDC->LineTo(400, 545);
-		pDC->LineTo(405, 550);
-		pDC->LineTo(400, 555);
+		pDC->LineTo(790, 590);
+		pDC->MoveTo(790, 595);
+		pDC->LineTo(790, 585);
+		pDC->LineTo(795, 590);
+		pDC->LineTo(790, 595);
+		
 		CString cc;
 		cc = czy_pokrywa ? "TRUE" : "FALSE";
 
 		//pDC->TextOutW(200,200,cc);
+		CPen pen3(PS_SOLID, 2, RGB(0, 0, 0));
+		CPen* oldpen3 = pDC->SelectObject(&pen3);
 
 		for (int i = 0; i < liczba_obszarow; i++)
 		{
@@ -106,46 +116,41 @@ void CMesTempView::OnDraw(CDC * pDC)
 
 	if (RysSiatka)
 	{
-		
+		CPen pen1(PS_SOLID, 1, RGB(50, 205, 50));
+		CPen* oldpen = pDC->SelectObject(&pen1);
+
 		Siatka siatka(wektor_obszarow);
 		siatka.utworz_siatke(wektor_obszarow);
 		
 		for (int i = 0; i < siatka.kord_x.size(); i++)
 		{
-			pDC->MoveTo(xos0 + siatka.kord_x[i], 0);
-			pDC->LineTo(xos0 + siatka.kord_x[i], 1000);
-			CString floatString;
-			floatString.Format(_T("%f"), siatka.kord_x[i]);
-			pDC->TextOutW(400, 10 * i + 200, floatString);
+			pDC->MoveTo(xos0 + siatka.kord_x[i], 10);
+			pDC->LineTo(xos0 + siatka.kord_x[i], 600);
+
 		}
 		for (int i = 0; i < siatka.kord_y.size() ; i++)
 		{
-			CString floatString;
-			floatString.Format(_T("%f"), siatka.kord_y[i]);
-			pDC->TextOutW(200, 20 * i + 200, floatString);
-			pDC->MoveTo(0, yos0 - siatka.kord_y[i]);
-			pDC->LineTo(1000, yos0 - siatka.kord_y[i]);
+			pDC->MoveTo(8, yos0 - siatka.kord_y[i]);
+			pDC->LineTo(800, yos0 - siatka.kord_y[i]);
 		}
 			if (ZagRysuj)
 			{
-				siatka.zageszczenie_prostokatow(5, siatka.kord_y);
-				siatka.zageszczenie_prostokatow(5, siatka.kord_x);
+				siatka.zageszczenie_prostokatow(zag_x, siatka.kord_y);
+				siatka.zageszczenie_prostokatow(zag_y, siatka.kord_x);
 				for (int i = 0; i < siatka.kord_x.size() ; i++)
 				{
-					pDC->MoveTo(xos0 + siatka.kord_x[i], 0);
-					pDC->LineTo(xos0 + siatka.kord_x[i], 1000);
-					CString floatString;
-					floatString.Format(_T("%f"), siatka.kord_x[i]);
-					pDC->TextOutW(400, 10 * i + 200, floatString);
+					pDC->MoveTo(xos0 + siatka.kord_x[i], 10);
+					pDC->LineTo(xos0 + siatka.kord_x[i], 600);
+					//CString floatString;
+					//floatString.Format(_T("%f"), siatka.kord_x[i]);
+					//pDC->TextOutW(400, 10 * i + 200, floatString);
 				}
 				
 				for (int i = 0; i < siatka.kord_y.size(); i++)
 				{
-					pDC->MoveTo(0, yos0 - siatka.kord_y[i]);
-					pDC->LineTo( 1000, yos0 - siatka.kord_y[i] );
-					CString floatString;
-					floatString.Format(_T("%f"), siatka.kord_y[i]);
-					pDC->TextOutW(400, 10 * i + 200, floatString);
+					pDC->MoveTo(8, yos0 - siatka.kord_y[i]);
+					pDC->LineTo( 800, yos0 - siatka.kord_y[i] );
+					
 				}
 
 			}
@@ -201,9 +206,10 @@ CMesTempDoc* CMesTempView::GetDocument() const // non-debug version is inline
 
 void CMesTempView::OnStartZag()
 {
-	//DialZagesc dlgDialZagesc;
-	//dlgDialZagesc.DoModal();
-
+	DialZagesc dlgDialZagesc;
+	dlgDialZagesc.DoModal();
+	zag_x = dlgDialZagesc.zag_x;
+	zag_y = dlgDialZagesc.zag_y;
 	ZagRysuj = true;
 	Invalidate(TRUE);
 	UpdateWindow();
@@ -257,8 +263,18 @@ void CMesTempView::OnFileOpen()
 
 		obszar.test(liczba_obszarow,wektor_obszarow,czy_pokrywa);
 		Rysuj = true;
-		RysSiatka = true;
 		Invalidate(TRUE);
 		UpdateWindow();
+		
 	}
 }
+
+
+void CMesTempView::OnStartGeneruj()
+{
+	RysSiatka = true;
+	Invalidate(TRUE);
+	UpdateWindow();
+}
+
+

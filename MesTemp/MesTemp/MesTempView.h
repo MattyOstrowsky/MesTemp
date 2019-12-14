@@ -5,6 +5,7 @@
 #pragma once
 #include "MesTempDoc.h"
 #include "Siatka.h"
+#include "DialZagesc.h"
 
 class CMesTempView : public CView
 {
@@ -21,7 +22,8 @@ public:
 	CString FilePathName;
 	int liczba_obszarow;
 	int skala;
-	float yos0 = 550;
+	int zag_y, zag_x;
+	float yos0 = 590;
 	float xos0 = 15;
 	bool czy_pokrywa = false;
 	bool RysSiatka = false;
@@ -57,6 +59,8 @@ protected:
 public:
 	afx_msg void OnStartZag();
 	afx_msg void OnFileOpen();
+	afx_msg void OnStartGeneruj();
+
 };
 
 #ifndef _DEBUG  // debug version in MesTempView.cpp
