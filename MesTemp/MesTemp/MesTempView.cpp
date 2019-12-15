@@ -111,7 +111,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 			
 			
 		}
-		
+		Rysuj = false;
 	};
 
 	if (RysSiatka)
@@ -152,7 +152,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 					pDC->LineTo( 800, yos0 - siatka.kord_y[i] );
 					
 				}
-
+				ZagRysuj = false;
 			}
 		
 
@@ -263,6 +263,8 @@ void CMesTempView::OnFileOpen()
 
 		obszar.test(liczba_obszarow,wektor_obszarow,czy_pokrywa);
 		Rysuj = true;
+		
+		
 		Invalidate(TRUE);
 		UpdateWindow();
 		
