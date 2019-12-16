@@ -14,7 +14,7 @@ void Prostokat::ust_temp(float t1, float t2, float t3, float t4)
 	T4 = t4;
 }
 
-void Prostokat::lokalna(float lamx, float lamy, float(&macierz)[][4], float (&P)[4], float wys, float szer)
+void Prostokat::lokalna(float lamx, float lamy, float(&macierz)[16], float (&P)[4], float wys, float szer)
 {
 	int mx[4][4] = { {2,-2,-1,1},{-2,2,1,-1},{-1,1,2,-2},{1,-1,-2,2} };
 	int my[4][4] = { {2,1,-1,-2},{1,2,-2,-1},{-1,-2,2,1},{-2,-1,1,2} };
@@ -25,7 +25,7 @@ void Prostokat::lokalna(float lamx, float lamy, float(&macierz)[][4], float (&P)
 	{
 		for (int j = 0; j < 4; j++)
 		{
-			macierz[i][j] = pomx * mx[i][j] + pomy * my[i][j];
+			macierz[i+j*4] = pomx * mx[i][j] + pomy * my[i][j];
 		}
 		P[i] = pomp;
 	}

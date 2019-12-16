@@ -3,8 +3,9 @@
 //element prostok¹tny
 class Prostokat
 {
+public:
 	//numer elementu i lewego dolnego elementu(na podstawie w³aœciwoœci siatki mo¿na wyliczyæ numery wszystkich wêz³ów)
-	int nr;
+	int nr, n1;
 	//Temperatury na wêz³ach
 	float Q, T1, T2, T3, T4;
 	//konstruktor
@@ -14,7 +15,7 @@ class Prostokat
 	//funkcja zmieniaj¹ca temperatury na wêz³ach
 	void ust_temp(float t1, float t2, float t3, float t4);
 	//funkcja tworz¹ca macierz lokaln¹ prostok¹tnego elementu
-	void lokalna(float lamx, float lamy, float (&macierz)[][4], float (&P)[4], float wys, float szer);
+	void lokalna(float lamx, float lamy, float (&macierz)[16], float (&P)[4], float wys, float szer);
 
 };
 
