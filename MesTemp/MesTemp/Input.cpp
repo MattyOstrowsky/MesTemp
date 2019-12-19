@@ -15,7 +15,7 @@ void Input::czytaj(std::ifstream& plik)
 	else //dla nieprostokatow
 		plik >> pion >> nr >> x1 >> y1 >> x2 >> y2 >> x3 >> y3 >> x4 >> y4;
 
-	plik >> czy_zrodlo >> moc_zrodla >> przewodnosc >> material;
+	plik >> czy_zrodlo >> moc_zrodla >> przewodnosc_x >>przewodnosc_y >> material;
 
 };
 void Input::test(int liczba_obszarow, std::vector <Input> wektor, bool & czy_pokrywa)

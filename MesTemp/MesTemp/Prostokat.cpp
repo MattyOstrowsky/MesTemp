@@ -1,17 +1,12 @@
 #include "pch.h"
 #include "Prostokat.h"
 
-void Prostokat::numeruj (int n)
+Prostokat::Prostokat(int n, int n_1, int o, float q)
 {
 	nr = n;
-}
-
-void Prostokat::ust_temp(float t1, float t2, float t3, float t4)
-{
-	T1 = t1;
-	T2 = t2;
-	T3 = t3;
-	T4 = t4;
+	n1 = n_1;
+	obszar = o;
+	Q = q;
 }
 
 void Prostokat::lokalna(float lamx, float lamy, float(&macierz)[16], float (&P)[4], float wys, float szer)
