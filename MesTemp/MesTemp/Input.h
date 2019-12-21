@@ -24,7 +24,8 @@ public:
 	float y4;
 	bool czy_zrodlo; //okresla czy w obszarze jest zrodlo
 	float moc_zrodla; //okresla moc zrodla
-	float przewodnosc; //okresla przewodnosc obszaru
+	float przewodnosc_x; //okresla przewodnosc obszaru
+	float przewodnosc_y;
 	char material[15]; //nazwa materialu
 	
 	Input::Input(); //pusty konstruktor aby utworzyc wstepny obiekt

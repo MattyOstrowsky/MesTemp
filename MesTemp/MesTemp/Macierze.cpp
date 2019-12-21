@@ -74,7 +74,7 @@ void Macierze::do_globalnej(Macierze& globalna, float co, int gdziex, int gdziey
 }
 
 // funkcja dodaj¹ca macierz lokaln¹ do globalnej
-void Macierze::do_globalnej(Macierze& globalna, float lokalna[][4], float lokp[4], float (&P)[4], int wspolrzedne[4])
+void Macierze::do_globalnej(Macierze& globalna, float lokalna[][4], float lokp[4],std::vector <float>& P, int wspolrzedne[4])
 {
 	bool czy;	//zmienna logiczna- czy trzeba twozyæ nowy element macierzy globalnej (zapisywanej jako 3 wektory)?
 	int pop = 0;	//indeks elementu tablicy A macierzy globalnej, po którym nale¿y wstawiæ nowy

@@ -1,20 +1,15 @@
 #include "pch.h"
 #include "Prostokat.h"
 
-void Prostokat::numeruj (int n)
+Prostokat::Prostokat(int n, int n_1, int o, float q)
 {
 	nr = n;
+	n1 = n_1;
+	obszar = o;
+	Q = q;
 }
 
-void Prostokat::ust_temp(float t1, float t2, float t3, float t4)
-{
-	T1 = t1;
-	T2 = t2;
-	T3 = t3;
-	T4 = t4;
-}
-
-void Prostokat::lokalna(float lamx, float lamy, float(&macierz)[][4], float (&P)[4], float wys, float szer)
+void Prostokat::lokalna(float lamx, float lamy, float(&macierz)[16], float (&P)[4], float wys, float szer)
 {
 	int mx[4][4] = { {2,-2,-1,1},{-2,2,1,-1},{-1,1,2,-2},{1,-1,-2,2} };
 	int my[4][4] = { {2,1,-1,-2},{1,2,-2,-1},{-1,-2,2,1},{-2,-1,1,2} };
@@ -25,7 +20,7 @@ void Prostokat::lokalna(float lamx, float lamy, float(&macierz)[][4], float (&P)
 	{
 		for (int j = 0; j < 4; j++)
 		{
-			macierz[i][j] = pomx * mx[i][j] + pomy * my[i][j];
+			macierz[i+j*4] = pomx * mx[i][j] + pomy * my[i][j];
 		}
 		P[i] = pomp;
 	}
