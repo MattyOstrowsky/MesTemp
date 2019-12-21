@@ -9,6 +9,8 @@ class Input
 
 public:
 
+	int liczba_obszarow;
+	float skala;
 	int nr; //nr porzadkowy
 	bool czy_prostokat; //okresla czy obszar jest prostokatem
 	bool pion; //jesli obszar nie jest prostokatem to atrybut okresla czy obszar jest pionowy (1) czy poziomy (0)
@@ -29,7 +31,7 @@ public:
 	char material[15]; //nazwa materialu
 	
 	Input::Input(); //pusty konstruktor aby utworzyc wstepny obiekt
-	void czytaj(std::ifstream& plik); //czytanie pliku i ustawianie atrybutow
+	void czytaj(std::fstream& plik); //czytanie pliku i ustawianie atrybutow
 	void test(int, std::vector <Input> wektor, bool & czy_pokrywa);
 };
 

@@ -5,9 +5,8 @@
 Input::Input() {}; //pusty konstruktor aby utworzyc wstepny obiekt
 
 //czytanie pliku i ustalanie atrybutow oraz pakowanie obiektow do wektora
-void Input::czytaj(std::ifstream& plik)
+void Input::czytaj(std::fstream& plik)
 {
-
 	plik >> czy_prostokat;
 
 	if (czy_prostokat) // dla prostokatow

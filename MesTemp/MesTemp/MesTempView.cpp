@@ -241,34 +241,35 @@ void CMesTempView::OnFileOpen()
 		oldFile.Close();
 
 
-		
+	
 
-		std::ifstream plik(FilePathName); //otworzenie pliku o danej nazwie
-		Input obszar; //utworzenie obiektu obszar
+		std::fstream plik; //otworzenie pliku o danej nazwie
+		plik.open(FilePathName, std::ios::in);
 
-		if (!plik)
-		{
-			std::cout << "Plik nie moze byc otwarty.\n";
-		}
-		else
+		if (plik.good())
 		{
 
 			plik >> liczba_obszarow;
 			plik >> skala;
-			
 
 			for (int i = 0; i < liczba_obszarow; i++)
-			{
-				
+			{	
+				Input obszar; //utworzenie obiektu obszar
 				obszar.czytaj(plik);
+				obszar.liczba_obszarow = liczba_obszarow;
+				obszar.skala = skala;
 				if (obszar.x4 > x_max)
 					x_max = obszar.x4;
 				if (obszar.y4 > y_max)
 					y_max = obszar.y4;
 				wektor_obszarow.push_back(obszar);
+
+
+			
+				
 			}
 
-			plik.close();
+			
 		}
 		while ((skala * x_max) > 800 || (skala * y_max) > 600) {
 			skala -= 0.1;
@@ -276,7 +277,7 @@ void CMesTempView::OnFileOpen()
 			
 
 
-		obszar.test(liczba_obszarow,wektor_obszarow,czy_pokrywa);
+		//obszar.test(liczba_obszarow,wektor_obszarow,czy_pokrywa);
 		Rysuj = true;
 		
 		

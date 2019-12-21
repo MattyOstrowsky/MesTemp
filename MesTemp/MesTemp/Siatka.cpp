@@ -11,6 +11,8 @@ void Siatka::utworz_siatke(std::vector <Input> &element)
 
 	//wczytanie danych
 	int ilosc_elementow = element.size();
+	float skala = element[0].skala;
+
 
 	//dodawanie kordów x i y na podstawie wprowadzonych obszarów do siatki prostokatnej
 	for (int i = 0; i < ilosc_elementow; i++)
