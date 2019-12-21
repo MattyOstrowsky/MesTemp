@@ -12,6 +12,7 @@ void Input::czytaj(std::ifstream& plik)
 
 	if (czy_prostokat) // dla prostokatow
 		plik >> nr >> x1 >> y1 >> x4 >> y4;
+		
 	else //dla nieprostokatow
 		plik >> pion >> nr >> x1 >> y1 >> x2 >> y2 >> x3 >> y3 >> x4 >> y4;
 

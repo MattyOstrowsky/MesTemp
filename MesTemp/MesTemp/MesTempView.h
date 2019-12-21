@@ -21,12 +21,16 @@ public:
 	bool Rysuj = false;
 	CString FilePathName;
 	int liczba_obszarow;
-	int skala;
+	float skala=1;
 	int zag_y, zag_x;
 	float yos0 = 590;
 	float xos0 = 15;
 	bool czy_pokrywa = false;
 	bool RysSiatka = false;
+	float x_max = 0;
+	float y_max = 0;
+
+
 
 	
 // Operations

@@ -83,8 +83,16 @@ void CMesTempView::OnDraw(CDC * pDC)
 		pDC->LineTo(795, 590);
 		pDC->LineTo(790, 595);
 		
-		CString cc;
-		cc = czy_pokrywa ? "TRUE" : "FALSE";
+		CString floatString;
+		
+		floatString = "skala:";
+		pDC->TextOutW(960, 50, floatString);
+		floatString = "liczba elementów:";
+		pDC->TextOutW(960, 70, floatString);
+		floatString.Format(_T("%f"), liczba_obszarow);
+		pDC->TextOutW(1170, 70, floatString);
+		floatString.Format(_T("%f"), skala);
+		pDC->TextOutW(1000,50, floatString);
 
 		//pDC->TextOutW(200,200,cc);
 		CPen pen3(PS_SOLID, 2, RGB(0, 0, 0));
@@ -94,11 +102,11 @@ void CMesTempView::OnDraw(CDC * pDC)
 		{
 			if (wektor_obszarow[i].czy_prostokat) // dla prostokatow
 			{
-				pDC->MoveTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
-				pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y1);
-				pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y4);
-				pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y4);
-				pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+				pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1),  (yos0 - skala * wektor_obszarow[i].y1));
+				pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4),  (yos0 - skala * wektor_obszarow[i].y1));
+				pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4),  (yos0 - skala * wektor_obszarow[i].y4));
+				pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1),  (yos0 - skala * wektor_obszarow[i].y4));
+				pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1),  (yos0 - skala * wektor_obszarow[i].y1));
 			}
 			else //dla nieprostokatow
 			{
@@ -111,7 +119,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 			
 			
 		}
-		Rysuj = false;
+		
 	};
 
 	if (RysSiatka)
@@ -141,9 +149,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 				{
 					pDC->MoveTo(xos0 + siatka.kord_x[i], 10);
 					pDC->LineTo(xos0 + siatka.kord_x[i], 600);
-					//CString floatString;
-					//floatString.Format(_T("%f"), siatka.kord_x[i]);
-					//pDC->TextOutW(400, 10 * i + 200, floatString);
+					
 				}
 				
 				for (int i = 0; i < siatka.kord_y.size(); i++)
@@ -152,7 +158,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 					pDC->LineTo( 800, yos0 - siatka.kord_y[i] );
 					
 				}
-				ZagRysuj = false;
+				
 			}
 		
 
@@ -255,11 +261,20 @@ void CMesTempView::OnFileOpen()
 			{
 				
 				obszar.czytaj(plik);
+				if (obszar.x4 > x_max)
+					x_max = obszar.x4;
+				if (obszar.y4 > y_max)
+					y_max = obszar.y4;
 				wektor_obszarow.push_back(obszar);
 			}
 
 			plik.close();
 		}
+		while ((skala * x_max) > 800 || (skala * y_max) > 600) {
+			skala -= 0.1;
+		}
+			
+
 
 		obszar.test(liczba_obszarow,wektor_obszarow,czy_pokrywa);
 		Rysuj = true;
