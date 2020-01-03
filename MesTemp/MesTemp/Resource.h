@@ -30,13 +30,19 @@
 #define ID_START_GENERUJSIATK32773      32773
 #define ID_START_RYSUJ                  32774
 #define ID_START_ZAPISZ                 32775
+#define ID_START_ZAG32777               32777
+#define ID_BUTTON32779                  32779
+#define ID_MENU_PRZYBLI32781            32781
+#define ID_MENU_ODDAL                   32782
+#define ID_START_ZAPISZ32783            32783
+#define ID_START_ROZK32784              32784
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        312
-#define _APS_NEXT_COMMAND_VALUE         32776
+#define _APS_NEXT_COMMAND_VALUE         32785
 #define _APS_NEXT_CONTROL_VALUE         1026
 #define _APS_NEXT_SYMED_VALUE           310
 #endif

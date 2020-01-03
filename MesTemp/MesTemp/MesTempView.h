@@ -20,16 +20,21 @@ public:
 	bool ZagRysuj= false;
 	bool Rysuj = false;
 	CString FilePathName;
-	int liczba_obszarow;
+	float liczba_obszarow;
 	float skala=1;
 	int zag_y, zag_x;
 	float yos0 = 590;
 	float xos0 = 15;
+	float yos00 = 590;
+	float xos00 = 15;
 	bool czy_pokrywa = false;
 	bool RysSiatka = false;
 	float x_max = 0;
 	float y_max = 0;
-
+	float xPos;
+	float yPos;
+	float skalaTrue;
+	bool RozRysuj = false;
 
 
 	
@@ -65,6 +70,11 @@ public:
 	afx_msg void OnFileOpen();
 	afx_msg void OnStartGeneruj();
 
+	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
+	afx_msg void OnMenuPrzybli();
+	afx_msg void OnMenuOddal();
+	afx_msg void OnStartZag32777();
+	afx_msg void OnStartRozk();
 };
 
 #ifndef _DEBUG  // debug version in MesTempView.cpp
