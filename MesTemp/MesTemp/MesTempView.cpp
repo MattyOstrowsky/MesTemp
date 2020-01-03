@@ -14,6 +14,7 @@
 #include "MesTempView.h"
 #include "DialZagesc.h"
 #include "Siatka.h"
+#include "licz.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -298,14 +299,18 @@ void CMesTempView::OnDraw(CDC * pDC)
 	}
 	if (RozRysuj)
 	{
-		for (int i = 8; i < 800; i++)
+		licz licz;
+		licz.rozw;
+		int temp; 
+
+		for (int x = 8; x < 800; x++)
 		{
-			for (int j = 10; j < 600; j++) 
+			for (int y = 10; y < 600; y++) 
 			{
-			
+				//int temp = licz.temp(x, y); na próbe czy cos wgl sie zmieni
+				pDC->SetPixel(x, y, RGB(temp, 105, 200));
 			}
 		}
-		pDC->SetPixel(900, 555, RGB(150, 105, 200));
 	}
 }
 
