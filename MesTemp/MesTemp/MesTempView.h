@@ -36,12 +36,12 @@ public:
 	float skalaTrue;
 	bool RozRysuj = false;
 	std::vector<float> wynikRozw;
-
+	
 	
 // Operations
 public:
 	std::vector <Input> wektor_obszarow;
-	//Siatka siatka;
+
 
 // Overrides
 public:

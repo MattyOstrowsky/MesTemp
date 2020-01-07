@@ -281,27 +281,29 @@ void CMesTempView::OnDraw(CDC * pDC)
 				pDC->MoveTo(8, yos0 - skala * siatka.kord_y[i]);
 				pDC->LineTo(800, yos0 - skala * siatka.kord_y[i]);
 			}
-		}
-		
-		
-
-	}
-	if (RozRysuj)
-	{
-		licz licz;
-		//licz.rozw( ,wynikRozw,siatka,wektor_obszarow);
-		int nr;
-		int temp; 
-
-		for (int x = 8; x < 800; x++)
-		{
-			for (int y = 10; y < 600; y++) 
+			if (RozRysuj)
 			{
-				//int temp = licz.temp(x, y, nr ,wynikRozw,e,siatka); 
-				//pDC->SetPixel(x, y, RGB(temp, 105, 200));
+				licz licz;
+				licz.rozw(wynikRozw, siatka, wektor_obszarow);
+				int nr;
+				int temp = 0;
+
+				for (int x = 200; x < 400; x++)
+				{
+					for (int y = 400; y < 600; y++)
+					{
+						//temp = licz.temp(x, y, nr ,wynikRozw,siatka); 
+						if(temp>0&&temp<255)
+							pDC->SetPixel(x, y, RGB(temp, 105, 200));
+					}
+				}
 			}
 		}
+		
+		
+
 	}
+	
 }
 
 
