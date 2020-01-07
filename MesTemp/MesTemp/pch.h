@@ -12,7 +12,6 @@
 #include "framework.h"
 #include "Siatka.h"
 #include "Input.h"
-#include "Prostokat.h"
 #include "Macierze.h"
 #include <iostream>
 #include <vector>

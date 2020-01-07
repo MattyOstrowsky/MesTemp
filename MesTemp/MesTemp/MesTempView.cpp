@@ -93,7 +93,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 		
 		floatString = "skala:";
 		pDC->TextOutW(960, 50, floatString);
-		floatString = "liczba elementów:";
+		floatString = "liczba elementï¿½w:";
 		pDC->TextOutW(960, 70, floatString);
 		floatString.Format(_T("%f"), liczba_obszarow);
 		pDC->TextOutW(1170, 70, floatString);
@@ -357,7 +357,7 @@ void CMesTempView::OnStartZag()
 
 void CMesTempView::OnFileOpen()
 {
-	// TODO: Dodaj tutaj swój kod procedury obs³ugi polecenia
+	// TODO: Dodaj tutaj swï¿½j kod procedury obsï¿½ugi polecenia
 	CFile newfile;
 	TCHAR szFilters[] = _T("txt Type Files (*.txt)|*.txt|All Files (*.*)|*.*||");
 	CFileDialog fileDlg(TRUE, _T("txt"), _T("*.txt"), OFN_HIDEREADONLY | OFN_FILEMUSTEXIST, szFilters);
@@ -423,7 +423,7 @@ void CMesTempView::OnStartGeneruj()
 
 void CMesTempView::OnLButtonUp(UINT nFlags, CPoint point)
 {
-	// TODO: Dodaj tutaj swój kod procedury obs³ugi komunikatów i/lub wywo³aj domyœlny
+	// TODO: Dodaj tutaj swï¿½j kod procedury obsï¿½ugi komunikatï¿½w i/lub wywoï¿½aj domyï¿½lny
 
 	CView::OnLButtonUp(nFlags, point);
 	
