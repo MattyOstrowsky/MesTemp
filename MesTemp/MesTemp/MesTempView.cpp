@@ -197,7 +197,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 					{
 						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y4));
 					}
-					else if (8 > (xos0 + skala * wektor_obszarow[i].x1) && 800 > (xos0 + skala * wektor_obszarow[i].x1)&& (xos0 + skala * wektor_obszarow[i].x1) >8)
+					else if (8 > (xos0 + skala * wektor_obszarow[i].x1) && 800 > (xos0 + skala * wektor_obszarow[i].x4)&& (xos0 + skala * wektor_obszarow[i].x4) >8)
 					{
 						
 						pDC->LineTo(8, (yos0 - skala * wektor_obszarow[i].y4));
@@ -262,53 +262,43 @@ void CMesTempView::OnDraw(CDC * pDC)
 
 		Siatka siatka(wektor_obszarow);
 		siatka.utworz_siatke(wektor_obszarow);
+		siatka.zageszczenie_prostokatow(zag_y, siatka.kord_y);
+		siatka.zageszczenie_prostokatow(zag_x, siatka.kord_x);
 		
 		for (int i = 0; i < siatka.kord_x.size(); i++)
 		{
-			pDC->MoveTo(xos0 + skala * siatka.kord_x[i], 10);
-			pDC->LineTo(xos0 + skala * siatka.kord_x[i], 600);
+			if ((xos0 + skala * siatka.kord_x[i]) > 8 && (xos0 + skala * siatka.kord_x[i]) < 800)
+			{
+				pDC->MoveTo(xos0 + skala * siatka.kord_x[i], 10);
+				pDC->LineTo(xos0 + skala * siatka.kord_x[i], 600);
+			}
 
 		}
 		for (int i = 0; i < siatka.kord_y.size() ; i++)
 		{
-			pDC->MoveTo(8,  yos0 - skala * siatka.kord_y[i]);
-			pDC->LineTo(800,  yos0 - skala * siatka.kord_y[i]);
-		}
-		RysSiatka = false;
-			if (ZagRysuj)
+			if ((yos0 - skala * siatka.kord_y[i]) > 10 && (yos0 - skala * siatka.kord_y[i]) < 600)
 			{
-				siatka.zageszczenie_prostokatow(zag_y, siatka.kord_y);
-				siatka.zageszczenie_prostokatow(zag_x, siatka.kord_x);
-				for (int i = 0; i < siatka.kord_x.size() ; i++)
-				{
-					pDC->MoveTo(xos0 + skala * siatka.kord_x[i], 10);
-					pDC->LineTo(xos0 + skala * siatka.kord_x[i], 600);
-					
-				}
-				
-				for (int i = 0; i < siatka.kord_y.size(); i++)
-				{
-					pDC->MoveTo(8, yos0 - skala * siatka.kord_y[i]);
-					pDC->LineTo( 800, yos0 - skala * siatka.kord_y[i] );
-					
-				}
-				
+				pDC->MoveTo(8, yos0 - skala * siatka.kord_y[i]);
+				pDC->LineTo(800, yos0 - skala * siatka.kord_y[i]);
 			}
+		}
+		
 		
 
 	}
 	if (RozRysuj)
 	{
 		licz licz;
-		licz.rozw;
+		//licz.rozw( ,wynikRozw,siatka,wektor_obszarow);
+		int nr;
 		int temp; 
 
 		for (int x = 8; x < 800; x++)
 		{
 			for (int y = 10; y < 600; y++) 
 			{
-				//int temp = licz.temp(x, y); na próbe czy cos wgl sie zmieni
-				pDC->SetPixel(x, y, RGB(temp, 105, 200));
+				//int temp = licz.temp(x, y, nr ,wynikRozw,e,siatka); 
+				//pDC->SetPixel(x, y, RGB(temp, 105, 200));
 			}
 		}
 	}
@@ -473,7 +463,6 @@ void CMesTempView::OnStartZag32777()
 	zag_x = dlgDialZagesc.zag_x;
 	zag_y = dlgDialZagesc.zag_y;
 	RysSiatka = true;
-	ZagRysuj = true;
 	Invalidate(TRUE);
 	UpdateWindow();
 }
