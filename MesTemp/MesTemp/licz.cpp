@@ -23,7 +23,7 @@ void licz::lokalna(float lamx, float lamy, float(&macierz)[16], float(&P)[4], fl
 void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary)
 {
 	licz R;
-	//vector<flloat> wyniki (ile_wezlow, 0);
+	//vector<flloat> wyniki (ile_wezlow, 0); ????/
 	//lx i ly powinny byæ sk¹dœ brane- siatka? prostok¹t? input???
 	int ilex = S.kord_x.size();
 	int iley = S.kord_y.size();
@@ -83,8 +83,8 @@ float licz::temp(float x, float y, int& ost, std::vector<float> T, Siatka S)
 	//zamiast zwyk³ego fora pêtla zaczyna poszukiwania od sprawdzenia ostatnio u¿ytego elementu. Nie doda³em obs³ugi b³êdów, wiêc
 	//JEŒLI PROGRAM WIESZA SIÊ NA TEJ PÊTLI TO ZNACZY, ¯E WSKAZANY PUNKT JEST POZA GRANICAMI SIATKI
 	L.ktory_el (x, y, ost, S, X);
-	//Po powy¿szej pêtli wiadomo ju¿, w którym elemencie znajduje siê punkt
-	ny = ost / S.kord_y.size();
+	//Po powy¿szej funkcji wiadomo ju¿, w którym elemencie znajduje siê punkt
+	ny = ost / S.kord_x.size();
 	nx = ost % S.kord_x.size();
 	if (X) return -300;
 	else

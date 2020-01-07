@@ -283,6 +283,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 			}
 			if (RozRysuj)
 			{
+				std::vector<float> wynikRozw(((siatka.kord_x.size() - 1)* (siatka.kord_y.size() - 1)), 0);
 				licz licz;
 				licz.rozw(wynikRozw, siatka, wektor_obszarow);
 				int nr;

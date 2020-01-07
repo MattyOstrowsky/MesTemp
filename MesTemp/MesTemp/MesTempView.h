@@ -35,7 +35,7 @@ public:
 	float yPos;
 	float skalaTrue;
 	bool RozRysuj = false;
-	std::vector<float> wynikRozw;
+	//std::vector<float> wynikRozw;
 	
 	
 // Operations
