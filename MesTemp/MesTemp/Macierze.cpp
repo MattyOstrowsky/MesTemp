@@ -52,7 +52,7 @@ void Macierze::do_globalnej(Macierze& globalna, float co, int gdziex, int gdziey
 	std::vector<int>::iterator it2;
 	for (int k = globalna.prow[gdziey] - 1; k < globalna.prow[gdziey + 1]; k++)	//szuka, czy istnieje ju¿ niepusty element maierzy globalnej o takich indeksach
 	{
-		if (globalna.coln[k] == gdziex)
+		if (globalna.coln[k] == gdziex && k == globalna.prow[gdziey])
 		{
 			globalna.A[k] += co;
 			czy = false;
