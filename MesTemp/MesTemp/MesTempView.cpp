@@ -283,17 +283,17 @@ void CMesTempView::OnDraw(CDC * pDC)
 			}
 			if (RozRysuj)
 			{
-				std::vector<float> wynikRozw(((siatka.kord_x.size() - 1)* (siatka.kord_y.size() - 1)), 0);
+				std::vector<float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
 				licz licz;
 				licz.rozw(wynikRozw, siatka, wektor_obszarow);
-				int nr;
+				int nr=0;
 				int temp = 0;
 
 				for (int x = 200; x < 400; x++)
 				{
 					for (int y = 400; y < 600; y++)
 					{
-						//temp = licz.temp(x, y, nr ,wynikRozw,siatka); 
+						temp = licz.temp(x, y, nr ,wynikRozw,siatka); 
 						if(temp>0&&temp<255)
 							pDC->SetPixel(x, y, RGB(temp, 105, 200));
 					}

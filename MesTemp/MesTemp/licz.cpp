@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "licz.h"
+#include <fstream>
 
 
 void licz::lokalna(float lamx, float lamy, float(&macierz)[16], float(&P)[4], float wys, float szer, float Q)
@@ -22,18 +23,32 @@ void licz::lokalna(float lamx, float lamy, float(&macierz)[16], float(&P)[4], fl
 // funkcja zarz¹dzaj¹ca tworzeniem macierzy globalnej i rozwi¹zywaniem uk³adu równañ
 void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary)
 {
+	std::ofstream plik;
+	plik.open("Testy.txt");
+	plik << "###########################\nWielki test wszystkiego. Zaczynamy!\n\n";
 	licz R;
 	//vector<flloat> wyniki (ile_wezlow, 0); ????/
 	//lx i ly powinny byæ sk¹dœ brane- siatka? prostok¹t? input???
 	int ilex = S.kord_x.size();
 	int iley = S.kord_y.size();
-	int ile = (ilex - 1) * (iley - 1);
+	int ile = (ilex) * (iley);
+	plik << "ilex = " << ilex << "; iley = " << iley<<"\nile = " << ile << "\n";
 	int nx, ny;		//iloœæ elementów w szeregu i kolumnie siatki
-	std::vector<float>x1 = {};
-	std::vector<float>x2 = {};
-	std::vector<int>x3 = {};
+	std::vector<float>x1 (ile, 0);
+	std::vector<int>x2;
+	std::vector<int>x3;
+	for (int i = 0; i < ile; i++)
+	{
+		x2.push_back(i);
+		x3.push_back(i);
+	}
+	x2.push_back(ile);
 	std::vector<float> Qg (ile, 0);	//na razie pusty wektor globalny Q
 	Macierze M(x1, x2, x3);	//na razie pusta macierz globalna
+	plik << "pusta macierz globalna:\n";
+	plik.close();
+	//M.pisz("Testy.txt", M, ile);
+	plik.open("Testy.txt", std::ofstream::app);
 	float lok[16];
 	float Q[4];
 	int wsp[4];	//tablic wspó³rzêdnych wêz³ów aktualnego elementu
@@ -42,17 +57,21 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 	float dx, dy;		//szerokoœæ i wysokoœæ elementu
 	int o = 0;
 	bool B = false;
-	//jakaœ zewnêtrzna pêtla do latania po ró¿nych obszarach?
 
+	//jakaœ zewnêtrzna pêtla do latania po ró¿nych obszarach?
+	plik << "Jedziemy!\n";
+	//plik << "Jedziemy!\nx   ;   y   ;   dx   ;   dy   ;   obszar\n\n";
 	for (int x = 0; x < ilex-1; x++)
 	{
 		for (int y = 0; y < iley-1; y++)
 		{
+			o = 0;
 			dx = S.kord_x[x + 1] - S.kord_x[x];
 			dy = S.kord_y[y + 1] - S.kord_y[y];
 			R.ktory_obszar((S.kord_x[x] + 0.5 * dx), (S.kord_y[y] + 0.5 * dy), o, S, B, obszary);
 			lx = obszary[o].przewodnosc_x;
 			ly = obszary[o].przewodnosc_y;
+			plik << x << "   ;   " << y << "   ;   " << dx << "   ;   " << dy<<"   ;   " << o << "\n\n";
 			R.lokalna(lx, ly, lok, Q, dx, dy, obszary[o].moc_zrodla);
 			for (int k = 0; k < 4; k++)
 			{
@@ -65,10 +84,31 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 			wsp[1] = y*ilex  + x + 1;
 			wsp[2] = (y+1) * ilex + x;
 			wsp[3] = (y + 1) * ilex + x + 1;
+			plik << "\ntuz przed dodaniem do globalnej...";
 			M.do_globalnej(M, pom, Q, Qg, wsp);
+			plik << "...i tuz po nim\n";
+			plik.close();
+			//M.pisz("Testy.txt", M, ile);
+			plik.open("Testy.txt", std::ofstream::app);
+			plik << "przeszlo dodanie\n";
+			plik.close();
+			plik.open("Testy.txt", std::ofstream::app);
 		}
+		plik << "przeszedl obrot wewnetrznej\n";
+		plik.close();
+		plik.open("Testy.txt", std::ofstream::app);
+	}
+	plik << "\nDodalo wszystko, co mialo dodac\n";
+	plik.close();
+	plik.open("Testy.txt", std::ofstream::app);
+	plik << "\nQg = : ";
+	for (int i = 0; i < ile; i++)
+	{
+		plik << Qg[i] << " ; ";
 	}
 	M.licz(M, Qg, wyniki);
+	plik << "\n\n\nPOLICZYLO!!!!\n\n\n";
+	plik.close();
 }
 
 

@@ -19,5 +19,6 @@
 #include <cstdlib>
 #include <afxcontrolbars.h>
 #include <fstream>
+#include <cstring>
 
 #endif //PCH_H
