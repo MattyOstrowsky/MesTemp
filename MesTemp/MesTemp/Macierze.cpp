@@ -68,7 +68,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 			plik << "\nnowy: " << wynik[i] << "\n";
 			plik.close();
 			plik.open("Testy.txt", std::ofstream::app);
-			if ((abs((wynik[i] - stare[i]) / wynik[i])) > 0.1) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
+			if ((abs((wynik[i] - stare[i]) / wynik[i])) > 1) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
 		}
 	} while (czy);
 	plik.close();

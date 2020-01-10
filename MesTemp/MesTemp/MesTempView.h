@@ -36,7 +36,7 @@ public:
 	float skalaTrue;
 	bool RozRysuj = false;
 	//std::vector<float> wynikRozw;
-	
+	double temp1[800][600];
 	
 // Operations
 public:

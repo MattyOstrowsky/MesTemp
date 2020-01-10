@@ -274,32 +274,69 @@ void CMesTempView::OnDraw(CDC * pDC)
 			}
 
 		}
-		for (int i = 0; i < siatka.kord_y.size() ; i++)
+		for (int i = 0; i < siatka.kord_y.size(); i++)
 		{
 			if ((yos0 - skala * siatka.kord_y[i]) > 10 && (yos0 - skala * siatka.kord_y[i]) < 600)
 			{
 				pDC->MoveTo(8, yos0 - skala * siatka.kord_y[i]);
 				pDC->LineTo(800, yos0 - skala * siatka.kord_y[i]);
 			}
-			if (RozRysuj)
+		}
+		if (RozRysuj)
+		{
+			std::vector<float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
+			licz licz;
+			licz.rozw(wynikRozw, siatka, wektor_obszarow);
+			int nr=0;
+			
+			double tempmax = 0;
+			double tempmin = 0;
+			for (int x = 0; x < 800; x++)
 			{
-				std::vector<float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
-				licz licz;
-				licz.rozw(wynikRozw, siatka, wektor_obszarow);
-				int nr=0;
-				int temp = 0;
-
-				for (int x = 200; x < 400; x++)
+				for (int y = 0; y < 600; y++)
 				{
-					for (int y = 400; y < 600; y++)
-					{
-						temp = licz.temp(x, y, nr ,wynikRozw,siatka); 
-						if(temp>0&&temp<255)
-							pDC->SetPixel(x, y, RGB(temp, 105, 200));
-					}
+					temp1[x][y] = licz.temp(x, y, nr, wynikRozw, siatka);
+					if (temp1[x][y] > tempmax)
+						tempmax = temp1[x][y];
+					if (temp1[x][y] < tempmin)
+						tempmin = temp1[x][y];
 				}
 			}
+
+			for (int x = 0; x < 800; x++)
+			{
+				for (int y = 0; y < 600; y++)
+				{
+					if (temp1[x][y] > tempmax * 0.66)
+					{
+						pDC->SetPixel(x, y, RGB(182, 0, 0));
+					}
+					else if (temp1[x][y] < tempmax * 0.66 && temp1[x][y] > tempmax * 0.33)
+					{
+						pDC->SetPixel(x, y, RGB(182, 101, 0));
+					}
+					else if (temp1[x][y] < tempmax * 0.33 && temp1[x][y] >=0)
+					{
+						pDC->SetPixel(x, y, RGB(221, 221, 0));
+					}
+					else if (temp1[x][y] > tempmin * 0.33 && temp1[x][y] < 0)
+					{
+						pDC->SetPixel(x, y, RGB(33, 1, 250));
+					}
+					else if (temp1[x][y] > tempmin * 0.66 && temp1[x][y] < tempmin * 0.33)
+					{
+						pDC->SetPixel(x, y, RGB(13, 30, 126));
+					}
+					else if (temp1[x][y] < tempmin * 0.33)
+					{
+						pDC->SetPixel(x, y, RGB(13, 4, 70));
+					}
+
+				}
+
+			}
 		}
+		
 		
 		
 

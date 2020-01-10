@@ -1,54 +1,54 @@
 ###########################
 Wielki test wszystkiego. Zaczynamy!
 
-ilex = 7; iley = 5
-ile = 35
+ilex = 4; iley = 5
+ile = 20
 pusta macierz globalna:
 -----------
 do globalnej
 P_glob 0 = 0
 P_glob 1 = 0
-P_glob 7 = 0
-P_glob 8 = 0
+P_glob 4 = 0
+P_glob 5 = 0
 ------------------------
 Jedziemy!
-0   ;   0   ;   100   ;   200   ;   0
+0   ;   0   ;   200   ;   200   ;   0
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 7 = 0
+P_glob 4 = 0
+P_glob 5 = 0
 P_glob 8 = 0
-P_glob 14 = 0
-P_glob 15 = 0
+P_glob 9 = 0
 ------------------------
-0   ;   1   ;   100   ;   200   ;   0
+0   ;   1   ;   200   ;   200   ;   0
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 14 = 0
-P_glob 15 = 0
-P_glob 21 = 0
-P_glob 22 = 0
+P_glob 8 = 0
+P_glob 9 = 0
+P_glob 12 = 0
+P_glob 13 = 0
 ------------------------
-0   ;   2   ;   100   ;   300   ;   0
+0   ;   2   ;   200   ;   300   ;   0
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 21 = 0
-P_glob 22 = 0
-P_glob 28 = 0
-P_glob 29 = 0
+P_glob 12 = 0
+P_glob 13 = 0
+P_glob 16 = 0
+P_glob 17 = 0
 ------------------------
-0   ;   3   ;   100   ;   200   ;   0
+0   ;   3   ;   200   ;   200   ;   0
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
@@ -58,59 +58,22 @@ przeszedl obrot wewnetrznej
 do globalnej
 P_glob 1 = 0
 P_glob 2 = 0
-P_glob 8 = 0
-P_glob 9 = 0
+P_glob 5 = 0
+P_glob 6 = 0
 ------------------------
-1   ;   0   ;   100   ;   200   ;   0
+1   ;   0   ;   400   ;   200   ;   1
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 8 = 0
-P_glob 9 = 0
-P_glob 15 = 0
-P_glob 16 = 0
-------------------------
-1   ;   1   ;   100   ;   200   ;   0
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
------------
-do globalnej
-P_glob 15 = 0
-P_glob 16 = 0
-P_glob 22 = 0
-P_glob 23 = 0
-------------------------
-1   ;   2   ;   100   ;   300   ;   0
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
------------
-do globalnej
-P_glob 22 = 0
-P_glob 23 = 0
-P_glob 29 = 0
-P_glob 30 = 0
-------------------------
-1   ;   3   ;   100   ;   200   ;   0
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
-przeszedl obrot wewnetrznej
------------
-do globalnej
-P_glob 2 = 0
-P_glob 3 = 0
+P_glob 5 = 0
+P_glob 6 = 0
 P_glob 9 = 0
 P_glob 10 = 0
 ------------------------
-2   ;   0   ;   200   ;   200   ;   1
+1   ;   1   ;   400   ;   200   ;   1
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
@@ -119,83 +82,22 @@ przeszlo dodanie
 do globalnej
 P_glob 9 = 0
 P_glob 10 = 0
-P_glob 16 = 0
-P_glob 17 = 0
+P_glob 13 = 0
+P_glob 14 = 0
 ------------------------
-2   ;   1   ;   200   ;   200   ;   1
+1   ;   2   ;   400   ;   300   ;   1
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 16 = 0
-P_glob 17 = 0
-P_glob 23 = 0
-P_glob 24 = 0
-------------------------
-2   ;   2   ;   200   ;   300   ;   1
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
------------
-do globalnej
-P_glob 23 = 0
-P_glob 24 = 0
-P_glob 30 = 0
-P_glob 31 = 0
-------------------------
-2   ;   3   ;   200   ;   200   ;   1
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
-przeszedl obrot wewnetrznej
------------
-do globalnej
-P_glob 3 = 0
-P_glob 4 = 0
-P_glob 10 = 0
-P_glob 11 = 0
-------------------------
-3   ;   0   ;   200   ;   200   ;   1
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
------------
-do globalnej
-P_glob 10 = 0
-P_glob 11 = 0
+P_glob 13 = 0
+P_glob 14 = 0
 P_glob 17 = 0
 P_glob 18 = 0
 ------------------------
-3   ;   1   ;   200   ;   200   ;   1
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
------------
-do globalnej
-P_glob 17 = 0
-P_glob 18 = 0
-P_glob 24 = 0
-P_glob 25 = 0
-------------------------
-3   ;   2   ;   200   ;   300   ;   1
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
------------
-do globalnej
-P_glob 24 = 0
-P_glob 25 = 0
-P_glob 31 = 0
-P_glob 32 = 0
-------------------------
-3   ;   3   ;   200   ;   200   ;   1
+1   ;   3   ;   400   ;   200   ;   1
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
@@ -203,97 +105,48 @@ przeszlo dodanie
 przeszedl obrot wewnetrznej
 -----------
 do globalnej
-P_glob 4 = 75000
-P_glob 5 = 75000
-P_glob 11 = 75000
-P_glob 12 = 75000
+P_glob 2 = 150000
+P_glob 3 = 150000
+P_glob 6 = 150000
+P_glob 7 = 150000
 ------------------------
-4   ;   0   ;   150   ;   200   ;   5
+2   ;   0   ;   300   ;   200   ;   5
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 11 = 225000
-P_glob 12 = 225000
-P_glob 18 = 150000
-P_glob 19 = 150000
+P_glob 6 = 450000
+P_glob 7 = 450000
+P_glob 10 = 300000
+P_glob 11 = 300000
 ------------------------
-4   ;   1   ;   150   ;   200   ;   3
+2   ;   1   ;   300   ;   200   ;   3
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 18 = 375000
-P_glob 19 = 375000
-P_glob 25 = 225000
-P_glob 26 = 225000
+P_glob 10 = 750000
+P_glob 11 = 750000
+P_glob 14 = 450000
+P_glob 15 = 450000
 ------------------------
-4   ;   2   ;   150   ;   300   ;   3
+2   ;   2   ;   300   ;   300   ;   3
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 25 = 375000
-P_glob 26 = 375000
-P_glob 32 = 150000
-P_glob 33 = 150000
+P_glob 14 = 750000
+P_glob 15 = 750000
+P_glob 18 = 300000
+P_glob 19 = 300000
 ------------------------
-4   ;   3   ;   150   ;   200   ;   3
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
-przeszedl obrot wewnetrznej
------------
-do globalnej
-P_glob 5 = 150000
-P_glob 6 = 75000
-P_glob 12 = 300000
-P_glob 13 = 75000
-------------------------
-5   ;   0   ;   150   ;   200   ;   5
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
------------
-do globalnej
-P_glob 12 = 450000
-P_glob 13 = 225000
-P_glob 19 = 525000
-P_glob 20 = 150000
-------------------------
-5   ;   1   ;   150   ;   200   ;   3
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
------------
-do globalnej
-P_glob 19 = 750000
-P_glob 20 = 375000
-P_glob 26 = 600000
-P_glob 27 = 225000
-------------------------
-5   ;   2   ;   150   ;   300   ;   3
-
-
-tuz przed dodaniem do globalnej......i tuz po nim
-przeszlo dodanie
------------
-do globalnej
-P_glob 26 = 750000
-P_glob 27 = 375000
-P_glob 33 = 300000
-P_glob 34 = 150000
-------------------------
-5   ;   3   ;   150   ;   200   ;   3
+2   ;   3   ;   300   ;   200   ;   3
 
 
 tuz przed dodaniem do globalnej......i tuz po nim
@@ -302,11 +155,11 @@ przeszedl obrot wewnetrznej
 
 Dodalo wszystko, co mialo dodac
 
-Weszlo do funkcji. ile = 35
+Weszlo do funkcji. ile = 20
 
 
 kolejne elementy wektora ii:
-0 ; 5 ; 11 ; 17 ; 23 ; 29 ; 35 ; 40 ; 48 ; 57 ; 66 ; 75 ; 84 ; 92 ; 97 ; 105 ; 114 ; 123 ; 132 ; 141 ; 149 ; 154 ; 162 ; 171 ; 180 ; 189 ; 198 ; 206 ; 211 ; 217 ; 223 ; 229 ; 235 ; 241 ; 246 ; 
+0 ; 5 ; 11 ; 17 ; 22 ; 30 ; 39 ; 47 ; 52 ; 60 ; 69 ; 77 ; 82 ; 90 ; 99 ; 107 ; 112 ; 118 ; 124 ; 129 ; 
 przeszlo, wchodzi do petli 'do'
 kolejny obrot do
 przepislo stare wyniki:
@@ -314,1117 +167,46 @@ stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 75000
+stary: 0pom = 150000
 nowy: 1285.71
 stary: 0pom = 150000
 nowy: 3000
-stary: 0pom = 75000
-nowy: 3000
 stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 225000
+stary: 0pom = 450000
 nowy: 1928.57
 stary: 0pom = 450000
 nowy: 4500
-stary: 0pom = 225000
-nowy: 4500
 stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 375000
+stary: 0pom = 750000
 nowy: 3857.14
 stary: 0pom = 750000
 nowy: 9000
-stary: 0pom = 375000
-nowy: 9000
 stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 375000
+stary: 0pom = 750000
 nowy: 3857.14
 stary: 0pom = 750000
 nowy: 9000
-stary: 0pom = 375000
-nowy: 9000
 stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 150000
+stary: 0pom = 300000
 nowy: 2571.43
 stary: 0pom = 300000
 nowy: 6000
-stary: 0pom = 150000
-nowy: 6000
-kolejny obrot do
-przepislo stare wyniki:
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 26785.7
-nowy: 401.786
-stary: 1285.71pom = 178125
-nowy: 3053.57
-stary: 3000pom = 329464
-nowy: 6589.29
-stary: 3000pom = 178125
-nowy: 7125
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 75000
-nowy: 562.5
-stary: 1928.57pom = 506250
-nowy: 4339.29
-stary: 4500pom = 937500
-nowy: 9375
-stary: 4500pom = 506250
-nowy: 10125
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 91071.4
-nowy: 819.643
-stary: 3857.14pom = 665625
-nowy: 6846.43
-stary: 9000pom = 1.24018e+06
-nowy: 14882.1
-stary: 9000pom = 665625
-nowy: 15975
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 96428.6
-nowy: 867.857
-stary: 3857.14pom = 693750
-nowy: 7135.71
-stary: 9000pom = 1.29107e+06
-nowy: 15492.9
-stary: 9000pom = 693750
-nowy: 16650
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 53571.4
-nowy: 803.571
-stary: 2571.43pom = 356250
-nowy: 6107.14
-stary: 6000pom = 658929
-nowy: 13178.6
-stary: 6000pom = 356250
-nowy: 14250
-kolejny obrot do
-przepislo stare wyniki:
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 8035.71
-nowy: 160.714
-stary: 401.786pom = 80357.1
-nowy: 1205.36
-stary: 3053.57pom = 309375
-nowy: 5303.57
-stary: 6589.29pom = 538393
-nowy: 10767.9
-stary: 7125pom = 301339
-nowy: 12053.6
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 19553.6
-nowy: 195.536
-stary: 562.5pom = 195536
-nowy: 1466.52
-stary: 4339.29pom = 784688
-nowy: 6725.89
-stary: 9375pom = 1.37384e+06
-nowy: 13738.4
-stary: 10125pom = 765134
-nowy: 15302.7
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 20892.9
-nowy: 250.714
-stary: 819.643pom = 208929
-nowy: 1880.36
-stary: 6846.43pom = 939375
-nowy: 9662.14
-stary: 14882.1pom = 1.66982e+06
-nowy: 20037.9
-stary: 15975pom = 918482
-nowy: 22043.6
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 23303.6
-nowy: 279.643
-stary: 867.857pom = 233036
-nowy: 2097.32
-stary: 7135.71pom = 1.01531e+06
-nowy: 10443.2
-stary: 15492.9pom = 1.79759e+06
-nowy: 21571.1
-stary: 16650pom = 992009
-nowy: 23808.2
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 13928.6
-nowy: 278.571
-stary: 803.571pom = 139286
-nowy: 2089.29
-stary: 6107.14pom = 551250
-nowy: 9450
-stary: 13178.6pom = 963214
-nowy: 19264.3
-stary: 14250pom = 537322
-nowy: 21492.9
-kolejny obrot do
-przepislo stare wyniki:
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 1484.38
-nowy: 44.5313
-stary: 160.714pom = 27154
-nowy: 543.08
-stary: 1205.36pom = 152098
-nowy: 2281.47
-stary: 5303.57pom = 446602
-nowy: 7656.03
-stary: 10767.9pom = 739621
-nowy: 14792.4
-stary: 12053.6pom = 419448
-nowy: 16777.9
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 3343.75
-nowy: 50.1563
-stary: 195.536pom = 60442
-nowy: 604.42
-stary: 1466.52pom = 346357
-nowy: 2597.68
-stary: 6725.89pom = 1.07592e+06
-nowy: 9222.19
-stary: 13738.4pom = 1.80214e+06
-nowy: 18021.4
-stary: 15302.7pom = 1.01548e+06
-nowy: 20309.6
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 3332.59
-nowy: 59.9866
-stary: 250.714pom = 59537.9
-nowy: 714.455
-stary: 1880.36pom = 350420
-nowy: 3153.78
-stary: 9662.14pom = 1.2087e+06
-nowy: 12432.3
-stary: 20037.9pom = 2.06364e+06
-nowy: 24763.7
-stary: 22043.6pom = 1.14916e+06
-nowy: 27579.8
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 3799.11
-nowy: 68.3839
-stary: 279.643pom = 68129.5
-nowy: 817.554
-stary: 2097.32pom = 396500
-nowy: 3568.5
-stary: 10443.2pom = 1.32408e+06
-nowy: 13619.1
-stary: 21571.1pom = 2.24786e+06
-nowy: 26974.3
-stary: 23808.2pom = 1.25595e+06
-nowy: 30142.8
-stary: 0pom = 0
-nowy: 0
-stary: 0pom = 2325.89
-nowy: 69.7768
-stary: 278.571pom = 41879.5
-nowy: 837.589
-stary: 2089.29pom = 240339
-nowy: 3605.09
-stary: 9450pom = 744703
-nowy: 12766.3
-stary: 19264.3pom = 1.24674e+06
-nowy: 24934.8
-stary: 21492.9pom = 702824
-nowy: 28112.9
-kolejny obrot do
-przepislo stare wyniki:
-stary: 0pom = 394.531
-nowy: 23.6719
-stary: 44.5313pom = 5617.19
-nowy: 168.516
-stary: 543.08pom = 56164.6
-nowy: 1123.29
-stary: 2281.47pom = 236804
-nowy: 3552.05
-stary: 7656.03pom = 589727
-nowy: 10109.6
-stary: 14792.4pom = 937822
-nowy: 18756.4
-stary: 16777.9pom = 533957
-nowy: 21358.3
-stary: 0pom = 853.46
-nowy: 25.6038
-stary: 50.1563pom = 12018.5
-nowy: 180.278
-stary: 604.42pom = 120880
-nowy: 1208.8
-stary: 2597.68pom = 522834
-nowy: 3921.25
-stary: 9222.19pom = 1.37199e+06
-nowy: 11759.9
-stary: 18021.4pom = 2.21084e+06
-nowy: 22108.4
-stary: 20309.6pom = 1.25196e+06
-nowy: 25039.3
-stary: 0pom = 815.513
-nowy: 29.3585
-stary: 59.9866pom = 11346.7
-nowy: 204.24
-stary: 714.455pom = 114827
-nowy: 1377.92
-stary: 3153.78pom = 510575
-nowy: 4595.18
-stary: 12432.3pom = 1.47705e+06
-nowy: 15192.5
-stary: 24763.7pom = 2.43381e+06
-nowy: 29205.8
-stary: 27579.8pom = 1.36304e+06
-nowy: 32713
-stary: 0pom = 932.255
-nowy: 33.5612
-stary: 68.3839pom = 12981.5
-nowy: 233.667
-stary: 817.554pom = 130905
-nowy: 1570.87
-stary: 3568.5pom = 577166
-nowy: 5194.5
-stary: 13619.1pom = 1.62622e+06
-nowy: 16726.9
-stary: 26974.3pom = 2.66416e+06
-nowy: 31970
-stary: 30142.8pom = 1.49625e+06
-nowy: 35910
-stary: 0pom = 575.67
-nowy: 34.5402
-stary: 69.7768pom = 8036.16
-nowy: 241.085
-stary: 837.589pom = 80794.4
-nowy: 1615.89
-stary: 3605.09pom = 352621
-nowy: 5289.32
-stary: 12766.3pom = 931435
-nowy: 15967.5
-stary: 24934.8pom = 1.50336e+06
-nowy: 30067.3
-stary: 28112.9pom = 851217
-nowy: 34048.7
-kolejny obrot do
-przepislo stare wyniki:
-stary: 23.6719pom = 1666.67
-nowy: 100
-stary: 168.516pom = 12927
-nowy: 387.81
-stary: 1123.29pom = 93950.9
-nowy: 1879.02
-stary: 3552.05pom = 332389
-nowy: 4985.83
-stary: 10109.6pom = 735680
-nowy: 12611.7
-stary: 18756.4pom = 1.12938e+06
-nowy: 22587.6
-stary: 21358.3pom = 643396
-nowy: 25735.8
-stary: 25.6038pom = 3497.38
-nowy: 104.921
-stary: 180.278pom = 27142
-nowy: 407.13
-stary: 1208.8pom = 198834
-nowy: 1988.34
-stary: 3921.25pom = 719414
-nowy: 5395.61
-stary: 11759.9pom = 1.67235e+06
-nowy: 14334.4
-stary: 22108.4pom = 2.60513e+06
-nowy: 26051.3
-stary: 25039.3pom = 1.47701e+06
-nowy: 29540.2
-stary: 29.3585pom = 3218.38
-nowy: 115.862
-stary: 204.24pom = 24973.8
-nowy: 449.528
-stary: 1377.92pom = 184577
-nowy: 2214.92
-stary: 4595.18pom = 686014
-nowy: 6174.12
-stary: 15192.5pom = 1.74421e+06
-nowy: 17940.5
-stary: 29205.8pom = 2.78387e+06
-nowy: 33406.5
-stary: 32713pom = 1.56285e+06
-nowy: 37508.5
-stary: 33.5612pom = 3645.47
-nowy: 131.237
-stary: 233.667pom = 28215.2
-nowy: 507.873
-stary: 1570.87pom = 208309
-nowy: 2499.71
-stary: 5194.5pom = 771147
-nowy: 6940.32
-stary: 16726.9pom = 1.92051e+06
-nowy: 19753.8
-stary: 31970pom = 3.04895e+06
-nowy: 36587.4
-stary: 35910pom = 1.71585e+06
-nowy: 41180.4
-stary: 34.5402pom = 2257.81
-nowy: 135.468
-stary: 241.085pom = 17456.3
-nowy: 523.69
-stary: 1615.89pom = 128615
-nowy: 2572.3
-stary: 5289.32pom = 472159
-nowy: 7082.38
-stary: 15967.5pom = 1.11296e+06
-nowy: 19079.4
-stary: 30067.3pom = 1.74083e+06
-nowy: 34816.6
-stary: 34048.7pom = 986608
-nowy: 39464.3
-kolejny obrot do
-przepislo stare wyniki:
-stary: 100pom = 4186.6
-nowy: 251.196
-stary: 387.81pom = 23753.3
-nowy: 712.599
-stary: 1879.02pom = 139533
-nowy: 2790.65
-stary: 4985.83pom = 436632
-nowy: 6549.48
-stary: 12611.7pom = 883591
-nowy: 15147.3
-stary: 22587.6pom = 1.31517e+06
-nowy: 26303.4
-stary: 25735.8pom = 748245
-nowy: 29929.8
-stary: 104.921pom = 8680.51
-nowy: 260.415
-stary: 407.13pom = 49357
-nowy: 740.355
-stary: 1988.34pom = 292157
-nowy: 2921.57
-stary: 5395.61pom = 932761
-nowy: 6995.71
-stary: 14334.4pom = 1.97463e+06
-nowy: 16925.4
-stary: 26051.3pom = 2.98451e+06
-nowy: 29845.1
-stary: 29540.2pom = 1.69116e+06
-nowy: 33823.2
-stary: 115.862pom = 7832.3
-nowy: 281.963
-stary: 449.528pom = 44644.6
-nowy: 803.604
-stary: 2214.92pom = 266872
-nowy: 3202.46
-stary: 6174.12pom = 873673
-nowy: 7863.05
-stary: 17940.5pom = 2.00971e+06
-nowy: 20671.3
-stary: 33406.5pom = 3.11677e+06
-nowy: 37401.3
-stary: 37508.5pom = 1.75067e+06
-nowy: 42016.2
-stary: 131.237pom = 8730.21
-nowy: 314.287
-stary: 507.873pom = 49750.2
-nowy: 895.503
-stary: 2499.71pom = 297894
-nowy: 3574.73
-stary: 6940.32pom = 974765
-nowy: 8772.88
-stary: 19753.8pom = 2.20796e+06
-nowy: 22710.4
-stary: 36587.4pom = 3.40886e+06
-nowy: 40906.3
-stary: 41180.4pom = 1.91879e+06
-nowy: 46051
-stary: 135.468pom = 5391.82
-nowy: 323.509
-stary: 523.69pom = 30709.2
-nowy: 921.276
-stary: 2572.3pom = 183647
-nowy: 3672.94
-stary: 7082.38pom = 597221
-nowy: 8958.32
-stary: 19079.4pom = 1.28928e+06
-nowy: 22102
-stary: 34816.6pom = 1.96142e+06
-nowy: 39228.5
-stary: 39464.3pom = 1.11103e+06
-nowy: 44441.2
-kolejny obrot do
-przepislo stare wyniki:
-stary: 251.196pom = 8224.1
-nowy: 493.446
-stary: 712.599pom = 38271.9
-nowy: 1148.16
-stary: 2790.65pom = 191970
-nowy: 3839.39
-stary: 6549.48pom = 548065
-nowy: 8220.97
-stary: 15147.3pom = 1.03246e+06
-nowy: 17699.4
-stary: 26303.4pom = 1.49504e+06
-nowy: 29900.8
-stary: 29929.8pom = 848718
-nowy: 33948.7
-stary: 260.415pom = 16930.1
-nowy: 507.904
-stary: 740.355pom = 78979.3
-nowy: 1184.69
-stary: 2921.57pom = 399014
-nowy: 3990.14
-stary: 6995.71pom = 1.15963e+06
-nowy: 8697.24
-stary: 16925.4pom = 2.27763e+06
-nowy: 19522.5
-stary: 29845.1pom = 3.3505e+06
-nowy: 33505
-stary: 33823.2pom = 1.89554e+06
-nowy: 37910.9
-stary: 281.963pom = 15069.1
-nowy: 542.487
-stary: 803.604pom = 70547.7
-nowy: 1269.86
-stary: 3202.46pom = 360016
-nowy: 4320.19
-stary: 7863.05pom = 1.07114e+06
-nowy: 9640.29
-stary: 20671.3pom = 2.27307e+06
-nowy: 23380.1
-stary: 37401.3pom = 3.43458e+06
-nowy: 41214.9
-stary: 42016.2pom = 1.92812e+06
-nowy: 46274.9
-stary: 314.287pom = 16552
-nowy: 595.873
-stary: 895.503pom = 77621.4
-nowy: 1397.19
-stary: 3574.73pom = 397669
-nowy: 4772.03
-stary: 8772.88pom = 1.18584e+06
-nowy: 10672.6
-stary: 22710.4pom = 2.48889e+06
-nowy: 25600
-stary: 40906.3pom = 3.74742e+06
-nowy: 44969.1
-stary: 46051pom = 2.10777e+06
-nowy: 50586.6
-stary: 323.509pom = 10189
-nowy: 611.339
-stary: 921.276pom = 47781.2
-nowy: 1433.43
-stary: 3672.94pom = 244698
-nowy: 4893.96
-stary: 8958.32pom = 726264
-nowy: 10894
-stary: 22102pom = 1.46099e+06
-nowy: 25045.5
-stary: 39228.5pom = 2.16831e+06
-nowy: 43366.2
-stary: 44441.2pom = 1.22648e+06
-nowy: 49059.2
-kolejny obrot do
-przepislo stare wyniki:
-stary: 493.446pom = 13952.7
-nowy: 837.163
-stary: 1148.16pom = 56540.2
-nowy: 1696.21
-stary: 3839.39pom = 250459
-nowy: 5009.18
-stary: 8220.97pom = 665337
-nowy: 9980.05
-stary: 17699.4pom = 1.18168e+06
-nowy: 20257.3
-stary: 29900.8pom = 1.66939e+06
-nowy: 33387.7
-stary: 33948.7pom = 945172
-nowy: 37806.9
-stary: 507.904pom = 28580.3
-nowy: 857.408
-stary: 1184.69pom = 116099
-nowy: 1741.48
-stary: 3990.14pom = 517735
-nowy: 5177.35
-stary: 8697.24pom = 1.39758e+06
-nowy: 10481.8
-stary: 19522.5pom = 2.58024e+06
-nowy: 22116.3
-stary: 33505pom = 3.70395e+06
-nowy: 37039.5
-stary: 37910.9pom = 2.09108e+06
-nowy: 41821.6
-stary: 542.487pom = 25178.7
-nowy: 906.433
-stary: 1269.86pom = 102690
-nowy: 1848.43
-stary: 4320.19pom = 462585
-nowy: 5551.02
-stary: 9640.29pom = 1.27647e+06
-nowy: 11488.3
-stary: 23380.1pom = 2.53395e+06
-nowy: 26063.5
-stary: 41214.9pom = 3.73909e+06
-nowy: 44869
-stary: 46274.9pom = 2.09654e+06
-nowy: 50317
-stary: 595.873pom = 27311
-nowy: 983.196
-stary: 1397.19pom = 111723
-nowy: 2011.02
-stary: 4772.03pom = 506125
-nowy: 6073.5
-stary: 10672.6pom = 1.40258e+06
-nowy: 12623.2
-stary: 25600pom = 2.76387e+06
-nowy: 28428.4
-stary: 44969.1pom = 4.06807e+06
-nowy: 48816.8
-stary: 50586.6pom = 2.28506e+06
-nowy: 54841.4
-stary: 611.339pom = 16759.9
-nowy: 1005.59
-stary: 1433.43pom = 68591.5
-nowy: 2057.74
-stary: 4893.96pom = 310816
-nowy: 6216.32
-stary: 10894pom = 858348
-nowy: 12875.2
-stary: 25045.5pom = 1.62848e+06
-nowy: 27916.9
-stary: 43366.2pom = 2.36355e+06
-nowy: 47271
-stary: 49059.2pom = 1.33443e+06
-nowy: 53377.1
-kolejny obrot do
-przepislo stare wyniki:
-stary: 837.163pom = 21468.8
-nowy: 1288.13
-stary: 1696.21pom = 78529.2
-nowy: 2355.88
-stary: 5009.18pom = 314273
-nowy: 6285.46
-stary: 9980.05pom = 787396
-nowy: 11810.9
-stary: 20257.3pom = 1.33074e+06
-nowy: 22812.8
-stary: 33387.7pom = 1.8385e+06
-nowy: 36770
-stary: 37806.9pom = 1.03794e+06
-nowy: 41517.6
-stary: 857.408pom = 43811.6
-nowy: 1314.35
-stary: 1741.48pom = 160633
-nowy: 2409.49
-stary: 5177.35pom = 646887
-nowy: 6468.87
-stary: 10481.8pom = 1.64451e+06
-nowy: 12333.8
-stary: 22116.3pom = 2.88172e+06
-nowy: 24700.5
-stary: 37039.5pom = 4.04592e+06
-nowy: 40459.2
-stary: 41821.6pom = 2.27865e+06
-nowy: 45572.9
-stary: 906.433pom = 38285.9
-nowy: 1378.29
-stary: 1848.43pom = 140960
-nowy: 2537.27
-stary: 5551.02pom = 573375
-nowy: 6880.49
-stary: 11488.3pom = 1.48813e+06
-nowy: 13393.1
-stary: 26063.5pom = 2.79216e+06
-nowy: 28719.3
-stary: 44869pom = 4.0318e+06
-nowy: 48381.6
-stary: 50317pom = 2.25707e+06
-nowy: 54169.6
-stary: 983.196pom = 41089.6
-nowy: 1479.22
-stary: 2011.02pom = 151867
-nowy: 2733.61
-stary: 6073.5pom = 622039
-nowy: 7464.47
-stary: 12623.2pom = 1.62374e+06
-nowy: 14613.7
-stary: 28428.4pom = 3.03338e+06
-nowy: 31200.5
-stary: 48816.8pom = 4.37332e+06
-nowy: 52479.9
-stary: 54841.4pom = 2.45243e+06
-nowy: 58858.3
-stary: 1005.59pom = 25146.5
-nowy: 1508.79
-stary: 2057.74pom = 93011.2
-nowy: 2790.34
-stary: 6216.32pom = 381278
-nowy: 7625.56
-stary: 12875.2pom = 992733
-nowy: 14891
-stary: 27916.9pom = 1.7922e+06
-nowy: 30723.4
-stary: 47271pom = 2.54894e+06
-nowy: 50978.9
-stary: 53377.1pom = 1.43607e+06
-nowy: 57442.6
-kolejny obrot do
-przepislo stare wyniki:
-stary: 1288.13pom = 30808.6
-nowy: 1848.52
-stary: 2355.88pom = 104145
-nowy: 3124.35
-stary: 6285.46pom = 382784
-nowy: 7655.68
-stary: 11810.9pom = 913358
-nowy: 13700.4
-stary: 22812.8pom = 1.47932e+06
-nowy: 25359.8
-stary: 36770pom = 2.00275e+06
-nowy: 40055.1
-stary: 41517.6pom = 1.12734e+06
-nowy: 45093.8
-stary: 1314.35pom = 62687.4
-nowy: 1880.62
-stary: 2409.49pom = 212381
-nowy: 3185.71
-stary: 6468.87pom = 785214
-nowy: 7852.14
-stary: 12333.8pom = 1.89878e+06
-nowy: 14240.8
-stary: 24700.5pom = 3.18156e+06
-nowy: 27270.5
-stary: 40459.2pom = 4.37733e+06
-nowy: 43773.3
-stary: 45572.9pom = 2.45903e+06
-nowy: 49180.6
-stary: 1378.29pom = 54423.7
-nowy: 1959.25
-stary: 2537.27pom = 185158
-nowy: 3332.84
-stary: 6880.49pom = 691367
-nowy: 8296.41
-stary: 13393.1pom = 1.70487e+06
-nowy: 15343.8
-stary: 28719.3pom = 3.0476e+06
-nowy: 31346.8
-stary: 48381.6pom = 4.31403e+06
-nowy: 51768.3
-stary: 54169.6pom = 2.41066e+06
-nowy: 57855.8
-stary: 1479.22pom = 57888.2
-nowy: 2083.98
-stary: 2733.61pom = 197807
-nowy: 3560.53
-stary: 7464.47pom = 744437
-nowy: 8933.25
-stary: 14613.7pom = 1.84836e+06
-nowy: 16635.2
-stary: 31200.5pom = 3.29787e+06
-nowy: 33920.9
-stary: 52479.9pom = 4.66535e+06
-nowy: 55984.2
-stary: 58858.3pom = 2.61132e+06
-nowy: 62671.7
-stary: 1508.79pom = 35343.3
-nowy: 2120.6
-stary: 2790.34pom = 120885
-nowy: 3626.56
-stary: 7625.56pom = 455500
-nowy: 9110.01
-stary: 14891pom = 1.1289e+06
-nowy: 16933.6
-stary: 30723.4pom = 1.9525e+06
-nowy: 33471.5
-stary: 50978.9pom = 2.7259e+06
-nowy: 54518
-stary: 57442.6pom = 1.53235e+06
-nowy: 61293.8
-kolejny obrot do
-przepislo stare wyniki:
-stary: 1848.52pom = 41963.7
-nowy: 2517.82
-stary: 3124.35pom = 133249
-nowy: 3997.48
-stary: 7655.68pom = 455439
-nowy: 9108.77
-stary: 13700.4pom = 1.04251e+06
-nowy: 15637.7
-stary: 25359.8pom = 1.62716e+06
-nowy: 27894.2
-stary: 40055.1pom = 2.16249e+06
-nowy: 43249.7
-stary: 45093.8pom = 1.21368e+06
-nowy: 48547.4
-stary: 1880.62pom = 85184
-nowy: 2555.52
-stary: 3185.71pom = 271059
-nowy: 4065.88
-stary: 7852.14pom = 931636
-nowy: 9316.36
-stary: 14240.8pom = 2.15901e+06
-nowy: 16192.5
-stary: 27270.5pom = 3.47938e+06
-nowy: 29823.3
-stary: 43773.3pom = 4.69907e+06
-nowy: 46990.7
-stary: 49180.6pom = 2.63293e+06
-nowy: 52658.6
-stary: 1959.25pom = 73558.4
-nowy: 2648.1
-stary: 3332.84pom = 235033
-nowy: 4230.6
-stary: 8296.41pom = 815700
-nowy: 9788.4
-stary: 15343.8pom = 1.92573e+06
-nowy: 17331.6
-stary: 31346.8pom = 3.30027e+06
-nowy: 33945.6
-stary: 51768.3pom = 4.58688e+06
-nowy: 55042.6
-stary: 57855.8pom = 2.55813e+06
-nowy: 61395
-stary: 2083.98pom = 77650.9
-nowy: 2795.43
-stary: 3560.53pom = 249265
-nowy: 4486.77
-stary: 8933.25pom = 872519
-nowy: 10470.2
-stary: 16635.2pom = 2.07571e+06
-nowy: 18681.4
-stary: 33920.9pom = 3.55778e+06
-nowy: 36594.3
-stary: 55984.2pom = 4.94589e+06
-nowy: 59350.7
-stary: 62671.7pom = 2.76291e+06
-nowy: 66309.9
-stary: 2120.6pom = 47312.7
-nowy: 2838.76
-stary: 3626.56pom = 152041
-nowy: 4561.24
-stary: 9110.01pom = 533017
-nowy: 10660.3
-stary: 16933.6pom = 1.26647e+06
-nowy: 18997.1
-stary: 33471.5pom = 2.10974e+06
-nowy: 36167
-stary: 54518pom = 2.89559e+06
-nowy: 57911.9
-stary: 61293.8pom = 1.62404e+06
-nowy: 64961.4
-kolejny obrot do
-przepislo stare wyniki:
-stary: 2517.82pom = 54893.3
-nowy: 3293.6
-stary: 3997.48pom = 165675
-nowy: 4970.25
-stary: 9108.77pom = 531758
-nowy: 10635.2
-stary: 15637.7pom = 1.17427e+06
-nowy: 17614.1
-stary: 27894.2pom = 1.7741e+06
-nowy: 30413.2
-stary: 43249.7pom = 2.31804e+06
-nowy: 46360.8
-stary: 48547.4pom = 1.29724e+06
-nowy: 51889.4
-stary: 2555.52pom = 111215
-nowy: 3336.46
-stary: 4065.88pom = 336330
-nowy: 5044.95
-stary: 9316.36pom = 1.08521e+06
-nowy: 10852.1
-stary: 16192.5pom = 2.42411e+06
-nowy: 18180.8
-stary: 29823.3pom = 3.77499e+06
-nowy: 32357.1
-stary: 46990.7pom = 5.01197e+06
-nowy: 50119.7
-stary: 52658.6pom = 2.80099e+06
-nowy: 56019.8
-stary: 2648.1pom = 95609.7
-nowy: 3441.95
-stary: 4230.6pom = 290298
-nowy: 5225.35
-stary: 9788.4pom = 945636
-nowy: 11347.6
-stary: 17331.6pom = 2.14994e+06
-nowy: 19349.5
-stary: 33945.6pom = 3.55019e+06
-nowy: 36516.2
-stary: 55042.6pom = 4.85136e+06
-nowy: 58216.3
-stary: 61395pom = 2.70016e+06
-nowy: 64803.9
-stary: 2795.43pom = 100283
-nowy: 3610.19
-stary: 4486.77pom = 305942
-nowy: 5506.96
-stary: 10470.2pom = 1.00562e+06
-nowy: 12067.5
-stary: 18681.4pom = 2.30525e+06
-nowy: 20747.3
-stary: 36594.3pom = 3.81351e+06
-nowy: 39224.7
-stary: 59350.7pom = 5.2164e+06
-nowy: 62596.8
-stary: 66309.9pom = 2.90817e+06
-nowy: 69796.1
-stary: 2838.76pom = 60995.3
-nowy: 3659.72
-stary: 4561.24pom = 186299
-nowy: 5588.98
-stary: 10660.3pom = 613443
-nowy: 12268.9
-stary: 18997.1pom = 1.40514e+06
-nowy: 21077.2
-stary: 36167pom = 2.26421e+06
-nowy: 38815.1
-stary: 57911.9pom = 3.05897e+06
-nowy: 61179.4
-stary: 64961.4pom = 1.71176e+06
-nowy: 68470.6
-kolejny obrot do
-przepislo stare wyniki:
-stary: 3293.6pom = 69533.8
-nowy: 4172.03
-stary: 4970.25pom = 201238
-nowy: 6037.14
-stary: 10635.2pom = 611325
-nowy: 12226.5
-stary: 17614.1pom = 1.30817e+06
-nowy: 19622.6
-stary: 30413.2pom = 1.92004e+06
-nowy: 32915
-stary: 46360.8pom = 2.46974e+06
-nowy: 49394.8
-stary: 51889.4pom = 1.37825e+06
-nowy: 55130
-stary: 3336.46pom = 140652
-nowy: 4219.57
-stary: 5044.95pom = 407825
-nowy: 6117.37
-stary: 10852.1pom = 1.24514e+06
-nowy: 12451.4
-stary: 18180.8pom = 2.69321e+06
-nowy: 20199.1
-stary: 32357.1pom = 4.06825e+06
-nowy: 34870.8
-stary: 50119.7pom = 5.31678e+06
-nowy: 53167.8
-stary: 56019.8pom = 2.96377e+06
-nowy: 59275.4
-stary: 3441.95pom = 120465
-nowy: 4336.75
-stary: 5225.35pom = 350645
-nowy: 6311.6
-stary: 11347.6pom = 1.08055e+06
-nowy: 12966.5
-stary: 19349.5pom = 2.37689e+06
-nowy: 21392
-stary: 36516.2pom = 3.79745e+06
-nowy: 39059.5
-stary: 58216.3pom = 5.1083e+06
-nowy: 61299.6
-stary: 64803.9pom = 2.83737e+06
-nowy: 68096.9
-stary: 3610.19pom = 125665
-nowy: 4523.93
-stary: 5506.96pom = 367533
-nowy: 6615.59
-stary: 12067.5pom = 1.14319e+06
-nowy: 13718.3
-stary: 20747.3pom = 2.53656e+06
-nowy: 22829.1
-stary: 39224.7pom = 4.06543e+06
-nowy: 41815.8
-stary: 62596.8pom = 5.47809e+06
-nowy: 65737.1
-stary: 69796.1pom = 3.0479e+06
-nowy: 73149.7
-stary: 3659.72pom = 76318
-nowy: 4579.08
-stary: 5588.98pom = 223475
-nowy: 6704.26
-stary: 12268.9pom = 696457
-nowy: 13929.1
-stary: 21077.2pom = 1.54471e+06
-nowy: 23170.6
-stary: 38815.1pom = 2.41619e+06
-nowy: 41420.4
-stary: 61179.4pom = 3.21684e+06
-nowy: 64336.7
-stary: 68470.6pom = 1.79605e+06
-nowy: 71842.1
-kolejny obrot do
-przepislo stare wyniki:
-stary: 4172.03pom = 85806.9
-nowy: 5148.42
-stary: 6037.14pom = 239746
-nowy: 7192.37
-stary: 12226.5pom = 693775
-nowy: 13875.5
-stary: 19622.6pom = 1.44383e+06
-nowy: 21657.5
-stary: 32915pom = 2.06493e+06
-nowy: 35398.8
-stary: 49394.8pom = 2.61789e+06
-nowy: 52357.8
-stary: 55130pom = 1.45696e+06
-nowy: 58278.4
-stary: 4219.57pom = 173338
-nowy: 5200.13
-stary: 6117.37pom = 485161
-nowy: 7277.42
-stary: 12451.4pom = 1.4107e+06
-nowy: 14107
-stary: 20199.1pom = 2.96558e+06
-nowy: 22241.9
-stary: 34870.8pom = 4.35913e+06
-nowy: 37364
-stary: 53167.8pom = 5.6142e+06
-nowy: 56142
-stary: 59275.4pom = 3.12177e+06
-nowy: 62435.5
-stary: 4336.75pom = 147992
-nowy: 5327.72
-stary: 6311.6pom = 415760
-nowy: 7483.67
-stary: 12966.5pom = 1.21988e+06
-nowy: 14638.6
-stary: 21392pom = 2.60607e+06
-nowy: 23454.6
-stary: 39059.5pom = 4.04215e+06
-nowy: 41576.4
-stary: 61299.6pom = 5.35846e+06
-nowy: 64301.5
-stary: 68096.9pom = 2.97026e+06
-nowy: 71286.3
-stary: 4523.93pom = 153660
-nowy: 5531.77
-stary: 6615.59pom = 433731
-nowy: 7807.16
-stary: 13718.3pom = 1.28475e+06
-nowy: 15417
-stary: 22829.1pom = 2.76932e+06
-nowy: 24923.9
-stary: 41815.8pom = 4.31387e+06
-nowy: 44371.2
-stary: 65737.1pom = 5.73201e+06
-nowy: 68784.1
-stary: 73149.7pom = 3.18278e+06
-nowy: 76386.8
-stary: 4579.08pom = 93198.8
-nowy: 5591.93
-stary: 6704.26pom = 263387
-nowy: 7901.6
-stary: 13929.1pom = 781787
-nowy: 15635.7
-stary: 23170.6pom = 1.685e+06
-nowy: 25275
-stary: 41420.4pom = 2.56592e+06
-nowy: 43987.2
-stary: 64336.7pom = 3.36985e+06
-nowy: 67397.1
-stary: 71842.1pom = 1.87733e+06
-nowy: 75093.3
-kolejny obrot do
-przepislo stare wyniki:
-stary: 5148.42pom = 103625
-nowy: 6217.51
-stary: 7192.37pom = 281003
-nowy: 8430.09
-stary: 13875.5pom = 778793
-nowy: 15575.9
-stary: 21657.5pom = 1.58094e+06
-nowy: 23714.1
-stary: 35398.8pom = 2.20873e+06
-nowy: 37864
-stary: 52357.8pom = 2.76278e+06
-nowy: 55255.6
-stary: 58278.4pom = 1.53357e+06
-nowy: 61342.7
-stary: 5200.13pom = 209097
-nowy: 6272.9
-stary: 7277.42pom = 567953
-nowy: 8519.29
-stary: 14107pom = 1.58128e+06
-nowy: 15812.8
-stary: 22241.9pom = 3.24066e+06
-nowy: 24305
-stary: 37364pom = 4.64764e+06
-nowy: 39836.9
-stary: 56142pom = 5.90485e+06
-nowy: 59048.5
-stary: 62435.5pom = 3.27545e+06
-nowy: 65509.1
-stary: 5327.72pom = 178046
-nowy: 6409.64
-stary: 7483.67pom = 485329
-nowy: 8735.92
-stary: 14638.6pom = 1.36318e+06
-nowy: 16358.1
-stary: 23454.6pom = 2.83711e+06
-nowy: 25534
-stary: 41576.4pom = 4.28443e+06
-nowy: 44068.4
+
+Qg = : 0 ; 0 ; 150000 ; 150000 ; 0 ; 0 ; 450000 ; 450000 ; 0 ; 0 ; 750000 ; 750000 ; 0 ; 0 ; 750000 ; 750000 ; 0 ; 0 ; 300000 ; 300000 ; 
+
+
+POLICZYLO!!!!
+
+
