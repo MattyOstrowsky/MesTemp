@@ -323,7 +323,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 					{
 						pDC->SetPixel(x, y, RGB(33, 1, 250));
 					}
-					else if (temp1[x][y] > tempmin * 0.66 && temp1[x][y] < tempmin * 0.33)
+					else if (temp1[x][y] < tempmin * 0.66 && temp1[x][y] > tempmin * 0.33)
 					{
 						pDC->SetPixel(x, y, RGB(13, 30, 126));
 					}

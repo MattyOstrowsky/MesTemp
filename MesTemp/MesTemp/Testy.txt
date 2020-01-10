@@ -6,10 +6,10 @@ ile = 20
 pusta macierz globalna:
 -----------
 do globalnej
-P_glob 0 = 0
-P_glob 1 = 0
-P_glob 4 = 0
-P_glob 5 = 0
+P_glob 0 = 1e+06
+P_glob 1 = 1e+06
+P_glob 4 = 1e+06
+P_glob 5 = 1e+06
 ------------------------
 Jedziemy!
 0   ;   0   ;   200   ;   200   ;   0
@@ -19,10 +19,10 @@ tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 4 = 0
-P_glob 5 = 0
-P_glob 8 = 0
-P_glob 9 = 0
+P_glob 4 = 2e+06
+P_glob 5 = 2e+06
+P_glob 8 = 1e+06
+P_glob 9 = 1e+06
 ------------------------
 0   ;   1   ;   200   ;   200   ;   0
 
@@ -31,10 +31,10 @@ tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 8 = 0
-P_glob 9 = 0
-P_glob 12 = 0
-P_glob 13 = 0
+P_glob 8 = 2.5e+06
+P_glob 9 = 2.5e+06
+P_glob 12 = 1.5e+06
+P_glob 13 = 1.5e+06
 ------------------------
 0   ;   2   ;   200   ;   300   ;   0
 
@@ -43,10 +43,10 @@ tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 12 = 0
-P_glob 13 = 0
-P_glob 16 = 0
-P_glob 17 = 0
+P_glob 12 = 2.5e+06
+P_glob 13 = 2.5e+06
+P_glob 16 = 1e+06
+P_glob 17 = 1e+06
 ------------------------
 0   ;   3   ;   200   ;   200   ;   0
 
@@ -56,9 +56,9 @@ przeszlo dodanie
 przeszedl obrot wewnetrznej
 -----------
 do globalnej
-P_glob 1 = 0
+P_glob 1 = 1e+06
 P_glob 2 = 0
-P_glob 5 = 0
+P_glob 5 = 2e+06
 P_glob 6 = 0
 ------------------------
 1   ;   0   ;   400   ;   200   ;   1
@@ -68,9 +68,9 @@ tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 5 = 0
+P_glob 5 = 2e+06
 P_glob 6 = 0
-P_glob 9 = 0
+P_glob 9 = 2.5e+06
 P_glob 10 = 0
 ------------------------
 1   ;   1   ;   400   ;   200   ;   1
@@ -80,9 +80,9 @@ tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 9 = 0
+P_glob 9 = 2.5e+06
 P_glob 10 = 0
-P_glob 13 = 0
+P_glob 13 = 2.5e+06
 P_glob 14 = 0
 ------------------------
 1   ;   2   ;   400   ;   300   ;   1
@@ -92,9 +92,9 @@ tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 13 = 0
+P_glob 13 = 2.5e+06
 P_glob 14 = 0
-P_glob 17 = 0
+P_glob 17 = 1e+06
 P_glob 18 = 0
 ------------------------
 1   ;   3   ;   400   ;   200   ;   1
@@ -105,10 +105,10 @@ przeszlo dodanie
 przeszedl obrot wewnetrznej
 -----------
 do globalnej
-P_glob 2 = 150000
-P_glob 3 = 150000
-P_glob 6 = 150000
-P_glob 7 = 150000
+P_glob 2 = 0
+P_glob 3 = 0
+P_glob 6 = 0
+P_glob 7 = 0
 ------------------------
 2   ;   0   ;   300   ;   200   ;   5
 
@@ -117,10 +117,10 @@ tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 6 = 450000
-P_glob 7 = 450000
-P_glob 10 = 300000
-P_glob 11 = 300000
+P_glob 6 = 0
+P_glob 7 = 0
+P_glob 10 = 0
+P_glob 11 = 0
 ------------------------
 2   ;   1   ;   300   ;   200   ;   3
 
@@ -129,10 +129,10 @@ tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 10 = 750000
-P_glob 11 = 750000
-P_glob 14 = 450000
-P_glob 15 = 450000
+P_glob 10 = 0
+P_glob 11 = 0
+P_glob 14 = 0
+P_glob 15 = 0
 ------------------------
 2   ;   2   ;   300   ;   300   ;   3
 
@@ -141,10 +141,10 @@ tuz przed dodaniem do globalnej......i tuz po nim
 przeszlo dodanie
 -----------
 do globalnej
-P_glob 14 = 750000
-P_glob 15 = 750000
-P_glob 18 = 300000
-P_glob 19 = 300000
+P_glob 14 = 0
+P_glob 15 = 0
+P_glob 18 = 0
+P_glob 19 = 0
 ------------------------
 2   ;   3   ;   300   ;   200   ;   3
 
@@ -163,48 +163,48 @@ kolejne elementy wektora ii:
 przeszlo, wchodzi do petli 'do'
 kolejny obrot do
 przepislo stare wyniki:
+stary: 0pom = 1e+06
+nowy: 30000
+stary: 0pom = 1e+06
+nowy: 10000
 stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 150000
-nowy: 1285.71
-stary: 0pom = 150000
-nowy: 3000
+stary: 0pom = 2e+06
+nowy: 30000
+stary: 0pom = 2e+06
+nowy: 10000
 stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 450000
-nowy: 1928.57
-stary: 0pom = 450000
-nowy: 4500
+stary: 0pom = 2.5e+06
+nowy: 45000
+stary: 0pom = 2.5e+06
+nowy: 15000
 stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 750000
-nowy: 3857.14
-stary: 0pom = 750000
-nowy: 9000
+stary: 0pom = 2.5e+06
+nowy: 45000
+stary: 0pom = 2.5e+06
+nowy: 15000
 stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 750000
-nowy: 3857.14
-stary: 0pom = 750000
-nowy: 9000
+stary: 0pom = 1e+06
+nowy: 30000
+stary: 0pom = 1e+06
+nowy: 10000
 stary: 0pom = 0
 nowy: 0
 stary: 0pom = 0
 nowy: 0
-stary: 0pom = 300000
-nowy: 2571.43
-stary: 0pom = 300000
-nowy: 6000
 
-Qg = : 0 ; 0 ; 150000 ; 150000 ; 0 ; 0 ; 450000 ; 450000 ; 0 ; 0 ; 750000 ; 750000 ; 0 ; 0 ; 750000 ; 750000 ; 0 ; 0 ; 300000 ; 300000 ; 
+Qg = : 1e+06 ; 1e+06 ; 0 ; 0 ; 2e+06 ; 2e+06 ; 0 ; 0 ; 2.5e+06 ; 2.5e+06 ; 0 ; 0 ; 2.5e+06 ; 2.5e+06 ; 0 ; 0 ; 1e+06 ; 1e+06 ; 0 ; 0 ; 
 
 
 POLICZYLO!!!!
