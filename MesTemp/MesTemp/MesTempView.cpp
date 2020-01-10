@@ -471,8 +471,7 @@ void CMesTempView::OnLButtonUp(UINT nFlags, CPoint point)
 	xPos = (int)point.x - xos00;
 	//yPos = (int)point.y;
 	//xPos = (int)point.x ;
-	Invalidate(TRUE);
-	UpdateWindow();
+
 }
 
 
