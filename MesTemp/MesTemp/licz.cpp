@@ -61,9 +61,9 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 	//jakaœ zewnêtrzna pêtla do latania po ró¿nych obszarach?
 	plik << "Jedziemy!\n";
 	//plik << "Jedziemy!\nx   ;   y   ;   dx   ;   dy   ;   obszar\n\n";
-	for (int x = 0; x < ilex-1; x++)
+	for (int y = 0; y < iley-1; y++)
 	{
-		for (int y = 0; y < iley-1; y++)
+		for (int x = 0; x < ilex-1; x++)
 		{
 			o = 0;
 			dx = S.kord_x[x + 1] - S.kord_x[x];
@@ -117,27 +117,30 @@ float licz::temp(float x, float y, int& ost, std::vector<float> T, Siatka S)
 {
 	licz L;
 	int n1;
-	float nx, ny, kx, ky, lokx, loky, w;
+	float nx, ny, kx, ky, lokx, loky, w, nex, ney;
 	bool czy = true;	//czy kontynuowaæ poszukiwania elementu
 	bool X = false;		//zmienna awaryjna, bada prawid³owy przebieg pêtli
 	//zamiast zwyk³ego fora pêtla zaczyna poszukiwania od sprawdzenia ostatnio u¿ytego elementu. Nie doda³em obs³ugi b³êdów, wiêc
 	//JEŒLI PROGRAM WIESZA SIÊ NA TEJ PÊTLI TO ZNACZY, ¯E WSKAZANY PUNKT JEST POZA GRANICAMI SIATKI
 	L.ktory_el (x, y, ost, S, X);
 	//Po powy¿szej funkcji wiadomo ju¿, w którym elemencie znajduje siê punkt
-	ny = ost / S.kord_x.size();
-	nx = ost % S.kord_x.size();
 	if (X) return -300;
 	else
 	{
+		//ney = ost / (S.kord_x.size() - 1);			//wspó³rzêdne elementu
+		//nex = ost % (S.kord_x.size() - 1);
+		//1n1 = nex + ney * S.kord_x.size();			//numer lewego dolnego wêz³a
+		//n1 = ost + (ost / (S.kord_x.size() - 1));
+		ny = ost / S.kord_x.size();					//wspó³rzêdne lewego dolnego wêz³a
+		nx = ost % S.kord_x.size();
 		kx = (S.kord_x[nx + 1] - S.kord_x[nx]) * 0.5;
 		ky = (S.kord_y[ny + 1] - S.kord_y[ny]) * 0.5;		//wspó³czynniki proporcjonalnoœci
 		lokx = (x - S.kord_x[nx]) / kx - 1;
 		loky = (y - S.kord_y[ny]) / ky - 1;		//lokalne wspó³zêdne (-1;1)
-		n1 = nx + ny * S.kord_x.size();			//numer lewego dolnego wêz³a
-		w = T[n1] * (1 - lokx) * (1 - loky);
-		w += T[n1 + 1] * (1 + lokx) * (1 - loky);
-		w += T[n1 + S.kord_x.size()] * (1 - lokx) * (1 + loky);
-		w += T[n1 + S.kord_x.size() + 1] * (1 + lokx) * (1 + loky);
+		w = T[ost] * (1 - lokx) * (1 - loky);
+		w += T[ost + 1] * (1 + lokx) * (1 - loky);
+		w += T[ost + S.kord_x.size()] * (1 - lokx) * (1 + loky);
+		w += T[ost + S.kord_x.size() + 1] * (1 + lokx) * (1 + loky);
 		w *= 0.25;
 		return w;
 	}
@@ -152,7 +155,7 @@ void licz:: ktory_obszar(float x, float y, int& ost, Siatka S, bool& X, std::vec
 	//JEŒLI PUNKT NIE NALE¯Y DY ¯ADNEGO OBSZARU, TO X =  TRUE 
 	while (czy)
 	{
-		if (x >= obszary[ost].x1 && x <= obszary[ost].x4 && y >= obszary[ost].y1 && obszary[ost].y4)
+		if (x >= obszary[ost].x1 && x <= obszary[ost].x4 && y >= obszary[ost].y1 && y <= obszary[ost].y4)
 		{
 			czy = false;
 		}
@@ -177,7 +180,7 @@ void licz:: ktory_obszar(float x, float y, int& ost, Siatka S, bool& X, std::vec
 		}
 	}
 }
-// funkcja zwracaj¹ca numer elementu pod wskazanymi wspó³rzêdnymi
+// funkcja zwracaj¹ca numer lewego dolnego wêz³a elementu pod wskazanymi wspó³rzêdnymi
 void licz::ktory_el(float x, float y, int& ost, Siatka S, bool& X)
 {
 	float nx, ny;
@@ -187,7 +190,7 @@ void licz::ktory_el(float x, float y, int& ost, Siatka S, bool& X)
 	//JEŒLI PUNKT NIE NALE¯Y DY ¯ADNEGO ELEMENTU, TO X = TRUE
 	while (czy)
 	{
-		ny = ost / S.kord_y.size();
+		ny = ost / S.kord_x.size();
 		nx = ost % S.kord_x.size();
 		if (x >= S.kord_x[nx] && x <= S.kord_x[nx + 1] && y >= S.kord_y[ny] && y <= S.kord_y[ny + 1])
 		{

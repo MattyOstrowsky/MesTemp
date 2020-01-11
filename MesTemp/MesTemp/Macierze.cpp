@@ -18,6 +18,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 	int ile = Q.size();
 	plik << "\nWeszlo do funkcji. ile = " << ile << "\n";
 	plik.close();
+	int petle = 0;			//dla zorientowania siê
 	plik.open("Testy.txt", std::ofstream::app);
 	float pom;
 	std::vector<int> ii;	//indeksy elementów na g³ównej przek¹tnej
@@ -29,6 +30,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 	plik.open("Testy.txt", std::ofstream::app);
 	for (int i = 0; i < ile; i++)	//wype³niamiy ii
 	{
+		petle++;
 		pom2 = K.prow[i];
 		while (i != K.coln[pom2])pom2++;
 		ii.push_back(pom2);
@@ -49,9 +51,9 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 		{
 			stare[i] = wynik[i];	//przepisuje poprzednie wyniki do tablicy pomocniczej
 		}
-		plik << "przepislo stare wyniki:\n";
-		plik.close();
-		plik.open("Testy.txt", std::ofstream::app);
+		//plik << "przepislo stare wyniki:\n";
+		//plik.close();
+		//plik.open("Testy.txt", std::ofstream::app);
 		for (int i = 0; i < ile; i++)
 		{
 			plik << "stary: " << stare[i];
@@ -63,14 +65,15 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 				pom -= K.A[j] * stare[K.coln[j]];
 			}
 			pom += K.A[ii[i]] * stare[i];
-			plik << "pom = " << pom;
+			//plik << "pom = " << pom;
 			wynik[i] = pom / K.A[ii[i]];
-			plik << "\nnowy: " << wynik[i] << "\n";
+			plik << " ; nowy: " << wynik[i] << "\n";
 			plik.close();
 			plik.open("Testy.txt", std::ofstream::app);
-			if ((abs((wynik[i] - stare[i]) / wynik[i])) > 1) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
+			if ((abs((wynik[i] - stare[i]) / stare[i])) > 0.1) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
 		}
 	} while (czy);
+	plik << "\nWyszlo z petli iteracyjnej po " << petle << " obrotach\n";
 	plik.close();
 }
 

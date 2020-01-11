@@ -291,9 +291,9 @@ void CMesTempView::OnDraw(CDC * pDC)
 			
 			double tempmax = 0;
 			double tempmin = 0;
-			for (int x = 0; x < 800; x++)
+			for (int y = 0; y < 600; y++)
 			{
-				for (int y = 0; y < 600; y++)
+				for (int x = 0; x < 800; x++)
 				{
 					temp1[x][y] = licz.temp(x, y, nr, wynikRozw, siatka);
 					if (temp1[x][y] > tempmax)
