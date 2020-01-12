@@ -62,14 +62,33 @@ void Siatka::zageszczenie_prostokatow(int gestosc, std::vector<float>& kord)
 	temp2.clear();
 
 	//polowienie kordow
-	for (int i = 0; i < kord.size() - 1; i++)
+
+
+	for (int i = 0; i < kord.size() - 2; i++)
+	{
+		if ((0.3*abs(kord[i + 2] - kord[i + 1])) <= (abs(kord[i + 1] - kord[i])))
+		{
+			for (int j = 0; j < gestosc - 1; j++)
+			{
+				if (temp2.empty())
+					temp2.push_back(kord[i] + 1.0 / gestosc * abs(kord[i + 1] - kord[i]));
+				else
+					temp2.push_back(temp2[j - 1] + 1.0 / gestosc * abs(kord[i + 1] - kord[i]));
+				temp.push_back(temp2[j]);
+			}
+			temp2.clear();
+		}
+	}
+	//dla ostatnich elementow
+	int licz = kord.size() - 2;
+	if ((0.3*abs(kord[licz - 1] - kord[licz])) <= (abs(kord[licz + 1] - kord[licz])))
 	{
 		for (int j = 0; j < gestosc - 1; j++)
 		{
 			if (temp2.empty())
-				temp2.push_back(kord[i] + 1.0 / gestosc * abs(kord[i + 1] - kord[i]));
+				temp2.push_back(kord[licz] + 1.0 / gestosc * abs(kord[licz + 1] - kord[licz]));
 			else
-				temp2.push_back(temp2[j - 1] + 1.0 / gestosc * abs(kord[i + 1] - kord[i]));
+				temp2.push_back(temp2[j - 1] + 1.0 / gestosc * abs(kord[licz + 1] - kord[licz]));
 			temp.push_back(temp2[j]);
 		}
 		temp2.clear();
