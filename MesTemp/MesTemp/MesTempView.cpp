@@ -264,24 +264,51 @@ void CMesTempView::OnDraw(CDC * pDC)
 		siatka.utworz_siatke(wektor_obszarow);
 		siatka.zageszczenie_prostokatow(zag_y, siatka.kord_y);
 		siatka.zageszczenie_prostokatow(zag_x, siatka.kord_x);
+		for (int j = 0; j < liczba_obszarow; j++)
+		{
 		
-		for (int i = 0; i < siatka.kord_x.size(); i++)
-		{
-			if ((xos0 + skala * siatka.kord_x[i]) > 8 && (xos0 + skala * siatka.kord_x[i]) < 800)
+			for (int i = 0; i < siatka.kord_x.size(); i++)
 			{
-				pDC->MoveTo(xos0 + skala * siatka.kord_x[i], 10);
-				pDC->LineTo(xos0 + skala * siatka.kord_x[i], 600);
-			}
+				if ((xos0 + skala * siatka.kord_x[i]) > wektor_obszarow[j].x1 && (xos0 + skala * siatka.kord_x[i]) < wektor_obszarow[j].x4)
+				{
+					if ((xos0 + skala * siatka.kord_x[i]) > 8 && (xos0 + skala * siatka.kord_x[i]) < 800)
+					{
+				
+						pDC->MoveTo(xos0 + skala * siatka.kord_x[i], yos0 - skala * wektor_obszarow[j].y1);
+						pDC->LineTo(xos0 + skala * siatka.kord_x[i], yos0 - skala * wektor_obszarow[j].y4);
+					}
+					else
+					{
+						pDC->MoveTo(xos0 + skala * siatka.kord_x[i], 10);
+						pDC->LineTo(xos0 + skala * siatka.kord_x[i], 600);
+						
+					}
+				}
+				
 
-		}
-		for (int i = 0; i < siatka.kord_y.size(); i++)
-		{
-			if ((yos0 - skala * siatka.kord_y[i]) > 10 && (yos0 - skala * siatka.kord_y[i]) < 600)
-			{
-				pDC->MoveTo(8, yos0 - skala * siatka.kord_y[i]);
-				pDC->LineTo(800, yos0 - skala * siatka.kord_y[i]);
 			}
+			for (int i = 0; i < siatka.kord_y.size(); i++)
+			{
+				if ((yos0 - skala * siatka.kord_y[i]) > wektor_obszarow[j].y1 && (yos0 - skala * siatka.kord_y[i]) < wektor_obszarow[j].y4)
+				{
+					if ((yos0 - skala * siatka.kord_y[i]) > 10 && (yos0 - skala * siatka.kord_y[i]) < 600)
+					{
+						pDC->MoveTo(xos0 + skala * wektor_obszarow[j].x1, yos0 - skala * siatka.kord_y[i]);
+						pDC->LineTo(xos0 + skala * wektor_obszarow[j].x4, yos0 - skala * siatka.kord_y[i]);
+					}
+					else
+					{
+
+						pDC->MoveTo(8, yos0 - skala * siatka.kord_y[i]);
+						pDC->LineTo(800, yos0 - skala * siatka.kord_y[i]);
+					}
+				}
+
+
+			}
+			
 		}
+		
 		if (RozRysuj)
 		{
 			std::vector<float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
@@ -302,39 +329,47 @@ void CMesTempView::OnDraw(CDC * pDC)
 						tempmin = temp1[x][y];
 				}
 			}
-
-			for (int x = 0; x < 800; x++)
+			
+			for (int i = 0; i < liczba_obszarow; i++)
 			{
-				for (int y = 0; y < 600; y++)
+				for (int x = skala * wektor_obszarow[i].x1; x < skala * wektor_obszarow[i].x4; x++)
 				{
-					if (temp1[x][y] > tempmax * 0.66)
+					for (int y = skala * wektor_obszarow[i].y1; y < skala * wektor_obszarow[i].y4; y++)
 					{
-						pDC->SetPixel(x, y, RGB(182, 0, 0));
-					}
-					else if (temp1[x][y] < tempmax * 0.66 && temp1[x][y] > tempmax * 0.33)
-					{
-						pDC->SetPixel(x, y, RGB(182, 101, 0));
-					}
-					else if (temp1[x][y] < tempmax * 0.33 && temp1[x][y] >=0)
-					{
-						pDC->SetPixel(x, y, RGB(221, 221, 0));
-					}
-					else if (temp1[x][y] > tempmin * 0.33 && temp1[x][y] < 0)
-					{
-						pDC->SetPixel(x, y, RGB(33, 1, 250));
-					}
-					else if (temp1[x][y] < tempmin * 0.66 && temp1[x][y] > tempmin * 0.33)
-					{
-						pDC->SetPixel(x, y, RGB(13, 30, 126));
-					}
-					else if (temp1[x][y] < tempmin * 0.33)
-					{
-						pDC->SetPixel(x, y, RGB(13, 4, 70));
+						
+						if (temp1[x][y] > tempmax * 0.66)
+						{
+							pDC->SetPixel(x + xos00, yos00 - y, RGB(182, 0, 0));
+						}
+						else if (temp1[x][y] < tempmax * 0.66 && temp1[x][y] > tempmax * 0.33)
+						{
+							pDC->SetPixel(x + xos00, yos00 - y, RGB(182, 101, 0));
+						}
+						else if (temp1[x][y] < tempmax * 0.33 && temp1[x][y] >= 0)
+						{
+							pDC->SetPixel(x + xos00, yos00 - y, RGB(221, 221, 0));
+						}
+						else if (temp1[x][y] > tempmin * 0.33 && temp1[x][y] < 0)
+						{
+							pDC->SetPixel(x + xos00, yos00 - y, RGB(33, 1, 250));
+						}
+						else if (temp1[x][y] < tempmin * 0.66 && temp1[x][y] > tempmin * 0.33)
+						{
+							pDC->SetPixel(x + xos00, yos00 - y, RGB(13, 30, 126));
+						}
+						else if (temp1[x][y] < tempmin * 0.33 )
+						{
+							pDC->SetPixel(x + xos00, yos00 - y, RGB(13, 4, 70));
+						}
+						else if (temp1[x][y] == -300)
+						{
+						}
+
 					}
 
 				}
-
 			}
+			
 		}
 		
 		
