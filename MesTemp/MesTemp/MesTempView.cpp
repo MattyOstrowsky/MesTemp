@@ -14,6 +14,7 @@
 #include "MesTempView.h"
 #include "DialZagesc.h"
 #include "Siatka.h"
+#include "licz.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -33,6 +34,11 @@ BEGIN_MESSAGE_MAP(CMesTempView, CView)
 	ON_COMMAND(ID_FILE_OPEN, &CMesTempView::OnFileOpen)
 	ON_COMMAND(ID_START_GENERUJSIATK32773, &CMesTempView::OnStartGeneruj)
 
+	ON_WM_LBUTTONUP()
+	ON_COMMAND(ID_MENU_PRZYBLI32781, &CMesTempView::OnMenuPrzybli)
+	ON_COMMAND(ID_MENU_ODDAL, &CMesTempView::OnMenuOddal)
+	ON_COMMAND(ID_START_ZAG32777, &CMesTempView::OnStartZag32777)
+	ON_COMMAND(ID_START_ROZK32784, &CMesTempView::OnStartRozk)
 END_MESSAGE_MAP()
 
 // CMesTempView construction/destruction
@@ -76,7 +82,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 		pDC->LineTo(15, 15);
 		pDC->LineTo(20, 20);
 		pDC->MoveTo(15, 20);
-		pDC->LineTo(xos0,yos0);
+		pDC->LineTo(15,590);
 		pDC->LineTo(790, 590);
 		pDC->MoveTo(790, 595);
 		pDC->LineTo(790, 585);
@@ -87,14 +93,18 @@ void CMesTempView::OnDraw(CDC * pDC)
 		
 		floatString = "skala:";
 		pDC->TextOutW(960, 50, floatString);
-		floatString = "liczba elementów:";
+		floatString = "liczba elementï¿½w:";
 		pDC->TextOutW(960, 70, floatString);
 		floatString.Format(_T("%f"), liczba_obszarow);
 		pDC->TextOutW(1170, 70, floatString);
 		floatString.Format(_T("%f"), skala);
-		pDC->TextOutW(1000,50, floatString);
+		pDC->TextOutW(1170,50, floatString);
+		floatString.Format(_T("%f"), yPos);
+		pDC->TextOutW(1120, 20, floatString);
+		floatString.Format(_T("%f"), xPos);
+		pDC->TextOutW(1020, 20, floatString);
+		
 
-		//pDC->TextOutW(200,200,cc);
 		CPen pen3(PS_SOLID, 2, RGB(0, 0, 0));
 		CPen* oldpen3 = pDC->SelectObject(&pen3);
 
@@ -102,20 +112,143 @@ void CMesTempView::OnDraw(CDC * pDC)
 		{
 			if (wektor_obszarow[i].czy_prostokat) // dla prostokatow
 			{
-				pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1),  (yos0 - skala * wektor_obszarow[i].y1));
-				pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4),  (yos0 - skala * wektor_obszarow[i].y1));
-				pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4),  (yos0 - skala * wektor_obszarow[i].y4));
-				pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1),  (yos0 - skala * wektor_obszarow[i].y4));
-				pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1),  (yos0 - skala * wektor_obszarow[i].y1));
+				//pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y1));
+				//pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y1));
+				if (600 > (yos0 - skala * wektor_obszarow[i].y1) && 10 < (yos0 - skala * wektor_obszarow[i].y1))
+				{
+					if (8 > (xos0 + skala * wektor_obszarow[i].x1) && 800>(xos0 + skala * wektor_obszarow[i].x4)&& (xos0 + skala * wektor_obszarow[i].x4) >8)
+					{
+						pDC->MoveTo(8, (yos0 - skala * wektor_obszarow[i].y1));
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y1));
+					}
+					else if (8 > (xos0 + skala * wektor_obszarow[i].x1) && 800 < (xos0 + skala * wektor_obszarow[i].x4))
+					{
+						pDC->MoveTo(8, (yos0 - skala * wektor_obszarow[i].y1));
+						pDC->LineTo(800, (yos0 - skala * wektor_obszarow[i].y1));
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y1));
+
+					}
+					else if (8 < (xos0 + skala * wektor_obszarow[i].x1)&&(xos0 + skala * wektor_obszarow[i].x1)<800 && 800 > (xos0 + skala * wektor_obszarow[i].x4))
+					{
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y1));
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y1));
+					}
+					else if (8 < (xos0 + skala * wektor_obszarow[i].x1)&& (xos0 + skala * wektor_obszarow[i].x1)<800 && 800 < (xos0 + skala * wektor_obszarow[i].x4))
+					{
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y1));
+						pDC->LineTo(800, (yos0 - skala * wektor_obszarow[i].y1));
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y1));
+
+					}
+				}else
+				{
+					pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y1));
+				}
+
+				//pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y4));
+
+				if (8 < (xos0 + skala * wektor_obszarow[i].x4) && 800 > (xos0 + skala * wektor_obszarow[i].x4))
+				{
+					if (600 < (yos0 - skala * wektor_obszarow[i].y1) && 10< (yos0 - skala * wektor_obszarow[i].y4)&& (yos0 - skala * wektor_obszarow[i].y4)<600)
+					{
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x4), 600);
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y4));
+					}
+					else if (600 < (yos0 - skala * wektor_obszarow[i].y1) && 10 > (yos0 - skala * wektor_obszarow[i].y4))
+					{
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x4), 600);
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4), 10);
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y4));
+
+					}
+					else if (600 > (yos0 - skala * wektor_obszarow[i].y1)&& (yos0 - skala * wektor_obszarow[i].y1)>10 && 10 > (yos0 - skala * wektor_obszarow[i].y4))
+					{
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4), 10);
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y4));
+					}
+					else if (600 > (yos0 - skala * wektor_obszarow[i].y1)&& (yos0 - skala * wektor_obszarow[i].y1) >10&& 10 < (yos0 - skala * wektor_obszarow[i].y4))
+					{
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y4));
+
+					}
+				}
+				else
+				{
+					pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x4), (yos0 - skala * wektor_obszarow[i].y4));
+				}
+
+				
+				//pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1),  (yos0 - skala * wektor_obszarow[i].y4));
+				if (600 > (yos0 - skala * wektor_obszarow[i].y4) && 10 < (yos0 - skala * wektor_obszarow[i].y4))
+				{
+					if (8 < (xos0 + skala * wektor_obszarow[i].x1)&&(xos0 + skala * wektor_obszarow[i].x1)<800 && 800 < (xos0 + skala * wektor_obszarow[i].x4))
+					{
+						pDC->MoveTo(800, (yos0 - skala * wektor_obszarow[i].y4));
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y4));
+					}
+					else if (8 > (xos0 + skala * wektor_obszarow[i].x1) && 800 < (xos0 + skala * wektor_obszarow[i].x4))
+					{
+						pDC->MoveTo(800, (yos0 - skala * wektor_obszarow[i].y4));
+						pDC->LineTo(8, (yos0 - skala * wektor_obszarow[i].y4));
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y4));
+
+					}
+					else if (8 < (xos0 + skala * wektor_obszarow[i].x1) && 800 > (xos0 + skala * wektor_obszarow[i].x4))
+					{
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y4));
+					}
+					else if (8 > (xos0 + skala * wektor_obszarow[i].x1) && 800 > (xos0 + skala * wektor_obszarow[i].x4)&& (xos0 + skala * wektor_obszarow[i].x4) >8)
+					{
+						
+						pDC->LineTo(8, (yos0 - skala * wektor_obszarow[i].y4));
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y4));
+
+					}
+				}
+				else
+				{
+					pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y4));
+				}
+				
+				//pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1),  (yos0 - skala * wektor_obszarow[i].y1));
+				if (8 < (xos0 + skala * wektor_obszarow[i].x4) && 800 > (xos0 + skala * wektor_obszarow[i].x4))
+				{
+					if (600 > (xos0 + skala * wektor_obszarow[i].x1)&& (xos0 + skala * wektor_obszarow[i].x1)>10 && 10 > (yos0 - skala * wektor_obszarow[i].y4))
+					{
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), 8);
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y1));
+					}
+					else if (600 < (yos0 - skala * wektor_obszarow[i].y1) && 10 > (yos0 - skala * wektor_obszarow[i].y4))
+					{
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), 10);
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1), 600);
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y1));
+
+					}
+					else if (600 > (yos0 - skala * wektor_obszarow[i].y1) && 10 < (yos0 - skala * wektor_obszarow[i].y4))
+					{
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y1));
+					}
+					else if (600 < (yos0 - skala * wektor_obszarow[i].y1) && 10 < (yos0 - skala * wektor_obszarow[i].y4)&& (yos0 - skala * wektor_obszarow[i].y4)<600)
+					{
+						pDC->LineTo((xos0 + skala * wektor_obszarow[i].x1), 600);
+						pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y1));
+
+					}
+				}
+				else
+				{
+					pDC->MoveTo((xos0 + skala * wektor_obszarow[i].x1), (yos0 - skala * wektor_obszarow[i].y1));
+				}
 			}
-			else //dla nieprostokatow
-			{
-				pDC->MoveTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
-				pDC->LineTo(xos0 + wektor_obszarow[i].x2, yos0 - wektor_obszarow[i].y2);
-				pDC->LineTo(xos0 + wektor_obszarow[i].x3, yos0 - wektor_obszarow[i].y3);
-				pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y4);
-				pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
-			}
+			//else //dla nieprostokatow
+			//{
+			//	pDC->MoveTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+			//	pDC->LineTo(xos0 + wektor_obszarow[i].x2, yos0 - wektor_obszarow[i].y2);
+			//	pDC->LineTo(xos0 + wektor_obszarow[i].x3, yos0 - wektor_obszarow[i].y3);
+			//	pDC->LineTo(xos0 + wektor_obszarow[i].x4, yos0 - wektor_obszarow[i].y4);
+			//	pDC->LineTo(xos0 + wektor_obszarow[i].x1, yos0 - wektor_obszarow[i].y1);
+			//}
 			
 			
 		}
@@ -129,41 +262,86 @@ void CMesTempView::OnDraw(CDC * pDC)
 
 		Siatka siatka(wektor_obszarow);
 		siatka.utworz_siatke(wektor_obszarow);
+		siatka.zageszczenie_prostokatow(zag_y, siatka.kord_y);
+		siatka.zageszczenie_prostokatow(zag_x, siatka.kord_x);
 		
 		for (int i = 0; i < siatka.kord_x.size(); i++)
 		{
-			pDC->MoveTo(xos0 + siatka.kord_x[i], 10);
-			pDC->LineTo(xos0 + siatka.kord_x[i], 600);
+			if ((xos0 + skala * siatka.kord_x[i]) > 8 && (xos0 + skala * siatka.kord_x[i]) < 800)
+			{
+				pDC->MoveTo(xos0 + skala * siatka.kord_x[i], 10);
+				pDC->LineTo(xos0 + skala * siatka.kord_x[i], 600);
+			}
 
 		}
-		for (int i = 0; i < siatka.kord_y.size() ; i++)
+		for (int i = 0; i < siatka.kord_y.size(); i++)
 		{
-			pDC->MoveTo(8, yos0 - siatka.kord_y[i]);
-			pDC->LineTo(800, yos0 - siatka.kord_y[i]);
-		}
-			if (ZagRysuj)
+			if ((yos0 - skala * siatka.kord_y[i]) > 10 && (yos0 - skala * siatka.kord_y[i]) < 600)
 			{
-				siatka.zageszczenie_prostokatow(zag_x, siatka.kord_y);
-				siatka.zageszczenie_prostokatow(zag_y, siatka.kord_x);
-				for (int i = 0; i < siatka.kord_x.size() ; i++)
-				{
-					pDC->MoveTo(xos0 + siatka.kord_x[i], 10);
-					pDC->LineTo(xos0 + siatka.kord_x[i], 600);
-					
-				}
-				
-				for (int i = 0; i < siatka.kord_y.size(); i++)
-				{
-					pDC->MoveTo(8, yos0 - siatka.kord_y[i]);
-					pDC->LineTo( 800, yos0 - siatka.kord_y[i] );
-					
-				}
-				
+				pDC->MoveTo(8, yos0 - skala * siatka.kord_y[i]);
+				pDC->LineTo(800, yos0 - skala * siatka.kord_y[i]);
 			}
+		}
+		if (RozRysuj)
+		{
+			std::vector<float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
+			licz licz;
+			licz.rozw(wynikRozw, siatka, wektor_obszarow);
+			int nr=0;
+			
+			double tempmax = 0;
+			double tempmin = 0;
+			for (int y = 0; y < 600; y++)
+			{
+				for (int x = 0; x < 800; x++)
+				{
+					temp1[x][y] = licz.temp(x, y, nr, wynikRozw, siatka);
+					if (temp1[x][y] > tempmax)
+						tempmax = temp1[x][y];
+					if (temp1[x][y] < tempmin)
+						tempmin = temp1[x][y];
+				}
+			}
+
+			for (int x = 0; x < 800; x++)
+			{
+				for (int y = 0; y < 600; y++)
+				{
+					if (temp1[x][y] > tempmax * 0.66)
+					{
+						pDC->SetPixel(x, y, RGB(182, 0, 0));
+					}
+					else if (temp1[x][y] < tempmax * 0.66 && temp1[x][y] > tempmax * 0.33)
+					{
+						pDC->SetPixel(x, y, RGB(182, 101, 0));
+					}
+					else if (temp1[x][y] < tempmax * 0.33 && temp1[x][y] >=0)
+					{
+						pDC->SetPixel(x, y, RGB(221, 221, 0));
+					}
+					else if (temp1[x][y] > tempmin * 0.33 && temp1[x][y] < 0)
+					{
+						pDC->SetPixel(x, y, RGB(33, 1, 250));
+					}
+					else if (temp1[x][y] < tempmin * 0.66 && temp1[x][y] > tempmin * 0.33)
+					{
+						pDC->SetPixel(x, y, RGB(13, 30, 126));
+					}
+					else if (temp1[x][y] < tempmin * 0.33)
+					{
+						pDC->SetPixel(x, y, RGB(13, 4, 70));
+					}
+
+				}
+
+			}
+		}
+		
+		
 		
 
 	}
-
+	
 }
 
 
@@ -212,20 +390,14 @@ CMesTempDoc* CMesTempView::GetDocument() const // non-debug version is inline
 
 void CMesTempView::OnStartZag()
 {
-	DialZagesc dlgDialZagesc;
-	dlgDialZagesc.DoModal();
-	zag_x = dlgDialZagesc.zag_x;
-	zag_y = dlgDialZagesc.zag_y;
-	ZagRysuj = true;
-	Invalidate(TRUE);
-	UpdateWindow();
+	
 
 }
 
 
 void CMesTempView::OnFileOpen()
 {
-	// TODO: Dodaj tutaj swój kod procedury obs³ugi polecenia
+	// TODO: Dodaj tutaj swï¿½j kod procedury obsï¿½ugi polecenia
 	CFile newfile;
 	TCHAR szFilters[] = _T("txt Type Files (*.txt)|*.txt|All Files (*.*)|*.*||");
 	CFileDialog fileDlg(TRUE, _T("txt"), _T("*.txt"), OFN_HIDEREADONLY | OFN_FILEMUSTEXIST, szFilters);
@@ -240,8 +412,6 @@ void CMesTempView::OnFileOpen()
 		loadArchive.Close();
 		oldFile.Close();
 
-
-	
 
 		std::fstream plik; //otworzenie pliku o danej nazwie
 		plik.open(FilePathName, std::ios::in);
@@ -263,24 +433,17 @@ void CMesTempView::OnFileOpen()
 				if (obszar.y4 > y_max)
 					y_max = obszar.y4;
 				wektor_obszarow.push_back(obszar);
-
-
-			
 				
 			}
-
 			
 		}
 		while ((skala * x_max) > 800 || (skala * y_max) > 600) {
 			skala -= 0.1;
 		}
-			
-
+		skalaTrue = skala;
 
 		//obszar.test(liczba_obszarow,wektor_obszarow,czy_pokrywa);
 		Rysuj = true;
-		
-		
 		Invalidate(TRUE);
 		UpdateWindow();
 		
@@ -296,3 +459,58 @@ void CMesTempView::OnStartGeneruj()
 }
 
 
+
+
+void CMesTempView::OnLButtonUp(UINT nFlags, CPoint point)
+{
+	// TODO: Dodaj tutaj swï¿½j kod procedury obsï¿½ugi komunikatï¿½w i/lub wywoï¿½aj domyï¿½lny
+
+	CView::OnLButtonUp(nFlags, point);
+	
+	yPos = yos00 - (int)point.y;
+	xPos = (int)point.x - xos00;
+	//yPos = (int)point.y;
+	//xPos = (int)point.x ;
+
+}
+
+
+void CMesTempView::OnMenuPrzybli()
+{
+	yos0 +=yPos -225;
+	xos0 -=xPos -300;
+	skala = skala * 1.25;
+	Invalidate(TRUE);
+	UpdateWindow();
+}
+
+
+void CMesTempView::OnMenuOddal()
+{
+	yos0 = 590;
+	xos0 = 15;
+	skala = skalaTrue;
+	Invalidate(TRUE);
+	UpdateWindow();
+}
+
+
+void CMesTempView::OnStartZag32777()
+{
+	DialZagesc dlgDialZagesc;
+	dlgDialZagesc.DoModal();
+	zag_x = dlgDialZagesc.zag_x;
+	zag_y = dlgDialZagesc.zag_y;
+	RysSiatka = true;
+	Invalidate(TRUE);
+	UpdateWindow();
+}
+
+
+void CMesTempView::OnStartRozk()
+{
+	RozRysuj = true;
+	RysSiatka = true;
+	Invalidate(TRUE);
+	UpdateWindow();
+}
