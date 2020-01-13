@@ -17,35 +17,35 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 	plik.open("Testy.txt", std::ofstream::app);
 	int ile = Q.size();
 	plik << "\nWeszlo do funkcji. ile = " << ile << "\n";
-	plik.close();
+	//plik.close();
 	int petle = 0;			//dla zorientowania siê
-	plik.open("Testy.txt", std::ofstream::app);
+	//plik.open("Testy.txt", std::ofstream::app);
 	float pom;
 	std::vector<int> ii;	//indeksy elementów na g³ównej przek¹tnej
 	float* stare = new float[ile];	//poprzednie wyniki, potrzebne by sprawdziæ kiedy skoñczyæ iteracjê
 	bool czy;
 	int pom2;
-	plik << "\n\nkolejne elementy wektora ii:\n";
-	plik.close();
-	plik.open("Testy.txt", std::ofstream::app);
+	//plik << "\n\nkolejne elementy wektora ii:\n";
+	//plik.close();
+	//plik.open("Testy.txt", std::ofstream::app);
 	for (int i = 0; i < ile; i++)	//wype³niamiy ii
 	{
 		petle++;
 		pom2 = K.prow[i];
 		while (i != K.coln[pom2])pom2++;
 		ii.push_back(pom2);
-		plik << ii[i] << " ; ";
-		plik.close();
-		plik.open("Testy.txt", std::ofstream::app);
+		//plik << ii[i] << " ; ";
+		//plik.close();
+		//plik.open("Testy.txt", std::ofstream::app);
 	}
-	plik << "\nprzeszlo, wchodzi do petli 'do'\n";
-	plik.close();
-	plik.open("Testy.txt", std::ofstream::app);
+	//plik << "\nprzeszlo, wchodzi do petli 'do'\n";
+	//plik.close();
+	//plik.open("Testy.txt", std::ofstream::app);
 	do
 	{
-		plik << "kolejny obrot do\n";
-		plik.close();
-		plik.open("Testy.txt", std::ofstream::app);
+		//plik << "kolejny obrot do\n";
+		//plik.close();
+		//plik.open("Testy.txt", std::ofstream::app);
 		czy = false;
 		for (int i = 0; i < ile; i++)
 		{
@@ -56,9 +56,9 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 		//plik.open("Testy.txt", std::ofstream::app);
 		for (int i = 0; i < ile; i++)
 		{
-			plik << "stary: " << stare[i];
-			plik.close();
-			plik.open("Testy.txt", std::ofstream::app);
+			//plik << "stary: " << stare[i];
+			//plik.close();
+			//plik.open("Testy.txt", std::ofstream::app);
 			pom = Q[i];
 			for (int j = K.prow[i]; j < K.prow[i + 1]; j++)	//mno¿enie macierzy przez wektor tylko dla niezerowych elementów
 			{
@@ -67,9 +67,9 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 			pom += K.A[ii[i]] * stare[i];
 			//plik << "pom = " << pom;
 			wynik[i] = pom / K.A[ii[i]];
-			plik << " ; nowy: " << wynik[i] << "\n";
-			plik.close();
-			plik.open("Testy.txt", std::ofstream::app);
+			//plik << " ; nowy: " << wynik[i] << "\n";
+			//plik.close();
+			//plik.open("Testy.txt", std::ofstream::app);
 			if ((abs((wynik[i] - stare[i]) / stare[i])) > 0.5) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
 		}
 	} while (czy);
@@ -114,8 +114,8 @@ void Macierze::do_globalnej(Macierze& globalna, float co, int gdziex, int gdziey
 void Macierze::do_globalnej(Macierze& globalna, float lokalna[][4], float lokp[4],std::vector <float>& P, int wspolrzedne[4])
 {
 	std::ofstream plik;
-	plik.open("Testy.txt", std::ofstream::app);
-	plik << "-----------\ndo globalnej\n";
+	//plik.open("Testy.txt", std::ofstream::app);
+	//plik << "-----------\ndo globalnej\n";
 	bool czy;	//zmienna logiczna- czy trzeba twozyæ nowy element macierzy globalnej (zapisywanej jako 3 wektory)?
 	int pop = 0;	//indeks elementu tablicy A macierzy globalnej, po którym nale¿y wstawiæ nowy
 	std::vector<float>::iterator it;
@@ -131,9 +131,9 @@ void Macierze::do_globalnej(Macierze& globalna, float lokalna[][4], float lokp[4
 			}
 		}
 		P[wspolrzedne[i]] += lokp[i];
-		plik << "P_glob " << wspolrzedne[i] << " = " << P[wspolrzedne[i]] << "\n";
+		//plik << "P_glob " << wspolrzedne[i] << " = " << P[wspolrzedne[i]] << "\n";
 	}
-	plik << "------------------------\n";
+	//plik << "------------------------\n";
 }
 
 
