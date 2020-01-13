@@ -329,14 +329,14 @@ void CMesTempView::OnDraw(CDC * pDC)
 						tempmin = temp1[x][y];
 				}
 			}
-			
+			float pomt;	//zmienna pomcnicza do przeskalowywania temperatur
 			for (int i = 0; i < liczba_obszarow; i++)
 			{
 				for (int x = skala * wektor_obszarow[i].x1; x < skala * wektor_obszarow[i].x4; x++)
 				{
 					for (int y = skala * wektor_obszarow[i].y1; y < skala * wektor_obszarow[i].y4; y++)
 					{
-						
+						/*
 						if (temp1[x][y] > tempmax * 0.66)
 						{
 							pDC->SetPixel(x + xos00, yos00 - y, RGB(182, 0, 0));
@@ -364,7 +364,13 @@ void CMesTempView::OnDraw(CDC * pDC)
 						else if (temp1[x][y] == -300)
 						{
 						}
-
+						*/
+						if (temp1[x][y] > -300)
+						{
+							pomt = temp1[x][y];
+							pomt = 255*(pomt - tempmin) / (tempmax - tempmin);
+							pDC->SetPixel(x + xos00, yos00 - y, RGB(pomt, 255-pomt, 20));
+						}
 					}
 
 				}

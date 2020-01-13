@@ -70,7 +70,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 			plik << " ; nowy: " << wynik[i] << "\n";
 			plik.close();
 			plik.open("Testy.txt", std::ofstream::app);
-			if ((abs((wynik[i] - stare[i]) / stare[i])) > 0.1) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
+			if ((abs((wynik[i] - stare[i]) / stare[i])) > 0.5) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
 		}
 	} while (czy);
 	plik << "\nWyszlo z petli iteracyjnej po " << petle << " obrotach\n";
