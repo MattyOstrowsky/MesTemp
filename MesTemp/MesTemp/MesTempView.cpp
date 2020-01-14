@@ -320,20 +320,27 @@ void CMesTempView::OnDraw(CDC * pDC)
 			licz licz;
 			licz.rozw(wynikRozw, siatka, wektor_obszarow);
 			int nr=0;
-			temp1[0][0] = licz.temp(0, 0, nr, wynikRozw, siatka);
-			double tempmax = temp1[0][0];
-			double tempmin = temp1[0][0];
-			//plik << "\ntemperatury na pikselach:\n\n";
-			for (int y = 1; y < 600; y++)
+			double tempmax =0;
+			double tempmin =0;
+
+
+			int** tablica = new int* [x_max];
+			for (int i = 0; i < x_max; i++)
 			{
-				for (int x = 1; x < 800; x++)
+				tablica[i] = new int[y_max];
+			}
+
+
+			for (int x = 0; x < x_max; x++)
+			{
+				for (int y = 0; y < y_max; y++)
 				{
-					temp1[x][y] = licz.temp(x, y, nr, wynikRozw, siatka);
-					//plik << temp1[x][y] << " ; ";
-					if (temp1[x][y] > tempmax)
-						tempmax = temp1[x][y];
-					if (temp1[x][y] < tempmin && temp1[x][y] > -300)
-						tempmin = temp1[x][y];
+					tablica[x][y] = licz.temp(x, y, nr, wynikRozw, siatka);
+
+					if (tablica[x][y] > tempmax)
+						tempmax = tablica[x][y];
+					if (tablica[x][y] < tempmin && tablica[x][y] > -300)
+						tempmin = tablica[x][y];
 				}
 				plik << "\n";
 			}
@@ -343,9 +350,9 @@ void CMesTempView::OnDraw(CDC * pDC)
 			float pomt;	//zmienna pomcnicza do przeskalowywania temperatur
 			for (int i = 0; i < liczba_obszarow; i++)
 			{
-				for (int x = skala * wektor_obszarow[i].x1; x < skala * wektor_obszarow[i].x4; x++)
+				for (int x =  wektor_obszarow[i].x1; x <  wektor_obszarow[i].x4; x++)
 				{
-					for (int y = skala * wektor_obszarow[i].y1; y < skala * wektor_obszarow[i].y4; y++)
+					for (int y =  wektor_obszarow[i].y1; y <  wektor_obszarow[i].y4; y++)
 					{
 						/*
 						if (temp1[x][y] > tempmax * 0.66)
@@ -376,11 +383,11 @@ void CMesTempView::OnDraw(CDC * pDC)
 						{
 						}
 						*/
-						if (temp1[x][y] > -300)
+						if (tablica[x][y] >= -300)
 						{
-							pomt = temp1[x][y];
+							pomt = tablica[x][y];
 							pomt = 255*(pomt - tempmin) / (tempmax - tempmin);
-							pDC->SetPixel(x + xos00, yos00 - y, RGB(pomt, 255-pomt, 20));
+							pDC->SetPixel(skala*x + xos00, yos00 - skala*y, RGB(pomt, 255-pomt, 20));
 						}
 					}
 
