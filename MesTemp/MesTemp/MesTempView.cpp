@@ -316,12 +316,12 @@ void CMesTempView::OnDraw(CDC * pDC)
 			plik << "\nWeszlo do funkcji rysujacej\n";
 			plik.close();
 			plik.open("Testy.txt", std::ofstream::app);
-			std::vector<float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
+			std::vector<long float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
 			licz licz;
 			licz.rozw(wynikRozw, siatka, wektor_obszarow);
 			int nr=0;
-			double tempmax =0;
-			double tempmin =0;
+			double tempmax = wynikRozw[0];
+			double tempmin = wynikRozw[0];
 
 
 			int** tablica = new int* [x_max];
@@ -342,12 +342,12 @@ void CMesTempView::OnDraw(CDC * pDC)
 					if (tablica[x][y] < tempmin && tablica[x][y] > -300)
 						tempmin = tablica[x][y];
 				}
-				plik << "\n";
+				//plik << "\n";
 			}
 			plik << "\nTmin = " << tempmin << ", Tmax= " << tempmax << "\n\n";
 			plik.close();
 			plik.open("Testy.txt", std::ofstream::app);
-			float pomt;	//zmienna pomcnicza do przeskalowywania temperatur
+			int pomt;	//zmienna pomcnicza do przeskalowywania temperatur
 			for (int i = 0; i < liczba_obszarow; i++)
 			{
 				for (int x =  wektor_obszarow[i].x1; x <  wektor_obszarow[i].x4; x++)
