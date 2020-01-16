@@ -354,36 +354,8 @@ void CMesTempView::OnDraw(CDC * pDC)
 				{
 					for (int y =  wektor_obszarow[i].y1; y <  wektor_obszarow[i].y4; y++)
 					{
-						/*
-						if (temp1[x][y] > tempmax * 0.66)
-						{
-							pDC->SetPixel(x + xos00, yos00 - y, RGB(182, 0, 0));
-						}
-						else if (temp1[x][y] < tempmax * 0.66 && temp1[x][y] > tempmax * 0.33)
-						{
-							pDC->SetPixel(x + xos00, yos00 - y, RGB(182, 101, 0));
-						}
-						else if (temp1[x][y] < tempmax * 0.33 && temp1[x][y] >= 0)
-						{
-							pDC->SetPixel(x + xos00, yos00 - y, RGB(221, 221, 0));
-						}
-						else if (temp1[x][y] > tempmin * 0.33 && temp1[x][y] < 0)
-						{
-							pDC->SetPixel(x + xos00, yos00 - y, RGB(33, 1, 250));
-						}
-						else if (temp1[x][y] < tempmin * 0.66 && temp1[x][y] > tempmin * 0.33)
-						{
-							pDC->SetPixel(x + xos00, yos00 - y, RGB(13, 30, 126));
-						}
-						else if (temp1[x][y] < tempmin * 0.33 )
-						{
-							pDC->SetPixel(x + xos00, yos00 - y, RGB(13, 4, 70));
-						}
-						else if (temp1[x][y] == -300)
-						{
-						}
-						*/
-						if (tablica[x][y] >= -300)
+					
+						if (tablica[x][y] > -300)
 						{
 							pomt = tablica[x][y];
 							pomt = 255*(pomt - tempmin) / (tempmax - tempmin);
