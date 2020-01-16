@@ -75,6 +75,9 @@ public:
 	afx_msg void OnMenuOddal();
 	afx_msg void OnStartZag32777();
 	afx_msg void OnStartRozk();
+	void RysujObszary(CDC* pDC);
+	
+	
 };
 
 #ifndef _DEBUG  // debug version in MesTempView.cpp
