@@ -39,6 +39,11 @@ BEGIN_MESSAGE_MAP(CMesTempView, CView)
 	ON_COMMAND(ID_MENU_ODDAL, &CMesTempView::OnMenuOddal)
 	ON_COMMAND(ID_START_ZAG32777, &CMesTempView::OnStartZag32777)
 	ON_COMMAND(ID_START_ROZK32784, &CMesTempView::OnStartRozk)
+	ON_UPDATE_COMMAND_UI(ID_START_GENERUJSIATK32773, &CMesTempView::OnUpdateStartGeneruj)
+	ON_UPDATE_COMMAND_UI(ID_START_ZAG32777, &CMesTempView::OnUpdateStartZag32777)
+	ON_UPDATE_COMMAND_UI(ID_START_RYSUJTEMPERATURY, &CMesTempView::OnUpdateStartRysujtemperatury)
+	ON_UPDATE_COMMAND_UI(ID_START_ROZK32784, &CMesTempView::OnUpdateStartRozk32784)
+	ON_COMMAND(ID_START_RYSUJTEMPERATURY, &CMesTempView::OnStartRysujtemperatury)
 END_MESSAGE_MAP()
 
 // CMesTempView construction/destruction
@@ -121,8 +126,8 @@ void CMesTempView::OnDraw(CDC * pDC)
 		siatka.utworz_siatke(wektor_obszarow);
 		siatka.zageszczenie_prostokatow(zag_y, siatka.kord_y);
 		siatka.zageszczenie_prostokatow(zag_x, siatka.kord_x);
-		zag_x = 1;
-		zag_y = 1;
+		RozRysujU = true;
+		
 		for (int j = 0; j < liczba_obszarow; j++)
 		{
 		
@@ -165,12 +170,13 @@ void CMesTempView::OnDraw(CDC * pDC)
 
 
 			}
-			RysSiatka = false;
+			
+			
 		}
 		
 		if (RozRysuj)
 		{
-			
+			TempRysujU = true;
 			std::vector<long float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
 			licz licz;
 			licz.rozw(wynikRozw, siatka, wektor_obszarow);
@@ -200,27 +206,32 @@ void CMesTempView::OnDraw(CDC * pDC)
 
 			}
 			
-			int pomt;	//zmienna pomcnicza do przeskalowywania temperatur
-			for (int i = 0; i < liczba_obszarow; i++)
+			if (TempRysuj)
 			{
-				for (int x =  wektor_obszarow[i].x1; x <  wektor_obszarow[i].x4; x++)
+				int pomt;	//zmienna pomcnicza do przeskalowywania temperatur
+				for (int i = 0; i < liczba_obszarow; i++)
 				{
-					for (int y =  wektor_obszarow[i].y1; y <  wektor_obszarow[i].y4; y++)
+					for (int x = wektor_obszarow[i].x1; x < wektor_obszarow[i].x4; x++)
 					{
-					
-						if (tablica[x][y] > -300)
+						for (int y = wektor_obszarow[i].y1; y < wektor_obszarow[i].y4; y++)
 						{
-							pomt = tablica[x][y];
-							pomt = 255*(pomt - tempmin) / (tempmax - tempmin);
-							pDC->SetPixel(skala*x + xos00, yos00 - skala*y, RGB(pomt, 255-pomt, 20));
-						}
-					}
 
+							if (tablica[x][y] > -300)
+							{
+								pomt = tablica[x][y];
+								pomt = 255 * (pomt - tempmin) / (tempmax - tempmin);
+								pDC->SetPixel(skala * x + xos00, yos00 - skala * y, RGB(pomt, 255 - pomt, 20));
+							}
+						}
+
+					}
 				}
 			}
+			
 			RysujObszary(pDC);
-			RozRysuj = false;
+			
 		}
+		
 		
 		
 
@@ -329,6 +340,9 @@ void CMesTempView::OnFileOpen()
 		//obszar.test(liczba_obszarow,wektor_obszarow,czy_pokrywa);
 		Rysuj = true;
 		RysSiatka = false;
+		RysSiatkaU = true;
+		zag_x = 1;
+		zag_y = 1;
 		Invalidate(TRUE);
 		UpdateWindow();
 		
@@ -553,4 +567,36 @@ void CMesTempView::RysujObszary(CDC* pDC)
 
 
 	}
+}
+
+
+void CMesTempView::OnUpdateStartGeneruj(CCmdUI* pCmdUI)
+{
+	pCmdUI->Enable(RysSiatkaU);
+}
+
+
+void CMesTempView::OnUpdateStartZag32777(CCmdUI* pCmdUI)
+{
+	pCmdUI->Enable(RysSiatkaU);
+}
+
+
+void CMesTempView::OnUpdateStartRysujtemperatury(CCmdUI* pCmdUI)
+{
+	pCmdUI->Enable(TempRysujU);
+}
+
+
+void CMesTempView::OnUpdateStartRozk32784(CCmdUI* pCmdUI)
+{
+	pCmdUI->Enable(RozRysujU);
+}
+
+
+void CMesTempView::OnStartRysujtemperatury()
+{
+	TempRysuj = true;
+	Invalidate(TRUE);
+	UpdateWindow();
 }
