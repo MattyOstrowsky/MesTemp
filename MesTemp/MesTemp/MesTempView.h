@@ -34,7 +34,12 @@ public:
 	float xPos;
 	float yPos;
 	float skalaTrue;
+	bool TempRysuj = false;
 	bool RozRysuj = false;
+	bool RysSiatkaU = false;
+	bool RozRysujU = false;
+	bool TempRysujU = false;
+
 	//std::vector<float> wynikRozw;
 	
 	
@@ -75,6 +80,14 @@ public:
 	afx_msg void OnMenuOddal();
 	afx_msg void OnStartZag32777();
 	afx_msg void OnStartRozk();
+	void RysujObszary(CDC* pDC);
+	
+	
+	afx_msg void OnUpdateStartGeneruj(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateStartZag32777(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateStartRysujtemperatury(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateStartRozk32784(CCmdUI* pCmdUI);
+	afx_msg void OnStartRysujtemperatury();
 };
 
 #ifndef _DEBUG  // debug version in MesTempView.cpp
