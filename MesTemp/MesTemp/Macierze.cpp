@@ -11,7 +11,7 @@ Macierze::Macierze(std::vector<float>& danea, std::vector<int>& danep, std::vect
 	coln = danec;
 }
 //rozwi¹zywanie uk³adu równañ, metoda iteracyjna
-void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik)
+void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<long float>& wynik)
 {
 	std::ofstream plik;
 	plik.open("Testy.txt", std::ofstream::app);
@@ -30,7 +30,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 	//plik.open("Testy.txt", std::ofstream::app);
 	for (int i = 0; i < ile; i++)	//wype³niamiy ii
 	{
-		petle++;
+		//wynik[i] = Q[i];
 		pom2 = K.prow[i];
 		while (i != K.coln[pom2])pom2++;
 		ii.push_back(pom2);
@@ -43,6 +43,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 	//plik.open("Testy.txt", std::ofstream::app);
 	do
 	{
+		petle++;
 		//plik << "kolejny obrot do\n";
 		//plik.close();
 		//plik.open("Testy.txt", std::ofstream::app);
@@ -70,7 +71,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 			//plik << " ; nowy: " << wynik[i] << "\n";
 			//plik.close();
 			//plik.open("Testy.txt", std::ofstream::app);
-			if ((abs((wynik[i] - stare[i]) / stare[i])) > 0.5) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
+			if ((abs((wynik[i] - stare[i]) / stare[i])) > 0.05) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
 		}
 	} while (czy);
 	plik << "\nWyszlo z petli iteracyjnej po " << petle << " obrotach\n";

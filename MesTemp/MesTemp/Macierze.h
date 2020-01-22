@@ -18,7 +18,7 @@ public:
 	Macierze(std::vector<float>& danea, std::vector<int>& danep, std::vector<int>& danec);
 
 	//funkcja rozwi¹zuj¹ca uk³ad równañ iteracyjn¹ metod¹ Gaussa-Siedla
-	void licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik);
+	void licz(Macierze K, std::vector<float>& Q, std::vector<long float>& wynik);
 	// funkcja dodaj¹ca macierz lokaln¹ albo wskazan¹ wartoœæ do globalnej
 	void do_globalnej(Macierze& globalna, float lokalna[][4], float lokp [4], std::vector <float>& P, int wspolrzedne[4]);
 	void do_globalnej(Macierze& globalna, float co, int gdziex, int gdziey);

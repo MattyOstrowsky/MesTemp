@@ -21,7 +21,7 @@ void licz::lokalna(float lamx, float lamy, float(&macierz)[16], float(&P)[4], fl
 }
 
 // funkcja zarz¹dzaj¹ca tworzeniem macierzy globalnej i rozwi¹zywaniem uk³adu równañ
-void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary)
+void licz::rozw(std::vector<long float>& wyniki, Siatka S, std::vector<Input> obszary)
 {
 	std::ofstream plik;
 	plik.open("Testy.txt", std::ofstream::app);
@@ -109,14 +109,15 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 	plik.close();
 	M.licz(M, Qg, wyniki);
 	plik.open("Testy.txt", std::ofstream::app);
-	plik << "\n\n\nPOLICZYLO!!!!\n\n\nMacierz=\n\n";
-	M.pisz("Testy.txt", M, ile);
+	plik << "\n\n\nPOLICZYLO!!!!\n\n\nwyniki=\n\n";
+	for (int i = 0; i < ile;  i++)plik << wyniki[i] << " ; ";
+	//M.pisz("Testy.txt", M, ile);
 	plik.close();
 }
 
 
 // funkcja podaj¹ca temperaturê w danym punkcie. ost-numer elementu w ostatnio wyszukiwanym punkcie
-float licz::temp(float x, float y, int& ost, std::vector<float> T, Siatka S)
+float licz::temp(float x, float y, int& ost, std::vector<long float> T, Siatka S)
 {
 	licz L;
 	int n1;
@@ -201,7 +202,7 @@ void licz::ktory_el(float x, float y, int& ost, Siatka S, bool& X)
 		}
 		else
 		{
-			if (ost == (S.kord_x.size()-1)*(S.kord_y.size()-1)-1)
+			if (ost == (S.kord_x.size())*(S.kord_y.size())-1)
 			{
 				ost = 0;
 				if (X)
