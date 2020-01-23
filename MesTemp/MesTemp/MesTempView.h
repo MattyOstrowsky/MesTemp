@@ -6,6 +6,7 @@
 #include "MesTempDoc.h"
 #include "Siatka.h"
 #include "DialZagesc.h"
+#include "pch.h"
 
 class CMesTempView : public CView
 {

@@ -21,7 +21,7 @@ void licz::lokalna(float lamx, float lamy, float(&macierz)[16], float(&P)[4], fl
 }
 
 // funkcja zarz¹dzaj¹ca tworzeniem macierzy globalnej i rozwi¹zywaniem uk³adu równañ
-void licz::rozw(std::vector<long float>& wyniki, Siatka S, std::vector<Input> obszary)
+void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary, std::vector<WarunkiBrzegowe>wb)
 {
 	std::ofstream plik;
 	plik.open("Testy.txt", std::ofstream::app);
@@ -106,6 +106,8 @@ void licz::rozw(std::vector<long float>& wyniki, Siatka S, std::vector<Input> ob
 	{
 		plik << Qg[i] << " ; ";
 	}
+	M.brzegowe(M, S, Qg, wb);
+	plik << "\nDodalo warunki brzegowe\n";
 	plik.close();
 	M.licz(M, Qg, wyniki);
 	plik.open("Testy.txt", std::ofstream::app);
@@ -117,7 +119,7 @@ void licz::rozw(std::vector<long float>& wyniki, Siatka S, std::vector<Input> ob
 
 
 // funkcja podaj¹ca temperaturê w danym punkcie. ost-numer elementu w ostatnio wyszukiwanym punkcie
-float licz::temp(float x, float y, int& ost, std::vector<long float> T, Siatka S)
+float licz::temp(float x, float y, int& ost, std::vector<float> T, Siatka S)
 {
 	licz L;
 	int n1;

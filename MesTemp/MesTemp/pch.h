@@ -14,6 +14,7 @@
 #include "Input.h"
 #include "Macierze.h"
 #include "WarunkiBrzegowe.h"
+#include "licz.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -21,5 +22,5 @@
 #include <afxcontrolbars.h>
 #include <fstream>
 #include <cstring>
-
+#include "MesTempView.h"
 #endif //PCH_H

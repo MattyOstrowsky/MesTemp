@@ -11,8 +11,9 @@ Macierze::Macierze(std::vector<float>& danea, std::vector<int>& danep, std::vect
 	coln = danec;
 }
 //rozwi¹zywanie uk³adu równañ, metoda iteracyjna
-void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<long float>& wynik)
+void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik)
 {
+	std::vector<int>brzegowe;	//wektor indeksów warunków brzegowych (coby ich nie zmieniaæ)
 	std::ofstream plik;
 	plik.open("Testy.txt", std::ofstream::app);
 	int ile = Q.size();
@@ -25,6 +26,11 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<long float>& 
 	float* stare = new float[ile];	//poprzednie wyniki, potrzebne by sprawdziæ kiedy skoñczyæ iteracjê
 	bool czy;
 	int pom2;
+	bool czy2;
+	for (int i = 0; i < ile; i++)
+	{
+		if (wynik[i] != 0)brzegowe.push_back(i);
+	}
 	//plik << "\n\nkolejne elementy wektora ii:\n";
 	//plik.close();
 	//plik.open("Testy.txt", std::ofstream::app);
@@ -57,21 +63,29 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<long float>& 
 		//plik.open("Testy.txt", std::ofstream::app);
 		for (int i = 0; i < ile; i++)
 		{
+			czy2 = true;
+			/*for (int j = 0; j < brzegowe.size(); j++)
+			{
+				if (i == brzegowe[j]) czy2 = false;
+			}*/
 			//plik << "stary: " << stare[i];
 			//plik.close();
 			//plik.open("Testy.txt", std::ofstream::app);
-			pom = Q[i];
-			for (int j = K.prow[i]; j < K.prow[i + 1]; j++)	//mno¿enie macierzy przez wektor tylko dla niezerowych elementów
+			if (czy2)
 			{
-				pom -= K.A[j] * stare[K.coln[j]];
+				pom = Q[i];
+				for (int j = K.prow[i]; j < K.prow[i + 1]; j++)	//mno¿enie macierzy przez wektor tylko dla niezerowych elementów
+				{
+					pom -= K.A[j] * stare[K.coln[j]];
+				}
+				pom += K.A[ii[i]] * stare[i];
+				//plik << "pom = " << pom;
+				wynik[i] = pom / K.A[ii[i]];
+				//plik << " ; nowy: " << wynik[i] << "\n";
+				//plik.close();
+				//plik.open("Testy.txt", std::ofstream::app);
+				if ((fabs((wynik[i] - stare[i]) / stare[i])) > 0.05) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
 			}
-			pom += K.A[ii[i]] * stare[i];
-			//plik << "pom = " << pom;
-			wynik[i] = pom / K.A[ii[i]];
-			//plik << " ; nowy: " << wynik[i] << "\n";
-			//plik.close();
-			//plik.open("Testy.txt", std::ofstream::app);
-			if ((abs((wynik[i] - stare[i]) / stare[i])) > 0.05) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
 		}
 	} while (czy);
 	plik << "\nWyszlo z petli iteracyjnej po " << petle << " obrotach\n";
@@ -158,4 +172,47 @@ void Macierze:: pisz(std::string nazwa,Macierze M2, int ile)
 		wyj << std::endl;
 	}
 	wyj.close();
+}
+
+
+// funkcja dodaj¹ca warunki brzegowe (I rodzaju)
+void Macierze::brzegowe (Macierze& M, Siatka S, std::vector <float>& P, std::vector <class WarunkiBrzegowe> brzeg)
+{
+	int szuk, pom, nx, ny;
+	bool czy;
+	std::vector<int> wezly;	//numery wêz³ów, na które wp³ywa warunek brzegowy;
+	for (int i = 0; i < brzeg.size(); i++)
+	{
+		wezly.clear();
+		czy = true;
+		pom = 0;
+		while (czy)	//pêtla zape³niaj¹ca wektor wezly dla jednego warunku brzegowego
+		{
+			ny = pom / S.kord_x.size();
+			nx = pom % S.kord_x.size();
+			if (S.kord_x[nx] >= brzeg[i].x1 && S.kord_x[nx] <= brzeg[i].x2 && S.kord_y[ny] >= brzeg[i].y1 && S.kord_y[ny] <= brzeg[i].y2)
+			{
+				wezly.push_back(pom);
+			}
+			if ((S.kord_x[nx] >= brzeg[i].x2 && S.kord_y[ny] >= brzeg[i].y2) ||(ny == S.kord_y.size()-1 && nx == S.kord_x.size()-1))
+			{
+				czy = false;
+			}
+			pom++;
+		}
+		for (int j = 0; j < wezly.size(); j++)
+		{
+			float pomK;
+			//M.do_globalnej(M, brzeg[i].temperatura, wezly[j], wezly[j]);
+			for (int k = M.prow[wezly[j]]; k < M.prow[wezly[j] + 1]; k++)
+			{
+				if (M.coln[k] == wezly[j])
+				{
+					M.A[k] *= 100000000;
+					pomK = M.A[k];
+				}
+			}
+			P[wezly[j]] =+ pomK*brzeg[i].temperatura;
+		}
+	}
 }

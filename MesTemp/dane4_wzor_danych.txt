@@ -17,7 +17,6 @@ czy pr:	nr:	x1:	y1:	x4:	 y4:	cz Ÿr:  moc:	przew_x:przew_y:materia³:
 1 	11	600	600	700	 700	1	250	 100	100	miedz
 1 	12	600	700	700	 900	0	0	 50 	50	miedz
 warunki brzegowe I rodzaju iloœæ:
-2
+1
 x1:	y1:	x2:	y2:	T[K]:
-0	0	600	0	350
-600	900	900	900	450
+0	0	900	0	250
