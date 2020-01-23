@@ -136,8 +136,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 				if ((xos0 + skala * siatka.kord_x[i]) > wektor_obszarow[j].x1 && (xos0 + skala * siatka.kord_x[i]) < wektor_obszarow[j].x4)
 				{
 					if ((xos0 + skala * siatka.kord_x[i]) > 8 && (xos0 + skala * siatka.kord_x[i]) < 800)
-					{
-				
+					{		
 						pDC->MoveTo(xos0 + skala * siatka.kord_x[i], yos0 - skala * wektor_obszarow[j].y1);
 						pDC->LineTo(xos0 + skala * siatka.kord_x[i], yos0 - skala * wektor_obszarow[j].y4);
 					}
@@ -176,6 +175,8 @@ void CMesTempView::OnDraw(CDC * pDC)
 		
 		if (RozRysuj)
 		{
+			std::ofstream plik;
+			plik.open("Testy.txt", std::ofstream::app);
 			TempRysujU = true;
 			std::vector<long float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
 			licz licz;
@@ -191,7 +192,6 @@ void CMesTempView::OnDraw(CDC * pDC)
 				tablica[i] = new float[y_max];
 			}
 
-
 			for (int x = 0; x < x_max; x++)
 			{
 				for (int y = 0; y < y_max; y++)
@@ -203,9 +203,8 @@ void CMesTempView::OnDraw(CDC * pDC)
 					if (tablica[x][y] < tempmin && tablica[x][y] > -300)
 						tempmin = tablica[x][y];
 				}
-
 			}
-			
+			plik << "\nTmax = " << tempmax << "  ;  Tmin = " << tempmin << "\n";
 			if (TempRysuj)
 			{
 				int pomt;	//zmienna pomcnicza do przeskalowywania temperatur
