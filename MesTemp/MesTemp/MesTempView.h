@@ -46,7 +46,7 @@ public:
 // Operations
 public:
 	std::vector <Input> wektor_obszarow;
-
+	std::vector <WarunkiBrzegowe> wektor_warunkow_brzegowych;
 
 // Overrides
 public:

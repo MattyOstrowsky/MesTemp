@@ -13,6 +13,7 @@
 #include "Siatka.h"
 #include "Input.h"
 #include "Macierze.h"
+#include "WarunkiBrzegowe.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>

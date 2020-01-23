@@ -2,6 +2,8 @@
 // MesTempView.cpp : implementation of the CMesTempView class
 //
 
+#define NOMINMAX
+
 #include "pch.h"
 #include "framework.h"
 // SHARED_HANDLERS can be defined in an ATL project implementing preview, thumbnail
@@ -15,6 +17,8 @@
 #include "DialZagesc.h"
 #include "Siatka.h"
 #include "licz.h"
+#include "sstream"
+#include "limits"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -312,22 +316,48 @@ void CMesTempView::OnFileOpen()
 
 		if (plik.good())
 		{
+			
+			std::string ignorowanalinia; //linia - smietnik
+			getline(plik, ignorowanalinia); //ignorowanie linii z oznaczeniami. Dalej tez tak samo
 
 			plik >> liczba_obszarow;
+
+			getline(plik, ignorowanalinia);
+			getline(plik, ignorowanalinia);
+
 			plik >> skala;
+
+			getline(plik, ignorowanalinia);
+			getline(plik, ignorowanalinia);
 
 			for (int i = 0; i < liczba_obszarow; i++)
 			{	
 				Input obszar; //utworzenie obiektu obszar
-				obszar.czytaj(plik);
+				obszar.czytaj(plik); //uzupelnienie wlasciwosci obszaru
 				obszar.liczba_obszarow = liczba_obszarow;
 				obszar.skala = skala;
-				if (obszar.x4 > x_max)
+				if (obszar.x4 > x_max) //znalezienie max i min wspolrzednych obszarow
 					x_max = obszar.x4;
 				if (obszar.y4 > y_max)
 					y_max = obszar.y4;
-				wektor_obszarow.push_back(obszar);
+				wektor_obszarow.push_back(obszar); //dodanie obszaru do wektora obszarow
 				
+			}
+			getline(plik, ignorowanalinia);
+			getline(plik, ignorowanalinia);
+
+			int ile_warunkow_brzegowych;
+
+			plik >> ile_warunkow_brzegowych;
+
+			getline(plik, ignorowanalinia);
+			getline(plik, ignorowanalinia);
+
+			for (int i = 0; i < ile_warunkow_brzegowych; i++)
+			{
+				WarunkiBrzegowe warunek; //utworzenie obiektu - warunek brzegowy
+				warunek.czytaj(plik);
+				wektor_warunkow_brzegowych.push_back(warunek);
 			}
 			
 		}

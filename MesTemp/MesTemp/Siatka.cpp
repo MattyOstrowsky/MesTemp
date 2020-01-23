@@ -79,6 +79,7 @@ void Siatka::zageszczenie_prostokatow(int gestosc, std::vector<float>& kord)
 			temp2.clear();
 		}
 	}
+
 	//dla ostatnich elementow
 	int licz = kord.size() - 2;
 	if ((0.3*abs(kord[licz - 1] - kord[licz])) <= (abs(kord[licz + 1] - kord[licz])))
@@ -92,6 +93,33 @@ void Siatka::zageszczenie_prostokatow(int gestosc, std::vector<float>& kord)
 			temp.push_back(temp2[j]);
 		}
 		temp2.clear();
+	}
+
+	//dodanie tymczasowych kordow do kord_x lub kord_y
+	for (int i = 0; i < temp.size(); i++)
+	{
+		kord.push_back(temp[i]);
+	}
+
+	//porzadkowanie kordow
+	std::sort(kord.begin(), kord.end()); //sortowanie elementow
+	kord.erase(std::unique(kord.begin(), kord.end()), kord.end()); //usuwanie duplikatow
+	temp.clear(); //czyszczenie tymczasowych kordow
+
+	for (int i = 1; i < kord.size() - 1; i++)
+	{
+		if ((kord[i] - kord[i - 1]) <= 0.5 * (kord[i + 1] - kord[i]))
+		{
+			temp.push_back(kord[i] + 0.5 * (kord[i + 1] - kord[i]));
+		}
+	}
+
+	for (int i = kord.size() - 2; i > 0; i--)
+	{
+		if ((kord[i + 1] - kord[i]) <= 0.5 * (kord[i] - kord[i - 1]))
+		{
+			temp.push_back(kord[i] - 0.5 * (kord[i] - kord[i - 1]));
+		}
 	}
 
 	//dodanie tymczasowych kordow do kord_x lub kord_y
