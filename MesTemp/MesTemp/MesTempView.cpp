@@ -54,8 +54,7 @@ END_MESSAGE_MAP()
 
 CMesTempView::CMesTempView() noexcept
 {
-	// TODO: add construction code here
-
+	
 }
 
 CMesTempView::~CMesTempView()
@@ -75,12 +74,15 @@ BOOL CMesTempView::PreCreateWindow(CREATESTRUCT& cs)
 void CMesTempView::OnDraw(CDC * pDC)
 {
 	
-	
+
 	CMesTempDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	if (!pDoc)
 		return;
+		
 
+		
+	
 	CPen pen1(PS_SOLID, 2, RGB(0, 0, 0));
 	CPen* oldpen1 = pDC->SelectObject(&pen1);
 	pDC->Rectangle(8, 10, 800, 600);
@@ -101,28 +103,26 @@ void CMesTempView::OnDraw(CDC * pDC)
 	CString floatString;
 
 	floatString = "skala:";
-	pDC->TextOutW(960, 50, floatString);
-	floatString = "liczba element�w:";
-
+	pDC->TextOutW(980, 50, floatString);
+	floatString = "liczba elementow:";
+	pDC->TextOutW(980, 70, floatString);
 
 
 	
 	if (Rysuj) {
 		 RysujObszary(pDC);
-		 pDC->TextOutW(960, 70, floatString);
-		 floatString.Format(_T("%f"), liczba_obszarow);
+		 
+		 floatString.Format(_T("%.0f"), liczba_obszarow);
 		 pDC->TextOutW(1170, 70, floatString);
-		 floatString.Format(_T("%f"), skala);
+		 floatString.Format(_T("%.1f"), skala);
 		 pDC->TextOutW(1170, 50, floatString);
-		 floatString.Format(_T("%f"), yPos);
-		 pDC->TextOutW(1120, 20, floatString);
-		 floatString.Format(_T("%f"), xPos);
-		 pDC->TextOutW(1020, 20, floatString);
-		 Rysuj = false;
+		
+
 	};
 
 	if (RysSiatka)
 	{
+		
 		CPen pen1(PS_SOLID, 1, RGB(50, 205, 50));
 		CPen* oldpen = pDC->SelectObject(&pen1);
 
@@ -179,24 +179,23 @@ void CMesTempView::OnDraw(CDC * pDC)
 		
 		if (RozRysuj)
 		{
+			TempRysujU = true;
 			std::ofstream plik;
 			plik.open("Testy.txt");
 			plik << "Zaczynamy\n";
-			TempRysujU = true;
-			std::vector<float> wynikRozw(((siatka.kord_x.size())* (siatka.kord_y.size())), 0);
+			std::vector<float> wynikRozw(((siatka.kord_x.size()) * (siatka.kord_y.size())), 0);
 			licz licz;
 			plik.close();
-			licz.rozw(wynikRozw, siatka, wektor_obszarow,wektor_warunkow_brzegowych);
-			int nr=0;
-			float tempmax = wynikRozw[0];
-			float tempmin = wynikRozw[0];
+			licz.rozw(wynikRozw, siatka, wektor_obszarow, wektor_warunkow_brzegowych);
+			int nr = 0;
+			tempmax = wynikRozw[0];
+			tempmin = wynikRozw[0];
 
-
-			float** tablica = new float* [x_max];
 			for (int i = 0; i < x_max; i++)
 			{
 				tablica[i] = new float[y_max];
 			}
+
 
 			for (int x = 0; x < x_max; x++)
 			{
@@ -212,46 +211,55 @@ void CMesTempView::OnDraw(CDC * pDC)
 			}
 			plik.open("Testy.txt", std::ofstream::app);
 			plik << "\nTmax = " << tempmax << "  ;  Tmin = " << tempmin << "\n";
-			if (TempRysuj)
+		}
+		if (TempRysuj)
+		{
+
+			double jedn = (tempmax - tempmin) / 500.0;
+
+			int tmp;
+			floatString.Format(_T("%.2f"), tempmax);
+			pDC->TextOutW(910, 50, floatString);
+
+			floatString.Format(_T("%.2f"), tempmin);
+			pDC->TextOutW(910, 550, floatString);
+			for (int xx = 850; xx < 900; xx++)
 			{
-				int pomt;	//zmienna pomcnicza do przeskalowywania temperatur
-				/*for (int i = 0; i < liczba_obszarow; i++)
+				double temper = tempmax;
+
+				for (int yy = 50; yy < 550; yy++)
 				{
-					for (int x = wektor_obszarow[i].x1; x < wektor_obszarow[i].x4; x++)
-					{
-						for (int y = wektor_obszarow[i].y1; y < wektor_obszarow[i].y4; y++)
-						{
 
-							if (tablica[x][y] > -300)
-							{
-								pomt = tablica[x][y];
-								pomt = 255 * (pomt - tempmin) / (tempmax - tempmin);
-								pDC->SetPixel(skala * x + xos00, yos00 - skala * y, RGB(pomt, 255 - pomt, 20));
-							}
-						}
-
-					}
-				}*/
-				for (int x = 0; x < 900; x++)
-				{
-					for (int y = 0; y < 900; y++)
-					{
-
-						if (tablica[x][y] > -300)
-						{
-							pomt = tablica[x][y];
-							pomt = 255 * (pomt - tempmin) / (tempmax - tempmin);
-							int tt = pomt/25;
-							pDC->SetPixel(skala * x + xos00, yos00 - skala * y, RGB(25*tt, 20, 255-25*tt));
-						}
-					}
-
+					tmp = 255 * (temper - tempmin) / (tempmax - tempmin);
+					int tt = tmp / 25;
+					pDC->SetPixel(xx, yy, RGB(25 * tt, 20, 255 - 25 * tt));
+					temper -= jedn;
+					
 				}
 			}
-			
-			RysujObszary(pDC);
-			
+			int pomt;
+			for (int x = 0; x < 900; x++)
+			{
+				for (int y = 0; y < 900; y++)
+				{
+
+					if (tablica[x][y] > -300)
+					{
+						pomt = tablica[x][y];
+						pomt = 255 * (pomt - tempmin) / (tempmax - tempmin);
+						int tt = pomt / 25;
+						pDC->SetPixel(skala * x + xos00, yos00 - skala * y, RGB(25 * tt, 20, 255 - 25 * tt));
+					}
+				}
+
+			}RysujObszary(pDC);
 		}
+		
+		
+			
+			
+			
+		
 		
 		
 		
@@ -638,11 +646,13 @@ void CMesTempView::OnUpdateStartRysujtemperatury(CCmdUI* pCmdUI)
 void CMesTempView::OnUpdateStartRozk32784(CCmdUI* pCmdUI)
 {
 	pCmdUI->Enable(RozRysujU);
+
 }
 
 
 void CMesTempView::OnStartRysujtemperatury()
 {
+	RozRysuj = false;
 	TempRysuj = true;
 	Invalidate(TRUE);
 	UpdateWindow();
