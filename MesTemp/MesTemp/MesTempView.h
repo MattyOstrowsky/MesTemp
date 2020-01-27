@@ -30,11 +30,13 @@ public:
 	float xos00 = 15;
 	bool czy_pokrywa = false;
 	bool RysSiatka = false;
-	float x_max = 0;
-	float y_max = 0;
+	float x_max = 900;
+	float y_max = 900;
 	float xPos;
 	float yPos;
 	float skalaTrue;
+	double tempmin;
+	double tempmax;
 	bool TempRysuj = false;
 	bool RozRysuj = false;
 	bool RysSiatkaU = false;
@@ -42,7 +44,8 @@ public:
 	bool TempRysujU = false;
 
 	//std::vector<float> wynikRozw;
-	
+	float** tablica = new float* [x_max];
+
 	
 // Operations
 public:
