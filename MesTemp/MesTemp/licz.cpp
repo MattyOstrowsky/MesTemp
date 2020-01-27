@@ -71,7 +71,6 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 			R.ktory_obszar((S.kord_x[x] + 0.5 * dx), (S.kord_y[y] + 0.5 * dy), o, S, B, obszary);
 			lx = obszary[o].przewodnosc_x;
 			ly = obszary[o].przewodnosc_y;
-			//plik << x << "   ;   " << y << "   ;   " << dx << "   ;   " << dy<<"   ;   " << o << "\n\n";
 			R.lokalna(lx, ly, lok, Q, dx, dy, obszary[o].moc_zrodla);
 			for (int k = 0; k < 4; k++)
 			{
@@ -84,36 +83,22 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 			wsp[1] = y*ilex  + x + 1;
 			wsp[2] = (y+1) * ilex + x;
 			wsp[3] = (y + 1) * ilex + x + 1;
-			//plik << "\ntuz przed dodaniem do globalnej...";
-			M.do_globalnej(M, pom, Q, Qg, wsp);
-			//plik << "...i tuz po nim\n";
-			//plik.close();
-			//M.pisz("Testy.txt", M, ile);
-			//plik.open("Testy.txt", std::ofstream::app);
-			//plik << "przeszlo dodanie\n";
-			//plik.close();
-			//plik.open("Testy.txt", std::ofstream::app);
+			M.do_globalnej(M, pom, Q, Qg, wsp);	//dodawanie macierzy lokalnej do globalnej
 		}
-		//plik << "przeszedl obrot wewnetrznej\n";
-		//plik.close();
-		//plik.open("Testy.txt", std::ofstream::app);
 	}
 	plik << "\nDodalo wszystko, co mialo dodac\n";
-	//plik.close();
-	//plik.open("Testy.txt", std::ofstream::app);
 	plik << "\nQg = : ";
 	for (int i = 0; i < ile; i++)
 	{
 		plik << Qg[i] << " ; ";
 	}
-	M.brzegowe(M, S, Qg, wb);
+	M.brzegowe(M, S, Qg, wb);		//wprowadzanie warunków brzegowych (ustalonej temperatury)
 	plik << "\nDodalo warunki brzegowe\n";
 	plik.close();
-	M.licz(M, Qg, wyniki);
+	M.licz(M, Qg, wyniki);		//rozwi¹zywanie uk³adu równañ
 	plik.open("Testy.txt", std::ofstream::app);
 	plik << "\n\n\nPOLICZYLO!!!!\n\n\nwyniki=\n\n";
 	for (int i = 0; i < ile;  i++)plik << wyniki[i] << " ; ";
-	//M.pisz("Testy.txt", M, ile);
 	plik.close();
 }
 
