@@ -30,10 +30,12 @@ public:
 	float xos00 = 15;
 	bool czy_pokrywa = false;
 	bool RysSiatka = false;
-	float x_max = 900;
-	float y_max = 900;
-	float xPos;
-	float yPos;
+	float x_max = 0;
+	float y_max = 0;
+	float xPos=0;
+	float yPos=0;
+	float xxpos;
+	float yypos;
 	float skalaTrue;
 	double tempmin;
 	double tempmax;
