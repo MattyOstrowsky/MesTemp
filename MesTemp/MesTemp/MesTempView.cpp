@@ -483,31 +483,31 @@ void CMesTempView::OnFileOpen()
 		{
 			for (int j = 0; j < liczba_obszarow; j++)
 			{
-				if (wektor_obszarow[i].x1 <= wektor_obszarow[j].x1 && wektor_obszarow[i].x4 >= wektor_obszarow[j].x1)
+				if (wektor_obszarow[i].x1 < wektor_obszarow[j].x1 && wektor_obszarow[i].x4 > wektor_obszarow[j].x1)
 				{
-					if (wektor_obszarow[i].y1 <= wektor_obszarow[j].y1 && wektor_obszarow[i].y4 >= wektor_obszarow[j].y1) {
+					if (wektor_obszarow[i].y1 < wektor_obszarow[j].y1 && wektor_obszarow[i].y4 > wektor_obszarow[j].y1) {
 						err = true;
 						Rysuj = false;
 					}
 					
 				}
-				else if (wektor_obszarow[i].x1 <= wektor_obszarow[j].x4 && wektor_obszarow[i].x4 >= wektor_obszarow[j].x4 )
+				else if (wektor_obszarow[i].x1 < wektor_obszarow[j].x4 && wektor_obszarow[i].x4 > wektor_obszarow[j].x4 )
 				{
-					if (wektor_obszarow[i].y1 <= wektor_obszarow[j].y1 && wektor_obszarow[i].y4 >= wektor_obszarow[j].y1) {
+					if (wektor_obszarow[i].y1 < wektor_obszarow[j].y1 && wektor_obszarow[i].y4 > wektor_obszarow[j].y1) {
 						err = true;
 						Rysuj = false;
 					}
 				}
-				else if (wektor_obszarow[i].x1 <= wektor_obszarow[j].x1 && wektor_obszarow[i].x4 >= wektor_obszarow[j].x1 )
+				else if (wektor_obszarow[i].x1 < wektor_obszarow[j].x1 && wektor_obszarow[i].x4 > wektor_obszarow[j].x1 )
 				{
-					if (wektor_obszarow[i].y4 <= wektor_obszarow[j].y1 && wektor_obszarow[i].y4 >= wektor_obszarow[j].y4) {
+					if (wektor_obszarow[i].y4 < wektor_obszarow[j].y1 && wektor_obszarow[i].y4 > wektor_obszarow[j].y4) {
 						err = true;
 						Rysuj = false;
 					}
 				}
-				else if (wektor_obszarow[i].x1 <= wektor_obszarow[j].x4 && wektor_obszarow[i].x4 >= wektor_obszarow[j].x4 )
+				else if (wektor_obszarow[i].x1 < wektor_obszarow[j].x4 && wektor_obszarow[i].x4 > wektor_obszarow[j].x4 )
 				{
-					if (wektor_obszarow[i].y4 <= wektor_obszarow[j].y1 && wektor_obszarow[i].y4 >= wektor_obszarow[j].y4) {
+					if (wektor_obszarow[i].y4 < wektor_obszarow[j].y1 && wektor_obszarow[i].y4 > wektor_obszarow[j].y4) {
 						err = true;
 						Rysuj = false;
 					}
