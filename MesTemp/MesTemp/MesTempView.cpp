@@ -23,6 +23,7 @@
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
+#include "error.h"
 
 
 // CMesTempView
@@ -108,10 +109,16 @@ void CMesTempView::OnDraw(CDC * pDC)
 	CString floatString;
 
 	
-
+	if (err == true)
+	{
+		error error;
+		error.DoModal();
+		err = false;
+	}
 
 	
 	if (Rysuj) {
+		
 		 RysujObszary(pDC);
 		 floatString = "skala:";
 		 pDC->TextOutW(980, 50, floatString);
@@ -471,6 +478,45 @@ void CMesTempView::OnFileOpen()
 		RysSiatkaU = true;
 		zag_x = 1;
 		zag_y = 1;
+		//sprawdzanie opszarów
+		for (int i = 0; i < liczba_obszarow; i++)
+		{
+			for (int j = 0; j < liczba_obszarow; j++)
+			{
+				if (wektor_obszarow[i].x1 <= wektor_obszarow[j].x1 && wektor_obszarow[i].x4 >= wektor_obszarow[j].x1)
+				{
+					if (wektor_obszarow[i].y1 <= wektor_obszarow[j].y1 && wektor_obszarow[i].y4 >= wektor_obszarow[j].y1) {
+						err = true;
+						Rysuj = false;
+					}
+					
+				}
+				else if (wektor_obszarow[i].x1 <= wektor_obszarow[j].x4 && wektor_obszarow[i].x4 >= wektor_obszarow[j].x4 )
+				{
+					if (wektor_obszarow[i].y1 <= wektor_obszarow[j].y1 && wektor_obszarow[i].y4 >= wektor_obszarow[j].y1) {
+						err = true;
+						Rysuj = false;
+					}
+				}
+				else if (wektor_obszarow[i].x1 <= wektor_obszarow[j].x1 && wektor_obszarow[i].x4 >= wektor_obszarow[j].x1 )
+				{
+					if (wektor_obszarow[i].y4 <= wektor_obszarow[j].y1 && wektor_obszarow[i].y4 >= wektor_obszarow[j].y4) {
+						err = true;
+						Rysuj = false;
+					}
+				}
+				else if (wektor_obszarow[i].x1 <= wektor_obszarow[j].x4 && wektor_obszarow[i].x4 >= wektor_obszarow[j].x4 )
+				{
+					if (wektor_obszarow[i].y4 <= wektor_obszarow[j].y1 && wektor_obszarow[i].y4 >= wektor_obszarow[j].y4) {
+						err = true;
+						Rysuj = false;
+					}
+				}
+				
+			}
+
+
+		}
 		Invalidate(TRUE);
 		UpdateWindow();
 		

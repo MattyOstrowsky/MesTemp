@@ -189,6 +189,7 @@
   <ItemGroup>
     <ClInclude Include="DialZagesc.h" />
     <ClInclude Include="Element.h" />
+    <ClInclude Include="error.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="licz.h" />
@@ -207,6 +208,7 @@
   <ItemGroup>
     <ClCompile Include="DialZagesc.cpp" />
     <ClCompile Include="Element.cpp" />
+    <ClCompile Include="error.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="licz.cpp" />
     <ClCompile Include="Macierze.cpp" />

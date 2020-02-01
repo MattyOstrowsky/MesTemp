@@ -44,6 +44,7 @@ public:
 	bool RysSiatkaU = false;
 	bool RozRysujU = false;
 	bool TempRysujU = false;
+	bool err=false;
 
 	//std::vector<float> wynikRozw;
 	float** tablica = new float* [x_max];
