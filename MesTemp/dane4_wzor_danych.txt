@@ -19,4 +19,4 @@ czy pr:	nr:	x1:	y1:	x4:	 y4:	cz Ÿr:  moc:	przew_x:przew_y:materia³:
 warunki brzegowe I rodzaju iloœæ:
 1
 x1:	y1:	x2:	y2:	T[K]:
-0	0	900	0	250
+0	0	0	900	250
