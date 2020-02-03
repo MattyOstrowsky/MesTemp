@@ -11,7 +11,7 @@ public:
 
 	int liczba_obszarow;
 	float skala;
-	float nr; //nr porzadkowy
+	int nr; //nr porzadkowy
 	bool czy_prostokat; //okresla czy obszar jest prostokatem
 	bool pion; //jesli obszar nie jest prostokatem to atrybut okresla czy obszar jest pionowy (1) czy poziomy (0)
 	
