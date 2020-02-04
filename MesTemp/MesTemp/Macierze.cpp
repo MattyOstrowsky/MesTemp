@@ -87,7 +87,67 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 				if ((fabs((wynik[i] - stare[i]) / stare[i])) > 0.05) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
 			}
 		}
-	} while (czy);
+	} while (czy);*/
+	std::ofstream plik;
+	plik.open("Testy.txt", std::ofstream::app);
+	int ile = Q.size();
+	plik << "\nWeszlo do funkcji. ile = " << ile << "\n";
+	int petle = 0;			//dla zorientowania siê
+	double r2, pom, pom2, pom3, a, b;
+	double* r = new double[ile];
+	double* rs = new double[ile];
+	double* p = new double[ile];
+	double* ps = new double[ile];
+	for (int i = 0; i < ile; i++)
+	{
+		r[i] = Q[i];
+		p[i] = Q[i];
+	}
+	do
+	{
+		r2 = 0;
+		pom = 0;
+		pom3 = 0;
+		for (int i = 0; i < ile; i++)
+		{
+			pom3 += r[i] * r[i];
+			pom2 = 0;
+			for (int j = K.prow[i]; j < K.prow[i+1]; j++)
+			{
+				pom2 += p[K.coln[j]] * K.A[j];
+			}
+			pom += p[i] * pom2;
+		}
+		a = pom3 / pom;	//alfa_k = r_kT*r_k/p_kT*A*p_k
+		for (int i = 0; i < ile; i++)
+		{
+			wynik[i] += p[i] * a;	//x_k+1 = x_k + alfa_k*Ap_k
+			rs[i] = r[i];
+			pom = 0;
+			for (int j = K.prow[i]; j < K.prow[i + 1]; j++)
+			{
+				pom += K.A[j] * p[K.coln[j]];
+			}
+			r[i] -= a * pom;
+			//r[i] -= alfa[k] * (A[i][0] * p[0] + A[i][1] * p[1] + A[i][2] * p[2] + A[i][3] * p[3]);	//r_k+1 = r_k - alfa_k*Ap_k
+		}
+		pom = 0;
+		pom2 = 0;
+		for (int i = 0; i < ile; i++)
+		{
+			pom += r[i] * r[i];
+			pom2 += rs[i] * rs[i];
+		}
+		b = pom/pom2;
+		//beta_k+1 = rT_k+1r_k+1/rT_kr_k
+		for (int i = 0; i < ile; i++)
+		{
+			ps[i] = p[i];
+			p[i] = ps[i] * b + r[i];	//p_k+1 = r_k+1 + beta_k+1p_k
+			r2 += r[i] * r[i];
+		}
+		petle++;
+	} while (r2 > 0.00000001);
 	plik << "\nWyszlo z petli iteracyjnej po " << petle << " obrotach\n";
 	plik.close();
 }
