@@ -13,7 +13,7 @@ Macierze::Macierze(std::vector<float>& danea, std::vector<int>& danep, std::vect
 //rozwi¹zywanie uk³adu równañ, metoda iteracyjna
 void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik)
 {
-	std::vector<int>brzegowe;	//wektor indeksów warunków brzegowych (coby ich nie zmieniaæ)
+	/*std::vector<int>brzegowe;	//wektor indeksów warunków brzegowych (coby ich nie zmieniaæ)
 	std::ofstream plik;
 	plik.open("Testy.txt", std::ofstream::app);
 	int ile = Q.size();
@@ -67,7 +67,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 			/*for (int j = 0; j < brzegowe.size(); j++)
 			{
 				if (i == brzegowe[j]) czy2 = false;
-			}*/
+			}
 			//plik << "stary: " << stare[i];
 			//plik.close();
 			//plik.open("Testy.txt", std::ofstream::app);
