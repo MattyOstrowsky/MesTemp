@@ -265,6 +265,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 			tempmax = wynikRozw[0];
 			tempmin = wynikRozw[0];
 
+			tablica = new float* [x_max];
 			for (int i = 0; i < x_max; i++)
 			{
 				tablica[i] = new float[y_max];

@@ -47,7 +47,7 @@ public:
 	bool err=false;
 
 	//std::vector<float> wynikRozw;
-	float** tablica = new float* [x_max];
+	float** tablica;
 
 	
 // Operations
