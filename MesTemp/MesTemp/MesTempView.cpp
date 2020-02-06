@@ -257,7 +257,6 @@ void CMesTempView::OnDraw(CDC * pDC)
 			std::ofstream plik;
 			plik.open("Testy.txt");
 			plik << "Zaczynamy\n";
-			std::vector<float> wynikRozw(((siatka.kord_x.size()) * (siatka.kord_y.size())), 0);
 			licz licz;
 			plik.close();
 			licz.rozw(wynikRozw, siatka, wektor_obszarow, wektor_warunkow_brzegowych);
@@ -331,16 +330,16 @@ void CMesTempView::OnDraw(CDC * pDC)
 					for (int y = skala * wektor_obszarow[i].y1; y <  skala * wektor_obszarow[i].y4; y++)
 					{
 						plik << "dziala3";
-						//pomt=licz.temp(x/skala, y/skala, nr, wynikRozw, siatka);
+						pomt=licz.temp(x/skala, y/skala, nr, wynikRozw, siatka);
 						plik << "\nx = " << x / skala - xos0 << "  ;  y = " << y / skala + yos0 << "  ;  temp = " << pomt;
 						if (pomt > -300)
 						{
 							
 							pomt = 255 * (pomt - tempmin) / (tempmax - tempmin);
 							int tt = pomt / 25;
-							if (x < 800 && x > 15)
+							if ((xos0 + x) < 800 &&( xos0 + x )> 15)
 							{
-								if (y < 590 && y > 10)
+								if ((yos0 - y) < 590 && (yos0 - y )>8)
 									pDC->SetPixel(xos0+x, yos0-y, RGB(25 * tt, 20, 255 - 25 * tt));
 
 							}
