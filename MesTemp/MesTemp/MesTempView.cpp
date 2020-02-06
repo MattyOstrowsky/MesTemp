@@ -316,22 +316,19 @@ void CMesTempView::OnDraw(CDC * pDC)
 			float tempa;
 			licz licz;
 			int pomt=0;
-			std::ofstream plik;
-			plik.open("Testy.txt", std::ofstream::app);
-
+			
 			
 			for (int i = 0; i < liczba_obszarow; i++)
 			{
-				plik << "dziala\n";
+				
 				for (int x =skala * wektor_obszarow[i].x1; x < skala * wektor_obszarow[i].x4; x++)
 				{
-					plik << "dziala2  "<<  wektor_obszarow[i].y1<<" <  "<<  wektor_obszarow[i].y4;
+					
 
 					for (int y = skala * wektor_obszarow[i].y1; y <  skala * wektor_obszarow[i].y4; y++)
 					{
-						plik << "dziala3";
 						pomt=licz.temp(x/skala, y/skala, nr, wynikRozw, siatka);
-						plik << "\nx = " << x / skala - xos0 << "  ;  y = " << y / skala + yos0 << "  ;  temp = " << pomt;
+						
 						if (pomt > -300)
 						{
 							
