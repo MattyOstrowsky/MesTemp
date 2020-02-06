@@ -48,6 +48,7 @@ public:
 
 	//std::vector<float> wynikRozw;
 	float** tablica;
+	std::vector<float> wynikRozw;
 
 	
 // Operations

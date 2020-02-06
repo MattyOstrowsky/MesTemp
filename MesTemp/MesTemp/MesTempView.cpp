@@ -290,13 +290,11 @@ void CMesTempView::OnDraw(CDC * pDC)
 		}
 		if (TempRysuj)
 		{
-
+			//skala
 			double jedn = (tempmax - tempmin) / 500.0;
-
 			int tmp;
 			floatString.Format(_T("%.2f"), tempmax);
 			pDC->TextOutW(910, 50, floatString);
-
 			floatString.Format(_T("%.2f"), tempmin);
 			pDC->TextOutW(910, 550, floatString);
 			for (int xx = 850; xx < 900; xx++)
@@ -310,30 +308,50 @@ void CMesTempView::OnDraw(CDC * pDC)
 					int tt = tmp / 25;
 					pDC->SetPixel(xx, yy, RGB(25 * tt, 20, 255 - 25 * tt));
 					temper -= jedn;
-					
+
 				}
 			}
-			int pomt;
-			for (int x = 0; x < x_max; x++)
+
+			//rysowanie
+			int nr = 0;
+			float tempa;
+			licz licz;
+			int pomt=0;
+			std::ofstream plik;
+			plik.open("Testy.txt", std::ofstream::app);
+
+			
+			for (int i = 0; i < liczba_obszarow; i++)
 			{
-				for (int y = 0; y < y_max; y++)
+				plik << "dziala\n";
+				for (int x =skala * wektor_obszarow[i].x1; x < skala * wektor_obszarow[i].x4; x++)
 				{
+					plik << "dziala2  "<<  wektor_obszarow[i].y1<<" <  "<<  wektor_obszarow[i].y4;
 
-					if (tablica[x][y] > -300)
+					for (int y = skala * wektor_obszarow[i].y1; y <  skala * wektor_obszarow[i].y4; y++)
 					{
-						pomt = tablica[x][y];
-						pomt = 255 * (pomt - tempmin) / (tempmax - tempmin);
-						int tt = pomt / 25;
-						if ((skala * x + xos0) < 800 && (skala * x + xos0) > 15)
+						plik << "dziala3";
+						//pomt=licz.temp(x/skala, y/skala, nr, wynikRozw, siatka);
+						plik << "\nx = " << x / skala - xos0 << "  ;  y = " << y / skala + yos0 << "  ;  temp = " << pomt;
+						if (pomt > -300)
 						{
-							if((yos0 - skala * y) < 590 && (yos0 - skala * y) > 10)
-								pDC->SetPixel(skala * x + xos0, yos0 - skala * y, RGB(25 * tt, 20, 255 - 25 * tt));
+							
+							pomt = 255 * (pomt - tempmin) / (tempmax - tempmin);
+							int tt = pomt / 25;
+							if (x < 800 && x > 15)
+							{
+								if (y < 590 && y > 10)
+									pDC->SetPixel(xos0+x, yos0-y, RGB(25 * tt, 20, 255 - 25 * tt));
 
+							}
 						}
+						
 					}
 				}
+			}
 
-			}RysujObszary(pDC);
+			
+			RysujObszary(pDC);
 		}
 		
 		
