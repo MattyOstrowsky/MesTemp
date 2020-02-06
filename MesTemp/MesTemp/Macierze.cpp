@@ -10,90 +10,16 @@ Macierze::Macierze(std::vector<float>& danea, std::vector<int>& danep, std::vect
 	prow = danep;
 	coln = danec;
 }
-//rozwi¹zywanie uk³adu równañ, metoda iteracyjna
+//rozwi¹zywanie uk³adu równañ, metoda gradientów sprzê¿onych
 void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik)
 {
-	/*std::vector<int>brzegowe;	//wektor indeksów warunków brzegowych (coby ich nie zmieniaæ)
-	std::ofstream plik;
-	plik.open("Testy.txt", std::ofstream::app);
-	int ile = Q.size();
-	plik << "\nWeszlo do funkcji. ile = " << ile << "\n";
-	//plik.close();
-	int petle = 0;			//dla zorientowania siê
-	//plik.open("Testy.txt", std::ofstream::app);
-	float pom;
-	std::vector<int> ii;	//indeksy elementów na g³ównej przek¹tnej
-	float* stare = new float[ile];	//poprzednie wyniki, potrzebne by sprawdziæ kiedy skoñczyæ iteracjê
-	bool czy;
-	int pom2;
-	bool czy2;
-	for (int i = 0; i < ile; i++)
-	{
-		if (wynik[i] != 0)brzegowe.push_back(i);
-	}
-	//plik << "\n\nkolejne elementy wektora ii:\n";
-	//plik.close();
-	//plik.open("Testy.txt", std::ofstream::app);
-	for (int i = 0; i < ile; i++)	//wype³niamiy ii
-	{
-		//wynik[i] = Q[i];
-		pom2 = K.prow[i];
-		while (i != K.coln[pom2])pom2++;
-		ii.push_back(pom2);
-		//plik << ii[i] << " ; ";
-		//plik.close();
-		//plik.open("Testy.txt", std::ofstream::app);
-	}
-	//plik << "\nprzeszlo, wchodzi do petli 'do'\n";
-	//plik.close();
-	//plik.open("Testy.txt", std::ofstream::app);
-	do
-	{
-		petle++;
-		//plik << "kolejny obrot do\n";
-		//plik.close();
-		//plik.open("Testy.txt", std::ofstream::app);
-		czy = false;
-		for (int i = 0; i < ile; i++)
-		{
-			stare[i] = wynik[i];	//przepisuje poprzednie wyniki do tablicy pomocniczej
-		}
-		//plik << "przepislo stare wyniki:\n";
-		//plik.close();
-		//plik.open("Testy.txt", std::ofstream::app);
-		for (int i = 0; i < ile; i++)
-		{
-			czy2 = true;
-			/*for (int j = 0; j < brzegowe.size(); j++)
-			{
-				if (i == brzegowe[j]) czy2 = false;
-			}
-			//plik << "stary: " << stare[i];
-			//plik.close();
-			//plik.open("Testy.txt", std::ofstream::app);
-			if (czy2)
-			{
-				pom = Q[i];
-				for (int j = K.prow[i]; j < K.prow[i + 1]; j++)	//mno¿enie macierzy przez wektor tylko dla niezerowych elementów
-				{
-					pom -= K.A[j] * stare[K.coln[j]];
-				}
-				pom += K.A[ii[i]] * stare[i];
-				//plik << "pom = " << pom;
-				wynik[i] = pom / K.A[ii[i]];
-				//plik << " ; nowy: " << wynik[i] << "\n";
-				//plik.close();
-				//plik.open("Testy.txt", std::ofstream::app);
-				if ((fabs((wynik[i] - stare[i]) / stare[i])) > 0.05) czy = true;	//przyrównanie wzglêdnej zmiany wyniku do zadanej dok³adnoœci
-			}
-		}
-	} while (czy);*/
 	std::ofstream plik;
 	plik.open("Testy.txt", std::ofstream::app);
 	int ile = Q.size();
 	plik << "\nWeszlo do funkcji. ile = " << ile << "\n";
 	int petle = 0;			//dla zorientowania siê
 	double r2, pom, pom2, pom3, a, b;
+	//r2- odleg³oœæ^2 od minimum, a-alfa-d³ugoœæ kroku, p-kierunek poszukiwañ, b-beta-wspó³czynnik liniowy uwzglêdniaj¹cy stary kierunek
 	double* r = new double[ile];
 	double* rs = new double[ile];
 	double* p = new double[ile];
@@ -102,6 +28,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 	{
 		r[i] = Q[i];
 		p[i] = Q[i];
+		wynik.push_back(0);
 	}
 	do
 	{
