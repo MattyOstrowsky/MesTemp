@@ -57,6 +57,7 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 	float dx, dy;		//szerokoœæ i wysokoœæ elementu
 	int o = 0;
 	bool B = false;
+	float cieplo;
 
 	//jakaœ zewnêtrzna pêtla do latania po ró¿nych obszarach?
 	plik << "Jedziemy!\n";
@@ -71,7 +72,9 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 			R.ktory_obszar((S.kord_x[x] + 0.5 * dx), (S.kord_y[y] + 0.5 * dy), o, S, B, obszary);
 			lx = obszary[o].przewodnosc_x;
 			ly = obszary[o].przewodnosc_y;
-			R.lokalna(lx, ly, lok, Q, dx, dy, obszary[o].moc_zrodla);
+			if (obszary[o].moc_zrodla == 0)cieplo = 0;
+			else cieplo = obszary[o].moc_zrodla * dx * dy / ((obszary[o].x4 - obszary[o].x1) * (obszary[o].y4 - obszary[o].y1));
+			R.lokalna(lx, ly, lok, Q, dx, dy, cieplo);
 			for (int k = 0; k < 4; k++)
 			{
 				for (int l = 0; l < 4; l++)
