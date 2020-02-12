@@ -74,7 +74,7 @@ void Macierze::licz(Macierze K, std::vector<float>& Q, std::vector<float>& wynik
 			r2 += r[i] * r[i];
 		}
 		petle++;
-	} while (r2 > 0.00000001);
+	} while (r2 > 0.0000000001);
 	plik << "\nWyszlo z petli iteracyjnej po " << petle << " obrotach\n";
 	plik.close();
 }
@@ -113,11 +113,11 @@ void Macierze::do_globalnej(Macierze& globalna, float co, int gdziex, int gdziey
 }
 
 // funkcja dodaj¹ca macierz lokaln¹ do globalnej
-void Macierze::do_globalnej(Macierze& globalna, float lokalna[][4], float lokp[4],std::vector <float>& P, int wspolrzedne[4])
+void Macierze::do_globalnej2(Macierze& globalna, float lokalna[][4], float lokp[4],std::vector <float>& P, int wspolrzedne[4])
 {
-	std::ofstream plik;
-	//plik.open("Testy.txt", std::ofstream::app);
-	//plik << "-----------\ndo globalnej\n";
+	/*std::ofstream plik;
+	plik.open("Testy.txt", std::ofstream::app);
+	plik << "-----------\ndo globalnej\n";*/
 	bool czy;	//zmienna logiczna- czy trzeba twozyæ nowy element macierzy globalnej (zapisywanej jako 3 wektory)?
 	int pop = 0;	//indeks elementu tablicy A macierzy globalnej, po którym nale¿y wstawiæ nowy
 	std::vector<float>::iterator it;
@@ -135,7 +135,8 @@ void Macierze::do_globalnej(Macierze& globalna, float lokalna[][4], float lokp[4
 		P[wspolrzedne[i]] += lokp[i];
 		//plik << "P_glob " << wspolrzedne[i] << " = " << P[wspolrzedne[i]] << "\n";
 	}
-	//plik << "------------------------\n";
+	/*plik << "------------------------\n";
+	plik.close();*/
 }
 
 
@@ -167,6 +168,7 @@ void Macierze::brzegowe (Macierze& M, Siatka S, std::vector <float>& P, std::vec
 {
 	int szuk, pom, nx, ny;
 	bool czy;
+	float d = 0.00000001;	//do porównywania floatów
 	std::vector<int> wezly;	//numery wêz³ów, na które wp³ywa warunek brzegowy;
 	for (int i = 0; i < brzeg.size(); i++)
 	{
@@ -177,11 +179,12 @@ void Macierze::brzegowe (Macierze& M, Siatka S, std::vector <float>& P, std::vec
 		{
 			ny = pom / S.kord_x.size();
 			nx = pom % S.kord_x.size();
-			if (S.kord_x[nx] >= brzeg[i].x1 && S.kord_x[nx] <= brzeg[i].x2 && S.kord_y[ny] >= brzeg[i].y1 && S.kord_y[ny] <= brzeg[i].y2)
+			if (S.kord_x[nx] >= brzeg[i].x1 && S.kord_x[nx]  <= brzeg[i].x2 && S.kord_y[ny] >= brzeg[i].y1 && S.kord_y[ny] <= brzeg[i].y2)
 			{
 				wezly.push_back(pom);
 			}
 			if ((S.kord_x[nx] >= brzeg[i].x2 && S.kord_y[ny] >= brzeg[i].y2) ||(ny == S.kord_y.size()-1 && nx == S.kord_x.size()-1))
+			//if (ny == S.kord_y.size() - 1 && nx == S.kord_x.size() - 1)
 			{
 				czy = false;
 			}
@@ -195,11 +198,11 @@ void Macierze::brzegowe (Macierze& M, Siatka S, std::vector <float>& P, std::vec
 			{
 				if (M.coln[k] == wezly[j])
 				{
-					M.A[k] *= 100000000;
+					M.A[k] = M.A[k]*100000000;
 					pomK = M.A[k];
+					P[wezly[j]] = pomK * brzeg[i].temperatura;
 				}
 			}
-			P[wezly[j]] =+ pomK*brzeg[i].temperatura;
 		}
 	}
 }

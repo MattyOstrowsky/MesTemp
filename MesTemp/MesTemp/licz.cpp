@@ -5,11 +5,16 @@
 
 void licz::lokalna(float lamx, float lamy, float(&macierz)[16], float(&P)[4], float wys, float szer, float Q)
 {
+	/*std::ofstream plik;
+	plik.open("Testy.txt", std::ofstream::app);
+	plik << "\nlokalna:\n wys = " << wys << " ; szer = " << szer << " ; lambdaX = " << lamx << " ; lambdaY = " << lamy << "\n";*/
 	int mx[4][4] = { {2,-2,-1,1},{-2,2,1,-1},{-1,1,2,-2},{1,-1,-2,2} };
 	int my[4][4] = { {2,1,-1,-2},{1,2,-2,-1},{-1,-2,2,1},{-2,-1,1,2} };
-	float pomx = (lamx * wys) / (12 * szer);
-	float pomy = (lamy * wys) / (12 * szer);
+	float pomx = (lamx * wys) / (6 * szer);
+	float pomy = (lamy * szer) / (6 * wys);
 	float pomp = Q * szer * wys / 4;
+	/*plik << "pomx = " << pomx << " ; pomy = " << pomy << " ; pomp = " << pomp<<std::endl;
+	plik.close();*/
 	for (int i = 0; i < 4; i++)
 	{
 		for (int j = 0; j < 4; j++)
@@ -60,7 +65,7 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 
 	//jakaœ zewnêtrzna pêtla do latania po ró¿nych obszarach?
 	plik << "Jedziemy!\n";
-	//plik << "Jedziemy!\nx   ;   y   ;   dx   ;   dy   ;   obszar\n\n";
+	plik << "Jedziemy!\nx   ;   y   ;   dx   ;   dy   ;   obszar	;	Q\n\n";
 	for (int y = 0; y < iley-1; y++)
 	{
 		for (int x = 0; x < ilex-1; x++)
@@ -71,7 +76,8 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 			R.ktory_obszar((S.kord_x[x] + 0.5 * dx), (S.kord_y[y] + 0.5 * dy), o, S, B, obszary);
 			lx = obszary[o].przewodnosc_x;
 			ly = obszary[o].przewodnosc_y;
-			R.lokalna(lx, ly, lok, Q, dx, dy, obszary[o].moc_zrodla);
+			plik << x << "	;	" << y << "	;	" << dx << "	;	" << dy << "	;	" << o << "	;	"<<obszary[o].moc_zrodla << std::endl;
+			R.lokalna(lx, ly, lok, Q, dy, dx, obszary[o].moc_zrodla);
 			for (int k = 0; k < 4; k++)
 			{
 				for (int l = 0; l < 4; l++)
@@ -81,24 +87,57 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 			}
 			wsp[0] = y*ilex + x;
 			wsp[1] = y*ilex  + x + 1;
-			wsp[2] = (y+1) * ilex + x;
-			wsp[3] = (y + 1) * ilex + x + 1;
-			M.do_globalnej(M, pom, Q, Qg, wsp);	//dodawanie macierzy lokalnej do globalnej
+			wsp[3] = (y+1) * ilex + x;
+			wsp[2] = (y + 1) * ilex + x + 1;
+			plik << "\nglobalne numery:\n" << wsp[0] << "	;	" << wsp[1] << "	;	" << wsp[2] << "	;	" << wsp[3] << std::endl;
+			M.do_globalnej2(M, pom, Q, Qg, wsp);	//dodawanie macierzy lokalnej do globalnej
+			//przynajmniej w pierwszym obrocie dodaje dobrze. uk³ad równañ????
 		}
 	}
-	plik << "\nDodalo wszystko, co mialo dodac\n";
+	plik << "\nDodalo wszystko do globalnej. Globalna:\n";
+	/*int pomr = 0;
+	for (int i = 0; i < ile; i++)
+	{
+		for (int j = 0; j < ile; j++)
+		{
+			if (M.coln[pomr] == j)
+			{
+				plik << std::setw(7) << M.A[pomr];
+				pomr++;
+			}
+			else plik << std::setw(7) << "0";
+			plik << "  ";
+		}
+		plik << std::endl;
+	}*/
+	M.brzegowe(M, S, Qg, wb);		//wprowadzanie warunków brzegowych (ustalonej temperatury)
+	plik << "\nDodalo warunki brzegowe\n";
+	/*plik << "\nDodalo wszystko do globalnej. Globalna:\n";
+	pomr = 0;
+	for (int i = 0; i < ile; i++)
+	{
+		for (int j = 0; j < ile; j++)
+		{
+			if (M.coln[pomr] == j)
+			{
+				plik << std::setw(7)<<M.A[pomr];
+				pomr++;
+			}
+			else plik <<std::setw(7)<< "0";
+			plik << "  ";
+		}
+		plik << std::endl;
+	}*/
 	plik << "\nQg = : ";
 	for (int i = 0; i < ile; i++)
 	{
-		plik << Qg[i] << " ; ";
+		plik <<std::setw(7)<< Qg[i] << " ; ";
 	}
-	M.brzegowe(M, S, Qg, wb);		//wprowadzanie warunków brzegowych (ustalonej temperatury)
-	plik << "\nDodalo warunki brzegowe\n";
 	plik.close();
 	M.licz(M, Qg, wyniki);		//rozwi¹zywanie uk³adu równañ
 	plik.open("Testy.txt", std::ofstream::app);
-	plik << "\n\n\nPOLICZYLO!!!!\n\n\nwyniki=\n\n";
-	for (int i = 0; i < ile;  i++)plik << wyniki[i] << " ; ";
+	plik << "\n\n\nPOLICZYLO!!!!\n\n\n";
+	//for (int i = 0; i < ile;  i++)plik << wyniki[i] << " ; ";
 	plik.close();
 }
 

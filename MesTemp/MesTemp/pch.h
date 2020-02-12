@@ -23,4 +23,5 @@
 #include <fstream>
 #include <cstring>
 #include "MesTempView.h"
+#include <iomanip>
 #endif //PCH_H
