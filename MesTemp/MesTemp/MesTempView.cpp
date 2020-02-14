@@ -49,6 +49,8 @@ BEGIN_MESSAGE_MAP(CMesTempView, CView)
 	ON_UPDATE_COMMAND_UI(ID_START_RYSUJTEMPERATURY, &CMesTempView::OnUpdateStartRysujtemperatury)
 	ON_UPDATE_COMMAND_UI(ID_START_ROZK32784, &CMesTempView::OnUpdateStartRozk32784)
 	ON_COMMAND(ID_START_RYSUJTEMPERATURY, &CMesTempView::OnStartRysujtemperatury)
+	ON_COMMAND(ID_START_ZAPISZ32783, &CMesTempView::OnStartZapisz)
+	ON_UPDATE_COMMAND_UI(ID_START_ZAPISZ32783, &CMesTempView::OnUpdateStartZapisz)
 END_MESSAGE_MAP()
 
 // CMesTempView construction/destruction
@@ -785,4 +787,18 @@ void CMesTempView::OnStartRysujtemperatury()
 	TempRysuj = true;
 	Invalidate(TRUE);
 	UpdateWindow();
+	ZapiszU = true;
 }
+
+void CMesTempView::OnUpdateStartZapisz(CCmdUI* pCmdUI)
+{
+	pCmdUI->Enable(ZapiszU);
+}
+
+
+void CMesTempView::OnStartZapisz()
+{
+	
+}
+
+

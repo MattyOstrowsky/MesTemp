@@ -45,6 +45,7 @@ public:
 	bool RozRysujU = false;
 	bool TempRysujU = false;
 	bool err=false;
+	bool ZapiszU = false;
 
 	//std::vector<float> wynikRozw;
 	float** tablica;
@@ -96,6 +97,8 @@ public:
 	afx_msg void OnUpdateStartRysujtemperatury(CCmdUI* pCmdUI);
 	afx_msg void OnUpdateStartRozk32784(CCmdUI* pCmdUI);
 	afx_msg void OnStartRysujtemperatury();
+	afx_msg void OnStartZapisz();
+	afx_msg void OnUpdateStartZapisz(CCmdUI* pCmdUI);
 };
 
 #ifndef _DEBUG  // debug version in MesTempView.cpp
