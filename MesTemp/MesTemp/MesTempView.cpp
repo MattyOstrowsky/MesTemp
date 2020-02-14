@@ -420,7 +420,7 @@ void CMesTempView::OnFileOpen()
 {
 	// TODO: Dodaj tutaj sw�j kod procedury obs�ugi polecenia
 	CFile newfile;
-	TCHAR szFilters[] = _T("txt Type Files (*.txt)|*.txt|All Files (*.*)|*.*||");
+	TCHAR szFilters[] = _T("txt Type Files (*.txt)|*.txt||");
 	CFileDialog fileDlg(TRUE, _T("txt"), _T("*.txt"), OFN_HIDEREADONLY | OFN_FILEMUSTEXIST, szFilters);
 	if (fileDlg.DoModal() == IDOK)
 	{
@@ -798,7 +798,35 @@ void CMesTempView::OnUpdateStartZapisz(CCmdUI* pCmdUI)
 
 void CMesTempView::OnStartZapisz()
 {
-	
+	CFile newfile;
+	TCHAR szFilters[] = _T("txt Type Files (*.txt)|*.txt||");
+	CFileDialog fileDlg(TRUE, _T("txt"), _T("*.txt"), OFN_HIDEREADONLY | OFN_FILEMUSTEXIST, szFilters);
+	if (fileDlg.DoModal() == IDOK)
+	{
+		CFile oldFile;
+		ASSERT(oldFile != NULL);
+		oldFile.Open(fileDlg.GetPathName(), CFile::modeRead | CFile::shareExclusive);
+		FilePathName = fileDlg.GetPathName();
+		CArchive loadArchive(&oldFile, CArchive::load | CArchive::bNoFlushOnDelete); // Create the archive to load data, the archive must be closed manually after the loading process      
+		Serialize(loadArchive);
+		loadArchive.Close();
+		oldFile.Close();
+
+
+		std::fstream plik; //otworzenie pliku o danej nazwie
+		plik.open(FilePathName, std::ios::in);
+
+
+
+
+
+
+
+
+
+
+
+	}
 }
 
 
