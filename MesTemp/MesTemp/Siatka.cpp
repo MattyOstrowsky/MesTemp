@@ -5,7 +5,8 @@ Siatka::Siatka(std::vector <Input>& dane)
 {
 	element = dane;
 }
-
+Siatka::Siatka()
+{}
 void Siatka::utworz_siatke(std::vector <Input> &element) 
 {
 

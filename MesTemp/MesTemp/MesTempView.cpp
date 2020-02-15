@@ -174,7 +174,7 @@ void CMesTempView::OnDraw(CDC * pDC)
 		CPen pen1(PS_SOLID, 1, RGB(50, 205, 50));
 		CPen* oldpen = pDC->SelectObject(&pen1);
 
-		Siatka siatka(wektor_obszarow);
+		//Siatka siatka(wektor_obszarow);
 		siatka.utworz_siatke(wektor_obszarow);
 		siatka.zageszczenie_prostokatow(zag_y, siatka.kord_y);
 		siatka.zageszczenie_prostokatow(zag_x, siatka.kord_x);
@@ -813,19 +813,38 @@ void CMesTempView::OnStartZapisz()
 		oldFile.Close();
 
 
-		std::fstream plik; //otworzenie pliku o danej nazwie
+		std::ofstream plik; //otworzenie pliku o danej nazwie
+		licz pom1;
+		int ob;
+		bool b = true;
+		std::vector<int>max;
+		std::vector<int> min;	//numery węzłów zawierających skrajne temperatury
 		plik.open(FilePathName, std::ios::in);
-
-
-
-
-
-
-
-
-
-
-
+		plik << "Wyniki dla " << liczba_obszarow << " obszarów materiałowych, podzielonych na siatkę o " << wynikRozw.size();
+		plik<<" węzłach ( "<<siatka.kord_x.size()<<" w osi X i "<<siatka.kord_y.size()<<" w osi Y):\n";
+		for (int i = 0; i < wynikRozw.size(); i++)
+		{
+			pom1.ktory_obszar(siatka.kord_x[i],siatka.kord_y[i],ob,siatka,b,wektor_obszarow);
+			plik << std::setw(7) << "\nNr węzła" << "|" << std::setw(7) << "X" << "|" << std::setw(7) << "Y" << "|";
+			plik<< std::setw(7) << "Temperatura" << "|" << std::setw(7) << "Nr obszaru" << "|" << std::setw(7) << "Przewodniość X" << "|" << std::setw(7) << "Przewodniość Y" << "|" << std::setw(7) << "Moc źródła\n";
+			plik << std::setw(7) << i << "|" << std::setw(7) << siatka.kord_x[i] << "|" << std::setw(7) << siatka.kord_y[i] << "|";
+			plik<< std::setw(7) << wynikRozw[i] << "|" << std::setw(7) << ob << "|" << std::setw(7) << wektor_obszarow[ob].przewodnosc_x << "|" << std::setw(7) << wektor_obszarow[i].przewodnosc_y << "|" << std::setw(7) << wektor_obszarow[i].moc_zrodla << "\n";
+			if (wynikRozw[i] == tempmax)max.push_back(i);
+			if (wynikRozw[i] == tempmin)min.push_back(i);
+		}
+		plik << "\nTemperatura maksymalna: " << tempmax << ". Wystąpiła dla węzłów nr: ";
+		for (int i = 0; i < max.size() - 1; i++)
+		{
+			plik << max[i] << ", ";
+		}
+		plik << max[max.size() - 1]<<".";
+		plik << "\nTemperatura minimalna: " << tempmin << ". Wystąpiła dla węzłów nr: ";
+		for (int i = 0; i < max.size() - 1; i++)
+		{
+			plik << min[i] << ", ";
+		}
+		plik << min[min.size() - 1] << ".";
+		plik.close();
 	}
 }
 
