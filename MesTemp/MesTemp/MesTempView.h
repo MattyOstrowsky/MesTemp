@@ -45,7 +45,7 @@ public:
 	bool RozRysujU = false;
 	bool TempRysujU = false;
 	bool err=false;
-	bool ZapiszU = false;
+	bool ZapiszU = true;
 
 	//std::vector<float> wynikRozw;
 	float** tablica;

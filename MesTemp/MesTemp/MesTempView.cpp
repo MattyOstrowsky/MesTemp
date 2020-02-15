@@ -800,18 +800,11 @@ void CMesTempView::OnStartZapisz()
 {
 	CFile newfile;
 	TCHAR szFilters[] = _T("txt Type Files (*.txt)|*.txt||");
-	CFileDialog fileDlg(TRUE, _T("txt"), _T("*.txt"), OFN_HIDEREADONLY | OFN_FILEMUSTEXIST, szFilters);
+	CFileDialog fileDlg(TRUE, _T("txt"), _T("*.txt"), OFN_HIDEREADONLY , szFilters);
 	if (fileDlg.DoModal() == IDOK)
 	{
-		CFile oldFile;
-		ASSERT(oldFile != NULL);
-		oldFile.Open(fileDlg.GetPathName(), CFile::modeRead | CFile::shareExclusive);
+		
 		FilePathName = fileDlg.GetPathName();
-		CArchive loadArchive(&oldFile, CArchive::load | CArchive::bNoFlushOnDelete); // Create the archive to load data, the archive must be closed manually after the loading process      
-		Serialize(loadArchive);
-		loadArchive.Close();
-		oldFile.Close();
-
 
 		std::ofstream plik; //otworzenie pliku o danej nazwie
 		licz pom1;
@@ -821,14 +814,14 @@ void CMesTempView::OnStartZapisz()
 		std::vector<int> min;	//numery węzłów zawierających skrajne temperatury
 		plik.open(FilePathName, std::ios::in);
 		plik << "Wyniki dla " << liczba_obszarow << " obszarów materiałowych, podzielonych na siatkę o " << wynikRozw.size();
-		plik<<" węzłach ( "<<siatka.kord_x.size()<<" w osi X i "<<siatka.kord_y.size()<<" w osi Y):\n";
+		plik << " węzłach ( " << siatka.kord_x.size() << " w osi X i " << siatka.kord_y.size() << " w osi Y):\n";
 		for (int i = 0; i < wynikRozw.size(); i++)
 		{
-			pom1.ktory_obszar(siatka.kord_x[i],siatka.kord_y[i],ob,siatka,b,wektor_obszarow);
+			pom1.ktory_obszar(siatka.kord_x[i], siatka.kord_y[i], ob, siatka, b, wektor_obszarow);
 			plik << std::setw(7) << "\nNr węzła" << "|" << std::setw(7) << "X" << "|" << std::setw(7) << "Y" << "|";
-			plik<< std::setw(7) << "Temperatura" << "|" << std::setw(7) << "Nr obszaru" << "|" << std::setw(7) << "Przewodniość X" << "|" << std::setw(7) << "Przewodniość Y" << "|" << std::setw(7) << "Moc źródła\n";
+			plik << std::setw(7) << "Temperatura" << "|" << std::setw(7) << "Nr obszaru" << "|" << std::setw(7) << "Przewodniość X" << "|" << std::setw(7) << "Przewodniość Y" << "|" << std::setw(7) << "Moc źródła\n";
 			plik << std::setw(7) << i << "|" << std::setw(7) << siatka.kord_x[i] << "|" << std::setw(7) << siatka.kord_y[i] << "|";
-			plik<< std::setw(7) << wynikRozw[i] << "|" << std::setw(7) << ob << "|" << std::setw(7) << wektor_obszarow[ob].przewodnosc_x << "|" << std::setw(7) << wektor_obszarow[i].przewodnosc_y << "|" << std::setw(7) << wektor_obszarow[i].moc_zrodla << "\n";
+			plik << std::setw(7) << wynikRozw[i] << "|" << std::setw(7) << ob << "|" << std::setw(7) << wektor_obszarow[ob].przewodnosc_x << "|" << std::setw(7) << wektor_obszarow[i].przewodnosc_y << "|" << std::setw(7) << wektor_obszarow[i].moc_zrodla << "\n";
 			if (wynikRozw[i] == tempmax)max.push_back(i);
 			if (wynikRozw[i] == tempmin)min.push_back(i);
 		}
@@ -837,7 +830,7 @@ void CMesTempView::OnStartZapisz()
 		{
 			plik << max[i] << ", ";
 		}
-		plik << max[max.size() - 1]<<".";
+		plik << max[max.size() - 1] << ".";
 		plik << "\nTemperatura minimalna: " << tempmin << ". Wystąpiła dla węzłów nr: ";
 		for (int i = 0; i < max.size() - 1; i++)
 		{
@@ -845,6 +838,8 @@ void CMesTempView::OnStartZapisz()
 		}
 		plik << min[min.size() - 1] << ".";
 		plik.close();
+
+
 	}
 }
 
