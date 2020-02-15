@@ -808,7 +808,7 @@ void CMesTempView::OnStartZapisz()
 
 		std::ofstream plik; //otworzenie pliku o danej nazwie
 		licz pom1;
-		int ob;
+		int ob=0;
 		bool b = true;
 		std::vector<int>max;
 		std::vector<int> min;	//numery węzłów zawierających skrajne temperatury
@@ -822,24 +822,28 @@ void CMesTempView::OnStartZapisz()
 			plik << std::setw(7) << "Temperatura" << "|" << std::setw(7) << "Nr obszaru" << "|" << std::setw(7) << "Przewodniość X" << "|" << std::setw(7) << "Przewodniość Y" << "|" << std::setw(7) << "Moc źródła\n";
 			plik << std::setw(7) << i << "|" << std::setw(7) << siatka.kord_x[i] << "|" << std::setw(7) << siatka.kord_y[i] << "|";
 			plik << std::setw(7) << wynikRozw[i] << "|" << std::setw(7) << ob << "|" << std::setw(7) << wektor_obszarow[ob].przewodnosc_x << "|" << std::setw(7) << wektor_obszarow[i].przewodnosc_y << "|" << std::setw(7) << wektor_obszarow[i].moc_zrodla << "\n";
-			if (wynikRozw[i] == tempmax)max.push_back(i);
-			if (wynikRozw[i] == tempmin)min.push_back(i);
+			if (fabs(wynikRozw[i] - tempmax)<0.00000001)max.push_back(i);
+			if (fabs(wynikRozw[i] - tempmin)<0.00000001)min.push_back(i);
 		}
 		plik << "\nTemperatura maksymalna: " << tempmax << ". Wystąpiła dla węzłów nr: ";
-		for (int i = 0; i < max.size() - 1; i++)
+		if (max.size() > 0)
 		{
-			plik << max[i] << ", ";
+			for (int i = 0; i < max.size() - 1; i++)
+			{
+				plik << max[i] << ", ";
+			}
+			plik << max[max.size() - 1] << ".";
 		}
-		plik << max[max.size() - 1] << ".";
 		plik << "\nTemperatura minimalna: " << tempmin << ". Wystąpiła dla węzłów nr: ";
-		for (int i = 0; i < max.size() - 1; i++)
+		if (min.size() > 0)
 		{
-			plik << min[i] << ", ";
+			for (int i = 0; i < max.size() - 1; i++)
+			{
+				plik << min[i] << ", ";
+			}
+			plik << min[min.size() - 1] << ".";
 		}
-		plik << min[min.size() - 1] << ".";
 		plik.close();
-
-
 	}
 }
 
