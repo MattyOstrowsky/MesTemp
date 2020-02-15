@@ -73,7 +73,7 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 			o = 0;
 			dx = S.kord_x[x + 1] - S.kord_x[x];
 			dy = S.kord_y[y + 1] - S.kord_y[y];
-			R.ktory_obszar((S.kord_x[x] + 0.5 * dx), (S.kord_y[y] + 0.5 * dy), o, S, B, obszary);
+			R.ktory_obszar((S.kord_x[x] + 0.5 * dx), (S.kord_y[y] + 0.5 * dy), o, B, obszary);
 			lx = obszary[o].przewodnosc_x;
 			ly = obszary[o].przewodnosc_y;
 			plik << x << "	;	" << y << "	;	" << dx << "	;	" << dy << "	;	" << o << "	;	"<<obszary[o].moc_zrodla << std::endl;
@@ -177,7 +177,7 @@ float licz::temp(float x, float y, int& ost, std::vector<float> T, Siatka S)
 }
 
 // funkcja zwracaj¹ca numer obszaru pod wskazanymi wspó³rzêdnymi
-void licz:: ktory_obszar(float x, float y, int& ost, Siatka S, bool& X, std::vector <Input> obszary)
+void licz:: ktory_obszar(float x, float y, int& ost, bool& X, std::vector <Input> obszary)
 {
 	bool czy = true;	//czy kontynuowaæ poszukiwania elementu
 	X = false;		//zmienna awaryjna, bada prawid³owy przebieg pêtli

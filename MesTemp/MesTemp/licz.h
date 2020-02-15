@@ -13,6 +13,6 @@ public:
 	float licz::temp(float x, float y, int& ost, std::vector<float> T, Siatka S);
 	// funkcja zwracaj¹ca numer obszaru pod wskazanymi wspó³rzêdnymi
 	void ktory_el(float x, float y, int& ost, Siatka S, bool& X);
-	void ktory_obszar(float x, float y, int& ost, Siatka S, bool& X, std::vector <Input> obszary);
+	void ktory_obszar(float x, float y, int& ost, bool& X, std::vector <Input> obszary);
 };
 

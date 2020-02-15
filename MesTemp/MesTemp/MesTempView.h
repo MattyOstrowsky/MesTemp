@@ -56,7 +56,8 @@ public:
 public:
 	std::vector <Input> wektor_obszarow;
 	std::vector <WarunkiBrzegowe> wektor_warunkow_brzegowych;
-	Siatka siatka;
+	std::vector<float>wsp_x;
+	std::vector<float>wsp_y;
 
 // Overrides
 public:

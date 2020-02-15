@@ -174,10 +174,12 @@ void CMesTempView::OnDraw(CDC * pDC)
 		CPen pen1(PS_SOLID, 1, RGB(50, 205, 50));
 		CPen* oldpen = pDC->SelectObject(&pen1);
 
-		//Siatka siatka(wektor_obszarow);
+		Siatka siatka(wektor_obszarow);
 		siatka.utworz_siatke(wektor_obszarow);
 		siatka.zageszczenie_prostokatow(zag_y, siatka.kord_y);
 		siatka.zageszczenie_prostokatow(zag_x, siatka.kord_x);
+		for (int i = 0; i < siatka.kord_x.size(); i++)wsp_x.push_back(siatka.kord_x[i]);
+		for (int i = 0; i < siatka.kord_y.size(); i++)wsp_y.push_back(siatka.kord_y[i]);
 		RozRysujU = true;
 		
 		for (int j = 0; j < liczba_obszarow; j++)
@@ -812,18 +814,26 @@ void CMesTempView::OnStartZapisz()
 		bool b = true;
 		std::vector<int>max;
 		std::vector<int> min;	//numery węzłów zawierających skrajne temperatury
-		plik.open(FilePathName, std::ios::in);
+		//plik.open(FilePathName, std::ios::in);
+		plik.open(FilePathName);
 		plik << "Wyniki dla " << liczba_obszarow << " obszarów materiałowych, podzielonych na siatkę o " << wynikRozw.size();
-		plik << " węzłach ( " << siatka.kord_x.size() << " w osi X i " << siatka.kord_y.size() << " w osi Y):\n";
+		plik << " węzłach ( " <<wsp_x.size() << " w osi X i " << wsp_y.size() << " w osi Y):\n";
+		tempmin = wynikRozw[0];
+		tempmax = wynikRozw[0];
+		for (int i = 1; i < wynikRozw.size(); i++)
+		{
+			if (wynikRozw[i] < tempmin)tempmin = wynikRozw[i];
+			if (wynikRozw[i] > tempmax)tempmax = wynikRozw[i];
+		}
 		for (int i = 0; i < wynikRozw.size(); i++)
 		{
-			pom1.ktory_obszar(siatka.kord_x[i], siatka.kord_y[i], ob, siatka, b, wektor_obszarow);
-			plik << std::setw(7) << "\nNr węzła" << "|" << std::setw(7) << "X" << "|" << std::setw(7) << "Y" << "|";
-			plik << std::setw(7) << "Temperatura" << "|" << std::setw(7) << "Nr obszaru" << "|" << std::setw(7) << "Przewodniość X" << "|" << std::setw(7) << "Przewodniość Y" << "|" << std::setw(7) << "Moc źródła\n";
-			plik << std::setw(7) << i << "|" << std::setw(7) << siatka.kord_x[i] << "|" << std::setw(7) << siatka.kord_y[i] << "|";
-			plik << std::setw(7) << wynikRozw[i] << "|" << std::setw(7) << ob << "|" << std::setw(7) << wektor_obszarow[ob].przewodnosc_x << "|" << std::setw(7) << wektor_obszarow[i].przewodnosc_y << "|" << std::setw(7) << wektor_obszarow[i].moc_zrodla << "\n";
-			if (fabs(wynikRozw[i] - tempmax)<0.00000001)max.push_back(i);
-			if (fabs(wynikRozw[i] - tempmin)<0.00000001)min.push_back(i);
+			pom1.ktory_obszar(wsp_x[i], wsp_y[i], ob, b, wektor_obszarow);
+			plik << std::setw(8) << "\nNr węzła" << "|" << std::setw(10) << "X" << "|" << std::setw(10) << "Y" << "|";
+			plik << std::setw(11) << "Temperatura" << "|" << std::setw(10) << "Nr obszaru" << "|" << std::setw(14) << "Przewodniość X" << "|" << std::setw(14) << "Przewodniość Y" << "|" << std::setw(11) << "Moc źródła\n";
+			plik << std::setw(8) << i << "|" << std::setw(10) << wsp_x[i] << "|" << std::setw(10) << wsp_y[i] << "|";
+			plik << std::setw(11) << wynikRozw[i] << "|" << std::setw(10) << ob << "|" << std::setw(14) << wektor_obszarow[ob].przewodnosc_x << "|" << std::setw(14) << wektor_obszarow[ob].przewodnosc_y << "|" << std::setw(11) << wektor_obszarow[ob].moc_zrodla << "\n";
+			if (fabs(wynikRozw[i] - tempmax)<0.0000001)max.push_back(i);
+			if (fabs(wynikRozw[i] - tempmin)<0.0000001)min.push_back(i);
 		}
 		plik << "\nTemperatura maksymalna: " << tempmax << ". Wystąpiła dla węzłów nr: ";
 		if (max.size() > 0)
@@ -837,7 +847,7 @@ void CMesTempView::OnStartZapisz()
 		plik << "\nTemperatura minimalna: " << tempmin << ". Wystąpiła dla węzłów nr: ";
 		if (min.size() > 0)
 		{
-			for (int i = 0; i < max.size() - 1; i++)
+			for (int i = 0; i < min.size() - 1; i++)
 			{
 				plik << min[i] << ", ";
 			}
