@@ -130,9 +130,9 @@ void CMesTempView::OnDraw(CDC * pDC)
 		 pDC->TextOutW(1170, 70, floatString);
 		 floatString.Format(_T("%.1f"), skala);
 		 pDC->TextOutW(1170, 50, floatString);
-		 floatString.Format(_T("%f"), yPos);
+		 floatString.Format(_T(" Y [mm]:%.1f"), yPos);
 		 pDC->TextOutW(1120, 20, floatString);
-		 floatString.Format(_T("%f"), xPos);
+		 floatString.Format(_T(" X [mm]:%.1f"), xPos);
 		 pDC->TextOutW(1020, 20, floatString);
 		 for (float j = 0; j < liczba_obszarow; j++)
 		 {
@@ -143,22 +143,22 @@ void CMesTempView::OnDraw(CDC * pDC)
 				
 					 floatString = "numer obszaru:";
 					 pDC->TextOutW(980, 120, floatString);
-					 floatString = "moc:";
+					 floatString = "gestosc mocy [W/m^2]:";
 					 pDC->TextOutW(980, 140, floatString);
-					 floatString = "przewodnosc x:";
+					 floatString = "przewodnosc x [W/(m * K)]:";
 					 pDC->TextOutW(980, 160, floatString);
-					 floatString = "przewodnosc y:";
+					 floatString = "przewodnosc y [W/(m* K):";
 					 pDC->TextOutW(980, 180, floatString);
 					 floatString = "material:";
 					 pDC->TextOutW(980, 200, floatString);
 
 					 floatString.Format(_T("%.0f"), wektor_obszarow[j].nr);
 					 pDC->TextOutW(1170, 120, floatString);
-					 floatString.Format(_T("%.0f"), wektor_obszarow[j].moc_zrodla);
+					 floatString.Format(_T("%.0f"), wektor_obszarow[j].moc_zrodla * pow(10, 6));
 					 pDC->TextOutW(1170, 140, floatString);
-					 floatString.Format(_T("%.0f"), wektor_obszarow[j].przewodnosc_x);
+					 floatString.Format(_T("%.0f"), wektor_obszarow[j].przewodnosc_x * 1000);
 					 pDC->TextOutW(1170, 160, floatString);
-					 floatString.Format(_T("%.0f"), wektor_obszarow[j].przewodnosc_y);
+					 floatString.Format(_T("%.0f"), wektor_obszarow[j].przewodnosc_y * 1000);
 					 pDC->TextOutW(1170, 180, floatString);
 
 					 pDC->TextOutW(1170, 200, CString(wektor_obszarow[j].material));
@@ -465,6 +465,9 @@ void CMesTempView::OnFileOpen()
 					x_max = obszar.x4;
 				if (obszar.y4 > y_max)
 					y_max = obszar.y4;
+				obszar.moc_zrodla *= pow(10, -6);
+				obszar.przewodnosc_x *= pow(10, -3);
+				obszar.przewodnosc_y *= pow(10, -3);
 				wektor_obszarow.push_back(obszar); //dodanie obszaru do wektora obszarow
 				
 			}
@@ -828,14 +831,14 @@ void CMesTempView::OnStartZapisz()
 		for (int i = 0; i < wynikRozw.size(); i++)
 		{
 			pom1.ktory_obszar(wsp_x[i], wsp_y[i], ob, b, wektor_obszarow);
-			plik << std::setw(8) << "\nNr węzła" << "|" << std::setw(10) << "X" << "|" << std::setw(10) << "Y" << "|";
-			plik << std::setw(11) << "Temperatura" << "|" << std::setw(10) << "Nr obszaru" << "|" << std::setw(14) << "Przewodniość X" << "|" << std::setw(14) << "Przewodniość Y" << "|" << std::setw(11) << "Moc źródła\n";
+			plik << std::setw(8) << "\nNr węzła" << "|" << std::setw(10) << "X[mm]" << "|" << std::setw(10) << "Y[mm]" << "|";
+			plik << std::setw(11) << "Temperatura[K]" << "|" << std::setw(10) << "Nr obszaru" << "|" << std::setw(14) << "Przewodność X[W/(m*K)]" << "|" << std::setw(14) << "Przewodność Y[W/(m*K)]" << "|" << std::setw(11) << "Moc źródła[W/m^2]\n";
 			plik << std::setw(8) << i << "|" << std::setw(10) << wsp_x[i] << "|" << std::setw(10) << wsp_y[i] << "|";
-			plik << std::setw(11) << wynikRozw[i] << "|" << std::setw(10) << ob << "|" << std::setw(14) << wektor_obszarow[ob].przewodnosc_x << "|" << std::setw(14) << wektor_obszarow[ob].przewodnosc_y << "|" << std::setw(11) << wektor_obszarow[ob].moc_zrodla << "\n";
+			plik << std::setw(11) << wynikRozw[i] << "|" << std::setw(10) << ob << "|" << std::setw(14) << wektor_obszarow[ob].przewodnosc_x * 1000 << "|" << std::setw(14) << wektor_obszarow[ob].przewodnosc_y * 1000 << "|" << std::setw(11) << wektor_obszarow[ob].moc_zrodla * pow(10, 6) << "\n";
 			if (fabs(wynikRozw[i] - tempmax)<0.0000001)max.push_back(i);
 			if (fabs(wynikRozw[i] - tempmin)<0.0000001)min.push_back(i);
 		}
-		plik << "\nTemperatura maksymalna: " << tempmax << ". Wystąpiła dla węzłów nr: ";
+		plik << "\nTemperatura maksymalna [K]: " << tempmax << ". Wystąpiła dla węzłów nr: ";
 		if (max.size() > 0)
 		{
 			for (int i = 0; i < max.size() - 1; i++)
@@ -844,7 +847,7 @@ void CMesTempView::OnStartZapisz()
 			}
 			plik << max[max.size() - 1] << ".";
 		}
-		plik << "\nTemperatura minimalna: " << tempmin << ". Wystąpiła dla węzłów nr: ";
+		plik << "\nTemperatura minimalna [K]: " << tempmin << ". Wystąpiła dla węzłów nr: ";
 		if (min.size() > 0)
 		{
 			for (int i = 0; i < min.size() - 1; i++)
