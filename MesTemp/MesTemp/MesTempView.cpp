@@ -178,8 +178,18 @@ void CMesTempView::OnDraw(CDC * pDC)
 		siatka.utworz_siatke(wektor_obszarow);
 		siatka.zageszczenie_prostokatow(zag_y, siatka.kord_y);
 		siatka.zageszczenie_prostokatow(zag_x, siatka.kord_x);
-		for (int i = 0; i < siatka.kord_x.size(); i++)wsp_x.push_back(siatka.kord_x[i]);
-		for (int i = 0; i < siatka.kord_y.size(); i++)wsp_y.push_back(siatka.kord_y[i]);
+		wsp_x.clear();
+		wsp_y.clear();
+		for (int i = 0; i < siatka.kord_x.size(); i++)
+		{
+			if (fabs(siatka.kord_x[i]) > 0.0000000001)wsp_x.push_back(siatka.kord_x[i]);
+			else wsp_x.push_back(0);
+		}
+		for (int i = 0; i < siatka.kord_y.size(); i++)
+		{
+			if (fabs(siatka.kord_y[i]) > 0.0000000001)wsp_y.push_back(siatka.kord_y[i]);
+			else wsp_y.push_back(0);
+		}
 		RozRysujU = true;
 		
 		for (int j = 0; j < liczba_obszarow; j++)
@@ -832,9 +842,9 @@ void CMesTempView::OnStartZapisz()
 		{
 			pom1.ktory_obszar(wsp_x[i], wsp_y[i], ob, b, wektor_obszarow);
 			plik << std::setw(8) << "\nNr węzła" << "|" << std::setw(10) << "X[mm]" << "|" << std::setw(10) << "Y[mm]" << "|";
-			plik << std::setw(11) << "Temperatura[K]" << "|" << std::setw(10) << "Nr obszaru" << "|" << std::setw(14) << "Przewodność X[W/(m*K)]" << "|" << std::setw(14) << "Przewodność Y[W/(m*K)]" << "|" << std::setw(11) << "Moc źródła[W/m^2]\n";
-			plik << std::setw(8) << i << "|" << std::setw(10) << wsp_x[i] << "|" << std::setw(10) << wsp_y[i] << "|";
-			plik << std::setw(11) << wynikRozw[i] << "|" << std::setw(10) << ob << "|" << std::setw(14) << wektor_obszarow[ob].przewodnosc_x * 1000 << "|" << std::setw(14) << wektor_obszarow[ob].przewodnosc_y * 1000 << "|" << std::setw(11) << wektor_obszarow[ob].moc_zrodla * pow(10, 6) << "\n";
+			plik << std::setw(14) << "Temperatura[K]" << "|" << std::setw(10) << "Nr obszaru" << "|" << std::setw(22) << "Przewodność X[W/(m*K)]" << "|" << std::setw(22) << "Przewodność Y[W/(m*K)]" << "|" << std::setw(17) << "Moc źródła[W/m^2]\n";
+			plik << std::setw(8) << i << "|" << std::setw(10) << wsp_x[i% wsp_x.size()] << "|" << std::setw(10) << wsp_y[i/ wsp_x.size()] << "|";
+			plik << std::setw(14) << wynikRozw[i] << "|" << std::setw(10) << ob << "|" << std::setw(22) << wektor_obszarow[ob].przewodnosc_x * 1000 << "|" << std::setw(22) << wektor_obszarow[ob].przewodnosc_y * 1000 << "|" << std::setw(17) << wektor_obszarow[ob].moc_zrodla * pow(10, 6) << "\n";
 			if (fabs(wynikRozw[i] - tempmax)<0.0000001)max.push_back(i);
 			if (fabs(wynikRozw[i] - tempmin)<0.0000001)min.push_back(i);
 		}
