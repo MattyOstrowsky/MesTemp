@@ -198,7 +198,7 @@ void Macierze::brzegowe (Macierze& M, Siatka S, std::vector <float>& P, std::vec
 			{
 				if (M.coln[k] == wezly[j])
 				{
-					M.A[k] = M.A[k]*100000000;
+					M.A[k] = M.A[k]*10000000000;
 					pomK = M.A[k];
 					P[wezly[j]] = pomK * brzeg[i].temperatura;
 				}
