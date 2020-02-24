@@ -3,9 +3,9 @@ liczba obszarów:
 skala:
 1
 czy pr:	nr:	x1:	y1:	x4:	 y4:	cz źr:	moc:	przew_x:	przew_y:	materiał:
-1 	0 	0 	0 	450 	 900 	0	0	 3		12		miedz
-1 	1 	450 	0 	900	 900	1	0.0016	 3		12 		miedz_zr
+1 	0 	0 	0 	450 	 900 	0	0	 10		1		miedz
+1 	1 	450 	0 	900	 900	1	900	 10		1 		miedz_zr
 warunki brzegowe I rodzaju ilość:
 1
 x1:	y1:	x2:	y2:	T[K]:
-0	0	0	900	10
+0	0	0	900	0

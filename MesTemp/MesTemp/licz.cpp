@@ -70,7 +70,7 @@ void licz::rozw(std::vector<float>& wyniki, Siatka S, std::vector<Input> obszary
 	{
 		for (int x = 0; x < ilex-1; x++)
 		{
-			o = 0;
+			//o = 0;
 			dx = S.kord_x[x + 1] - S.kord_x[x];
 			dy = S.kord_y[y + 1] - S.kord_y[y];
 			R.ktory_obszar((S.kord_x[x] + 0.5 * dx), (S.kord_y[y] + 0.5 * dy), o, B, obszary);

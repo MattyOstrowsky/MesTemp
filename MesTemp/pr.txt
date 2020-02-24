@@ -1,0 +1,1753 @@
+Wyniki dla 7 obszarów materiałowych, podzielonych na siatkę o 583 węzłach ( 11 w osi X i 53 w osi Y):
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       0|         0|         0|   2.09579e-09|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       1|        50|         0|   2.16408e-09|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       2|    118.75|         0|   2.19906e-09|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       3|     187.5|         0|   2.24891e-09|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       4|       325|         0|   2.27975e-09|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       5|     462.5|         0|   2.27005e-09|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       6|       600|         0|   2.25518e-09|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       7|       675|         0|     2.216e-09|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       8|       750|         0|   2.21447e-09|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+       9|       825|         0|    2.2154e-09|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      10|       900|         0|   2.21773e-09|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      11|         0|   15.3846|       15.3848|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      12|        50|   15.3846|       15.3848|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      13|    118.75|   15.3846|       15.3847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      14|     187.5|   15.3846|       15.3847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      15|       325|   15.3846|       15.3847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      16|     462.5|   15.3846|       15.3847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      17|       600|   15.3846|       15.3847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      18|       675|   15.3846|       15.3847|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      19|       750|   15.3846|       15.3847|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      20|       825|   15.3846|       15.3847|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      21|       900|   15.3846|       15.3847|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      22|         0|   30.7692|       30.7695|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      23|        50|   30.7692|       30.7695|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      24|    118.75|   30.7692|       30.7695|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      25|     187.5|   30.7692|       30.7695|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      26|       325|   30.7692|       30.7695|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      27|     462.5|   30.7692|       30.7695|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      28|       600|   30.7692|       30.7695|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      29|       675|   30.7692|       30.7695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      30|       750|   30.7692|       30.7695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      31|       825|   30.7692|       30.7695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      32|       900|   30.7692|       30.7695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      33|         0|   46.1538|       46.1543|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      34|        50|   46.1538|       46.1543|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      35|    118.75|   46.1538|       46.1542|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      36|     187.5|   46.1538|       46.1542|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      37|       325|   46.1538|       46.1541|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      38|     462.5|   46.1538|       46.1542|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      39|       600|   46.1538|       46.1542|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      40|       675|   46.1538|       46.1542|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      41|       750|   46.1538|       46.1543|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      42|       825|   46.1538|       46.1542|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      43|       900|   46.1538|       46.1543|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      44|         0|   61.5385|        61.539|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      45|        50|   61.5385|        61.539|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      46|    118.75|   61.5385|       61.5389|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      47|     187.5|   61.5385|       61.5389|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      48|       325|   61.5385|       61.5389|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      49|     462.5|   61.5385|       61.5389|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      50|       600|   61.5385|        61.539|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      51|       675|   61.5385|        61.539|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      52|       750|   61.5385|        61.539|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      53|       825|   61.5385|        61.539|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      54|       900|   61.5385|        61.539|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      55|         0|   76.9231|       76.9238|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      56|        50|   76.9231|       76.9238|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      57|    118.75|   76.9231|       76.9237|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      58|     187.5|   76.9231|       76.9235|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      59|       325|   76.9231|       76.9236|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      60|     462.5|   76.9231|       76.9237|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      61|       600|   76.9231|       76.9237|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      62|       675|   76.9231|       76.9237|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      63|       750|   76.9231|       76.9238|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      64|       825|   76.9231|       76.9239|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      65|       900|   76.9231|       76.9238|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      66|         0|   92.3077|       92.3085|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      67|        50|   92.3077|       92.3086|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      68|    118.75|   92.3077|       92.3085|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      69|     187.5|   92.3077|       92.3082|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      70|       325|   92.3077|       92.3083|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      71|     462.5|   92.3077|       92.3084|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      72|       600|   92.3077|       92.3084|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      73|       675|   92.3077|       92.3085|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      74|       750|   92.3077|       92.3085|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      75|       825|   92.3077|       92.3085|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      76|       900|   92.3077|       92.3085|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      77|         0|   107.692|       107.693|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      78|        50|   107.692|       107.693|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      79|    118.75|   107.692|       107.693|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      80|     187.5|   107.692|       107.693|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      81|       325|   107.692|       107.693|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      82|     462.5|   107.692|       107.693|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      83|       600|   107.692|       107.693|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      84|       675|   107.692|       107.693|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      85|       750|   107.692|       107.693|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      86|       825|   107.692|       107.693|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      87|       900|   107.692|       107.693|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      88|         0|   123.077|       123.078|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      89|        50|   123.077|       123.078|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      90|    118.75|   123.077|       123.078|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      91|     187.5|   123.077|       123.078|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      92|       325|   123.077|       123.078|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      93|     462.5|   123.077|       123.078|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      94|       600|   123.077|       123.078|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      95|       675|   123.077|       123.078|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      96|       750|   123.077|       123.078|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      97|       825|   123.077|       123.078|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      98|       900|   123.077|       123.078|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+      99|         0|   138.462|       138.463|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     100|        50|   138.462|       138.463|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     101|    118.75|   138.462|       138.462|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     102|     187.5|   138.462|       138.462|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     103|       325|   138.462|       138.462|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     104|     462.5|   138.462|       138.463|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     105|       600|   138.462|       138.463|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     106|       675|   138.462|       138.463|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     107|       750|   138.462|       138.463|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     108|       825|   138.462|       138.463|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     109|       900|   138.462|       138.463|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     110|         0|   153.846|       153.847|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     111|        50|   153.846|       153.847|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     112|    118.75|   153.846|       153.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     113|     187.5|   153.846|       153.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     114|       325|   153.846|       153.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     115|     462.5|   153.846|       153.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     116|       600|   153.846|       153.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     117|       675|   153.846|       153.847|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     118|       750|   153.846|       153.848|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     119|       825|   153.846|       153.847|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     120|       900|   153.846|       153.848|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     121|         0|   169.231|       169.232|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     122|        50|   169.231|       169.232|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     123|    118.75|   169.231|       169.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     124|     187.5|   169.231|       169.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     125|       325|   169.231|       169.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     126|     462.5|   169.231|       169.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     127|       600|   169.231|       169.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     128|       675|   169.231|       169.232|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     129|       750|   169.231|       169.232|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     130|       825|   169.231|       169.232|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     131|       900|   169.231|       169.232|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     132|         0|   184.615|       184.617|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     133|        50|   184.615|       184.617|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     134|    118.75|   184.615|       184.617|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     135|     187.5|   184.615|       184.616|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     136|       325|   184.615|       184.617|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     137|     462.5|   184.615|       184.617|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     138|       600|   184.615|       184.617|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     139|       675|   184.615|       184.617|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     140|       750|   184.615|       184.617|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     141|       825|   184.615|       184.617|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     142|       900|   184.615|       184.617|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     143|         0|       200|       200.002|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     144|        50|       200|       200.001|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     145|    118.75|       200|       200.001|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     146|     187.5|       200|       200.001|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     147|       325|       200|       200.001|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     148|     462.5|       200|       200.002|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     149|       600|       200|       200.002|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     150|       675|       200|       200.002|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     151|       750|       200|       200.002|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     152|       825|       200|       200.002|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     153|       900|       200|       200.002|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     154|         0|   215.385|       215.386|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     155|        50|   215.385|       215.386|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     156|    118.75|   215.385|       215.386|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     157|     187.5|   215.385|       215.386|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     158|       325|   215.385|       215.386|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     159|     462.5|   215.385|       215.386|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     160|       600|   215.385|       215.386|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     161|       675|   215.385|       215.386|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     162|       750|   215.385|       215.386|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     163|       825|   215.385|       215.387|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     164|       900|   215.385|       215.387|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     165|         0|   230.769|       230.771|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     166|        50|   230.769|       230.771|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     167|    118.75|   230.769|       230.771|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     168|     187.5|   230.769|        230.77|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     169|       325|   230.769|       230.771|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     170|     462.5|   230.769|       230.771|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     171|       600|   230.769|       230.771|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     172|       675|   230.769|       230.771|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     173|       750|   230.769|       230.771|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     174|       825|   230.769|       230.771|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     175|       900|   230.769|       230.771|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     176|         0|   246.154|       246.156|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     177|        50|   246.154|       246.156|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     178|    118.75|   246.154|       246.155|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     179|     187.5|   246.154|       246.155|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     180|       325|   246.154|       246.155|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     181|     462.5|   246.154|       246.156|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     182|       600|   246.154|       246.156|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     183|       675|   246.154|       246.156|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     184|       750|   246.154|       246.156|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     185|       825|   246.154|       246.156|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     186|       900|   246.154|       246.156|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     187|         0|   261.538|        261.54|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     188|        50|   261.538|        261.54|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     189|    118.75|   261.538|        261.54|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     190|     187.5|   261.538|        261.54|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     191|       325|   261.538|        261.54|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     192|     462.5|   261.538|        261.54|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     193|       600|   261.538|       261.541|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     194|       675|   261.538|       261.541|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     195|       750|   261.538|       261.541|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     196|       825|   261.538|       261.541|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     197|       900|   261.538|        261.54|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     198|         0|   276.923|       276.925|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     199|        50|   276.923|       276.925|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     200|    118.75|   276.923|       276.925|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     201|     187.5|   276.923|       276.925|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     202|       325|   276.923|       276.925|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     203|     462.5|   276.923|       276.925|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     204|       600|   276.923|       276.926|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     205|       675|   276.923|       276.926|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     206|       750|   276.923|       276.926|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     207|       825|   276.923|       276.925|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     208|       900|   276.923|       276.925|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     209|         0|   292.308|        292.31|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     210|        50|   292.308|        292.31|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     211|    118.75|   292.308|        292.31|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     212|     187.5|   292.308|       292.309|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     213|       325|   292.308|        292.31|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     214|     462.5|   292.308|        292.31|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     215|       600|   292.308|        292.31|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     216|       675|   292.308|        292.31|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     217|       750|   292.308|        292.31|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     218|       825|   292.308|        292.31|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     219|       900|   292.308|        292.31|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     220|         0|   307.692|       307.694|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     221|        50|   307.692|       307.694|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     222|    118.75|   307.692|       307.694|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     223|     187.5|   307.692|       307.694|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     224|       325|   307.692|       307.694|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     225|     462.5|   307.692|       307.695|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     226|       600|   307.692|       307.695|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     227|       675|   307.692|       307.695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     228|       750|   307.692|       307.695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     229|       825|   307.692|       307.695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     230|       900|   307.692|       307.695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     231|         0|   323.077|       323.079|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     232|        50|   323.077|       323.079|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     233|    118.75|   323.077|       323.079|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     234|     187.5|   323.077|       323.078|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     235|       325|   323.077|       323.079|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     236|     462.5|   323.077|       323.079|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     237|       600|   323.077|        323.08|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     238|       675|   323.077|        323.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     239|       750|   323.077|        323.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     240|       825|   323.077|        323.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     241|       900|   323.077|        323.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     242|         0|   338.462|       338.464|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     243|        50|   338.462|       338.464|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     244|    118.75|   338.462|       338.464|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     245|     187.5|   338.462|       338.463|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     246|       325|   338.462|       338.464|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     247|     462.5|   338.462|       338.464|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     248|       600|   338.462|       338.464|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     249|       675|   338.462|       338.464|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     250|       750|   338.462|       338.464|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     251|       825|   338.462|       338.464|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     252|       900|   338.462|       338.465|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     253|         0|   353.846|       353.848|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     254|        50|   353.846|       353.848|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     255|    118.75|   353.846|       353.848|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     256|     187.5|   353.846|       353.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     257|       325|   353.846|       353.848|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     258|     462.5|   353.846|       353.849|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     259|       600|   353.846|       353.849|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     260|       675|   353.846|       353.849|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     261|       750|   353.846|       353.849|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     262|       825|   353.846|       353.849|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     263|       900|   353.846|       353.849|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     264|         0|   369.231|       369.233|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     265|        50|   369.231|       369.233|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     266|    118.75|   369.231|       369.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     267|     187.5|   369.231|       369.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     268|       325|   369.231|       369.233|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     269|     462.5|   369.231|       369.233|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     270|       600|   369.231|       369.234|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     271|       675|   369.231|       369.234|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     272|       750|   369.231|       369.233|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     273|       825|   369.231|       369.234|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     274|       900|   369.231|       369.234|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     275|         0|   384.615|       384.618|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     276|        50|   384.615|       384.617|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     277|    118.75|   384.615|       384.617|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     278|     187.5|   384.615|       384.617|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     279|       325|   384.615|       384.618|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     280|     462.5|   384.615|       384.618|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     281|       600|   384.615|       384.618|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     282|       675|   384.615|       384.619|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     283|       750|   384.615|       384.618|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     284|       825|   384.615|       384.619|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     285|       900|   384.615|       384.618|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     286|         0|       400|       400.002|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     287|        50|       400|       400.002|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     288|    118.75|       400|       400.002|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     289|     187.5|       400|       400.002|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     290|       325|       400|       400.003|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     291|     462.5|       400|       400.003|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     292|       600|       400|       400.003|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     293|       675|       400|       400.003|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     294|       750|       400|       400.003|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     295|       825|       400|       400.003|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     296|       900|       400|       400.003|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     297|         0|   423.077|       423.079|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     298|        50|   423.077|       423.079|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     299|    118.75|   423.077|       423.079|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     300|     187.5|   423.077|       423.079|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     301|       325|   423.077|       423.079|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     302|     462.5|   423.077|        423.08|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     303|       600|   423.077|        423.08|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     304|       675|   423.077|        423.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     305|       750|   423.077|        423.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     306|       825|   423.077|        423.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     307|       900|   423.077|       423.081|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     308|         0|   446.154|       446.156|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     309|        50|   446.154|       446.156|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     310|    118.75|   446.154|       446.156|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     311|     187.5|   446.154|       446.156|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     312|       325|   446.154|       446.156|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     313|     462.5|   446.154|       446.157|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     314|       600|   446.154|       446.157|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     315|       675|   446.154|       446.157|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     316|       750|   446.154|       446.158|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     317|       825|   446.154|       446.157|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     318|       900|   446.154|       446.157|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     319|         0|   469.231|       469.233|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     320|        50|   469.231|       469.233|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     321|    118.75|   469.231|       469.233|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     322|     187.5|   469.231|       469.233|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     323|       325|   469.231|       469.233|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     324|     462.5|   469.231|       469.234|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     325|       600|   469.231|       469.234|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     326|       675|   469.231|       469.234|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     327|       750|   469.231|       469.234|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     328|       825|   469.231|       469.234|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     329|       900|   469.231|       469.235|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     330|         0|   492.308|        492.31|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     331|        50|   492.308|       492.309|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     332|    118.75|   492.308|       492.309|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     333|     187.5|   492.308|        492.31|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     334|       325|   492.308|        492.31|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     335|     462.5|   492.308|       492.311|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     336|       600|   492.308|       492.311|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     337|       675|   492.308|       492.311|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     338|       750|   492.308|       492.312|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     339|       825|   492.308|       492.311|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     340|       900|   492.308|       492.311|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     341|         0|   515.385|       515.387|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     342|        50|   515.385|       515.386|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     343|    118.75|   515.385|       515.386|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     344|     187.5|   515.385|       515.387|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     345|       325|   515.385|       515.387|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     346|     462.5|   515.385|       515.387|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     347|       600|   515.385|       515.388|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     348|       675|   515.385|       515.388|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     349|       750|   515.385|       515.388|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     350|       825|   515.385|       515.388|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     351|       900|   515.385|       515.388|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     352|         0|   538.462|       538.464|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     353|        50|   538.462|       538.464|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     354|    118.75|   538.462|       538.463|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     355|     187.5|   538.462|       538.464|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     356|       325|   538.462|       538.464|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     357|     462.5|   538.462|       538.465|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     358|       600|   538.462|       538.465|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     359|       675|   538.462|       538.465|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     360|       750|   538.462|       538.466|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     361|       825|   538.462|       538.465|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     362|       900|   538.462|       538.466|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     363|         0|   561.538|       561.541|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     364|        50|   561.538|       561.539|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     365|    118.75|   561.538|        561.54|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     366|     187.5|   561.538|        561.54|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     367|       325|   561.538|        561.54|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     368|     462.5|   561.538|       561.542|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     369|       600|   561.538|       561.542|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     370|       675|   561.538|       561.542|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     371|       750|   561.538|       561.542|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     372|       825|   561.538|       561.543|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     373|       900|   561.538|       561.543|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     374|         0|   584.615|       584.617|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     375|        50|   584.615|       584.618|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     376|    118.75|   584.615|       584.617|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     377|     187.5|   584.615|       584.617|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     378|       325|   584.615|       584.618|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     379|     462.5|   584.615|       584.619|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     380|       600|   584.615|       584.619|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     381|       675|   584.615|        584.62|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     382|       750|   584.615|        584.62|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     383|       825|   584.615|       584.619|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     384|       900|   584.615|        584.62|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     385|         0|   607.692|       607.695|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     386|        50|   607.692|       607.694|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     387|    118.75|   607.692|       607.693|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     388|     187.5|   607.692|       607.693|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     389|       325|   607.692|       607.694|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     390|     462.5|   607.692|       607.695|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     391|       600|   607.692|       607.697|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     392|       675|   607.692|       607.697|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     393|       750|   607.692|       607.696|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     394|       825|   607.692|       607.696|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     395|       900|   607.692|       607.697|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     396|         0|   630.769|       630.771|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     397|        50|   630.769|       630.771|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     398|    118.75|   630.769|       630.771|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     399|     187.5|   630.769|       630.771|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     400|       325|   630.769|       630.772|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     401|     462.5|   630.769|       630.772|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     402|       600|   630.769|       630.773|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     403|       675|   630.769|       630.773|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     404|       750|   630.769|       630.773|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     405|       825|   630.769|       630.774|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     406|       900|   630.769|       630.773|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     407|         0|   653.846|       653.848|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     408|        50|   653.846|       653.847|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     409|    118.75|   653.846|       653.848|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     410|     187.5|   653.846|       653.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     411|       325|   653.846|       653.849|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     412|     462.5|   653.846|       653.849|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     413|       600|   653.846|        653.85|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     414|       675|   653.846|        653.85|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     415|       750|   653.846|       653.851|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     416|       825|   653.846|        653.85|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     417|       900|   653.846|       653.851|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     418|         0|   676.923|       676.924|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     419|        50|   676.923|       676.925|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     420|    118.75|   676.923|       676.924|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     421|     187.5|   676.923|       676.925|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     422|       325|   676.923|       676.925|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     423|     462.5|   676.923|       676.926|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     424|       600|   676.923|       676.927|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     425|       675|   676.923|       676.927|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     426|       750|   676.923|       676.926|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     427|       825|   676.923|       676.928|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     428|       900|   676.923|       676.927|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     429|         0|       700|       700.001|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     430|        50|       700|       700.002|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     431|    118.75|       700|       700.002|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     432|     187.5|       700|       700.002|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     433|       325|       700|       700.004|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     434|     462.5|       700|       700.004|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     435|       600|       700|       700.003|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     436|       675|       700|       700.004|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     437|       750|       700|       700.004|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     438|       825|       700|       700.004|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     439|       900|       700|       700.004|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     440|         0|   715.385|       715.386|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     441|        50|   715.385|       715.386|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     442|    118.75|   715.385|       715.386|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     443|     187.5|   715.385|       715.386|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     444|       325|   715.385|       715.388|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     445|     462.5|   715.385|       715.389|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     446|       600|   715.385|       715.388|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     447|       675|   715.385|       715.388|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     448|       750|   715.385|       715.388|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     449|       825|   715.385|       715.388|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     450|       900|   715.385|       715.389|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     451|         0|   730.769|       730.771|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     452|        50|   730.769|       730.771|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     453|    118.75|   730.769|        730.77|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     454|     187.5|   730.769|       730.771|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     455|       325|   730.769|       730.772|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     456|     462.5|   730.769|       730.773|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     457|       600|   730.769|       730.773|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     458|       675|   730.769|       730.773|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     459|       750|   730.769|       730.773|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     460|       825|   730.769|       730.773|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     461|       900|   730.769|       730.774|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     462|         0|   746.154|       746.156|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     463|        50|   746.154|       746.156|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     464|    118.75|   746.154|       746.155|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     465|     187.5|   746.154|       746.156|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     466|       325|   746.154|       746.156|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     467|     462.5|   746.154|       746.157|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     468|       600|   746.154|       746.157|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     469|       675|   746.154|       746.158|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     470|       750|   746.154|       746.157|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     471|       825|   746.154|       746.158|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     472|       900|   746.154|       746.157|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     473|         0|   761.539|        761.54|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     474|        50|   761.539|        761.54|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     475|    118.75|   761.539|        761.54|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     476|     187.5|   761.539|       761.541|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     477|       325|   761.539|       761.541|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     478|     462.5|   761.539|       761.542|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     479|       600|   761.539|       761.541|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     480|       675|   761.539|       761.541|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     481|       750|   761.539|       761.543|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     482|       825|   761.539|       761.542|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     483|       900|   761.539|       761.542|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     484|         0|   776.923|       776.924|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     485|        50|   776.923|       776.924|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     486|    118.75|   776.923|       776.925|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     487|     187.5|   776.923|       776.926|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     488|       325|   776.923|       776.926|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     489|     462.5|   776.923|       776.926|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     490|       600|   776.923|       776.925|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     491|       675|   776.923|       776.926|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     492|       750|   776.923|       776.927|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     493|       825|   776.923|       776.927|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     494|       900|   776.923|       776.926|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     495|         0|   792.308|       792.309|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     496|        50|   792.308|        792.31|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     497|    118.75|   792.308|       792.308|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     498|     187.5|   792.308|       792.309|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     499|       325|   792.308|       792.311|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     500|     462.5|   792.308|        792.31|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     501|       600|   792.308|        792.31|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     502|       675|   792.308|       792.311|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     503|       750|   792.308|       792.311|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     504|       825|   792.308|        792.31|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     505|       900|   792.308|       792.311|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     506|         0|   807.693|       807.694|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     507|        50|   807.693|       807.694|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     508|    118.75|   807.693|       807.693|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     509|     187.5|   807.693|       807.694|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     510|       325|   807.693|       807.694|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     511|     462.5|   807.693|       807.695|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     512|       600|   807.693|       807.694|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     513|       675|   807.693|       807.695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     514|       750|   807.693|       807.695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     515|       825|   807.693|       807.696|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     516|       900|   807.693|       807.695|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     517|         0|   823.077|       823.078|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     518|        50|   823.077|       823.079|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     519|    118.75|   823.077|       823.078|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     520|     187.5|   823.077|       823.078|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     521|       325|   823.077|       823.079|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     522|     462.5|   823.077|       823.079|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     523|       600|   823.077|       823.079|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     524|       675|   823.077|        823.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     525|       750|   823.077|       823.079|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     526|       825|   823.077|        823.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     527|       900|   823.077|        823.08|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     528|         0|   838.462|       838.462|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     529|        50|   838.462|       838.463|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     530|    118.75|   838.462|       838.462|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     531|     187.5|   838.462|       838.463|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     532|       325|   838.462|       838.464|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     533|     462.5|   838.462|       838.464|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     534|       600|   838.462|       838.464|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     535|       675|   838.462|       838.464|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     536|       750|   838.462|       838.463|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     537|       825|   838.462|       838.464|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     538|       900|   838.462|       838.465|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     539|         0|   853.846|       853.848|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     540|        50|   853.846|       853.847|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     541|    118.75|   853.846|       853.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     542|     187.5|   853.846|       853.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     543|       325|   853.846|       853.848|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     544|     462.5|   853.846|       853.848|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     545|       600|   853.846|       853.847|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     546|       675|   853.846|       853.848|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     547|       750|   853.846|       853.848|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     548|       825|   853.846|       853.849|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     549|       900|   853.846|       853.848|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     550|         0|   869.231|       869.232|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     551|        50|   869.231|       869.232|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     552|    118.75|   869.231|       869.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     553|     187.5|   869.231|       869.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     554|       325|   869.231|       869.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     555|     462.5|   869.231|       869.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     556|       600|   869.231|       869.232|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     557|       675|   869.231|       869.232|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     558|       750|   869.231|       869.232|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     559|       825|   869.231|       869.233|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     560|       900|   869.231|       869.232|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     561|         0|   884.616|       884.615|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     562|        50|   884.616|       884.616|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     563|    118.75|   884.616|       884.615|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     564|     187.5|   884.616|       884.616|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     565|       325|   884.616|       884.616|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     566|     462.5|   884.616|       884.616|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     567|       600|   884.616|       884.616|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     568|       675|   884.616|       884.616|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     569|       750|   884.616|       884.616|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     570|       825|   884.616|       884.617|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     571|       900|   884.616|       884.617|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     572|         0|       900|           900|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     573|        50|       900|           900|         0|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     574|    118.75|       900|           900|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     575|     187.5|       900|           900|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     576|       325|       900|           900|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     577|     462.5|       900|           900|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     578|       600|       900|           900|         1|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     579|       675|       900|           900|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     580|       750|       900|           900|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     581|       825|       900|           900|         5|                   100|                   100|                0
+
+Nr węzła|     X[mm]|     Y[mm]|Temperatura[K]|Nr obszaru|Przewodność X[W/(m*K)]|Przewodność Y[W/(m*K)]|Moc źródła[W/m^2]
+     582|       900|       900|           900|         5|                   100|                   100|                0
+
+Temperatura maksymalna [K]: 900. Wystąpiła dla węzłów nr: 573, 581.
+Temperatura minimalna [K]: 2.09579e-09. Wystąpiła dla węzłów nr: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.

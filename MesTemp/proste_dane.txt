@@ -13,5 +13,5 @@ czy pr:	nr:	x1:	y1:	x4:	 y4:	cz źr:  moc:	przew_x:przew_y:materiał:
 warunki brzegowe I rodzaju ilość:
 2
 x1:	y1:	x2:	y2:	T[K]:
-0	0	900	0	350
-900	0	900	900	50
+0	0	900	0	0
+0	900	900	900	900
