@@ -838,11 +838,11 @@ void CMesTempView::OnStartZapisz()
 			if (wynikRozw[i] < tempmin)tempmin = wynikRozw[i];
 			if (wynikRozw[i] > tempmax)tempmax = wynikRozw[i];
 		}
+		plik << std::setw(8) << "\nNr węzła" << "|" << std::setw(10) << "X[mm]" << "|" << std::setw(10) << "Y[mm]" << "|";
+		plik << std::setw(14) << "Temperatura[K]" << "|" << std::setw(10) << "Nr obszaru" << "|" << std::setw(22) << "Przewodność X[W/(m*K)]" << "|" << std::setw(22) << "Przewodność Y[W/(m*K)]" << "|" << std::setw(17) << "Moc źródła[W/m^2]\n";
 		for (int i = 0; i < wynikRozw.size(); i++)
 		{
 			pom1.ktory_obszar(wsp_x[i%wsp_x.size()], wsp_y[i/wsp_x.size()], ob, b, wektor_obszarow);
-			plik << std::setw(8) << "\nNr węzła" << "|" << std::setw(10) << "X[mm]" << "|" << std::setw(10) << "Y[mm]" << "|";
-			plik << std::setw(14) << "Temperatura[K]" << "|" << std::setw(10) << "Nr obszaru" << "|" << std::setw(22) << "Przewodność X[W/(m*K)]" << "|" << std::setw(22) << "Przewodność Y[W/(m*K)]" << "|" << std::setw(17) << "Moc źródła[W/m^2]\n";
 			plik << std::setw(8) << i << "|" << std::setw(10) << wsp_x[i% wsp_x.size()] << "|" << std::setw(10) << wsp_y[i/ wsp_x.size()] << "|";
 			plik << std::setw(14) << wynikRozw[i] << "|" << std::setw(10) << ob << "|" << std::setw(22) << wektor_obszarow[ob].przewodnosc_x * 1000 << "|" << std::setw(22) << wektor_obszarow[ob].przewodnosc_y * 1000 << "|" << std::setw(17) << wektor_obszarow[ob].moc_zrodla * pow(10, 6) << "\n";
 			if (fabs(wynikRozw[i] - tempmax)<0.0000001)max.push_back(i);
