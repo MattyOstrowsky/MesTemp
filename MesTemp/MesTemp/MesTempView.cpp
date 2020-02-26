@@ -121,7 +121,20 @@ void CMesTempView::OnDraw(CDC * pDC)
 	
 	if (Rysuj) {
 		
+		
 		 RysujObszary(pDC);
+		 floatString = "liczba wezlow siatki:";
+		 pDC->TextOutW(980, 100, floatString);
+		 floatString.Format(_T("%.0f"), liczbaWezlow);
+		 pDC->TextOutW(1170, 100, floatString);
+		 floatString = "liczba wezlo poziomo:";
+		 pDC->TextOutW(980, 120, floatString);
+		 floatString.Format(_T("%.0f"), float(wsp_x.size()));
+		 pDC->TextOutW(1170, 120, floatString);
+		 floatString = "liczba wezlow pionowo:";
+		 pDC->TextOutW(980, 140, floatString);
+		 floatString.Format(_T("%.0f"), float(wsp_y.size()));
+		 pDC->TextOutW(1170, 140, floatString);
 		 floatString = "liczba obszarow:";
 		 pDC->TextOutW(980, 70, floatString);
 		 floatString.Format(_T("%.0f"), liczba_obszarow);
@@ -138,26 +151,26 @@ void CMesTempView::OnDraw(CDC * pDC)
 				 {
 				
 					 floatString = "numer obszaru:";
-					 pDC->TextOutW(980, 120, floatString);
-					 floatString = "gestosc mocy [W/m^2]:";
-					 pDC->TextOutW(980, 140, floatString);
-					 floatString = "przewodnosc x [W/(m * K)]:";
 					 pDC->TextOutW(980, 160, floatString);
-					 floatString = "przewodnosc y [W/(m* K):";
+					 floatString = "gestosc mocy [W/m^2]:";
 					 pDC->TextOutW(980, 180, floatString);
-					 floatString = "material:";
+					 floatString = "przewodnosc x [W/(m * K)]:";
 					 pDC->TextOutW(980, 200, floatString);
+					 floatString = "przewodnosc y [W/(m* K):";
+					 pDC->TextOutW(980, 220, floatString);
+					 floatString = "material:";
+					 pDC->TextOutW(980, 240, floatString);
 
 					 floatString.Format(_T("%.0f"), wektor_obszarow[j].nr);
-					 pDC->TextOutW(1170, 120, floatString);
-					 floatString.Format(_T("%.0f"), wektor_obszarow[j].moc_zrodla * pow(10, 6));
-					 pDC->TextOutW(1170, 140, floatString);
-					 floatString.Format(_T("%.0f"), wektor_obszarow[j].przewodnosc_x * 1000);
 					 pDC->TextOutW(1170, 160, floatString);
-					 floatString.Format(_T("%.0f"), wektor_obszarow[j].przewodnosc_y * 1000);
+					 floatString.Format(_T("%.0f"), wektor_obszarow[j].moc_zrodla * pow(10, 6));
 					 pDC->TextOutW(1170, 180, floatString);
+					 floatString.Format(_T("%.0f"), wektor_obszarow[j].przewodnosc_x * 1000);
+					 pDC->TextOutW(1170, 200, floatString);
+					 floatString.Format(_T("%.0f"), wektor_obszarow[j].przewodnosc_y * 1000);
+					 pDC->TextOutW(1170, 220, floatString);
 
-					 pDC->TextOutW(1170, 200, CString(wektor_obszarow[j].material));
+					 pDC->TextOutW(1170, 240, CString(wektor_obszarow[j].material));
 				 }
 			 }
 		 }
@@ -258,7 +271,9 @@ void CMesTempView::OnDraw(CDC * pDC)
 						}
 					}
 				}
-			}		
+			}
+
+			liczbaWezlow = wsp_x.size() * wsp_y.size();
 		}
 		
 		if (RozRysuj)

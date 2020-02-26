@@ -21,6 +21,7 @@ public:
 	bool Rysuj = false;
 	CString FilePathName;
 	float liczba_obszarow;
+	float liczbaWezlow;
 	float skala=1;
 	int zag_y = 0;
 	int zag_x = 0;

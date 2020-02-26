@@ -146,8 +146,11 @@ void Siatka::zageszczenie_prostokatow(int gestosc, std::vector<float>& kord)
 		temp.clear(); //czyszczenie tymczasowych kordow
 
 	} while (flaga);
+
+	
 	
 }
+
 
 
 void Siatka::zageszczenie_nieregularne(int gestosc)
