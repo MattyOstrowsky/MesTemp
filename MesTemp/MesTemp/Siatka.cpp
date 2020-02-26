@@ -116,7 +116,7 @@ void Siatka::zageszczenie_prostokatow(int gestosc, std::vector<float>& kord)
 		{
 			if ((kord[i] - kord[i - 1]) <= 0.25 * (kord[i + 1] - kord[i]))
 			{
-				temp.push_back(kord[i] + 0.25 * (kord[i + 1] - kord[i]));
+				temp.push_back(kord[i] + 0.5 * (kord[i + 1] - kord[i]));
 				flaga = true;
 			}
 
@@ -127,7 +127,7 @@ void Siatka::zageszczenie_prostokatow(int gestosc, std::vector<float>& kord)
 		{
 			if ((kord[i + 1] - kord[i]) <= 0.25 * (kord[i] - kord[i - 1]))
 			{
-				temp.push_back(kord[i] - 0.25 * (kord[i] - kord[i - 1]));
+				temp.push_back(kord[i] - 0.5 * (kord[i] - kord[i - 1]));
 				flaga = true;
 			}
 		}
