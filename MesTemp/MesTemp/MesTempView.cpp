@@ -122,14 +122,10 @@ void CMesTempView::OnDraw(CDC * pDC)
 	if (Rysuj) {
 		
 		 RysujObszary(pDC);
-		 floatString = "skala:";
-		 pDC->TextOutW(980, 50, floatString);
-		 floatString = "liczba elementow:";
+		 floatString = "liczba obszarow:";
 		 pDC->TextOutW(980, 70, floatString);
 		 floatString.Format(_T("%.0f"), liczba_obszarow);
 		 pDC->TextOutW(1170, 70, floatString);
-		 floatString.Format(_T("%.1f"), skala);
-		 pDC->TextOutW(1170, 50, floatString);
 		 floatString.Format(_T(" Y [mm]:%.1f"), yPos);
 		 pDC->TextOutW(1120, 20, floatString);
 		 floatString.Format(_T(" X [mm]:%.1f"), xPos);
