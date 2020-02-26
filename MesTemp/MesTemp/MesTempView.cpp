@@ -139,9 +139,9 @@ void CMesTempView::OnDraw(CDC * pDC)
 		 pDC->TextOutW(980, 70, floatString);
 		 floatString.Format(_T("%.0f"), liczba_obszarow);
 		 pDC->TextOutW(1170, 70, floatString);
-		 floatString.Format(_T(" Y [mm]:%.1f"), yPos);
+		 floatString.Format(_T(" Y [mm]:%.1f"), yPos/skala);
 		 pDC->TextOutW(1120, 20, floatString);
-		 floatString.Format(_T(" X [mm]:%.1f"), xPos);
+		 floatString.Format(_T(" X [mm]:%.1f"), xPos/skala);
 		 pDC->TextOutW(1020, 20, floatString);
 		 for (float j = 0; j < liczba_obszarow; j++)
 		 {
