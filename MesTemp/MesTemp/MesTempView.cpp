@@ -586,8 +586,8 @@ void CMesTempView::OnLButtonUp(UINT nFlags, CPoint point)
 	CView::OnLButtonUp(nFlags, point);
 	yypos = (int)point.y;
 	xxpos = (int)point.x;
-	yPos = yos00 - (int)point.y;
-	xPos = (int)point.x - xos00;
+	yPos = yos0 - (int)point.y;
+	xPos = (int)point.x - xos0;
 	//yPos = (int)point.y;
 	//xPos = (int)point.x ;
 	Invalidate(TRUE);
